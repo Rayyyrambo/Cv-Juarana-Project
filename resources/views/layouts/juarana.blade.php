@@ -7,7 +7,8 @@
          @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <title>Document</title>
     </head>
     <body>
@@ -118,18 +119,18 @@
         <section>
             <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 border-b-4 border-indigo-500">
                 <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
-                <div>
-                    <div class="max-w-prose md:max-w-none">
-                    <h2 class="text-2xl font-semibold text-red-600 sm:text-3xl lg:text-5xl">
-                        JUARANA <span class="text-blue-600">MANDIRI</span>
-                    </h2>
-                    <p class="mt-4 text-pretty text-gray-700">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque saepe
-                        architecto maiores repudiandae amet perferendis repellendus, reprehenderit voluptas
-                        sequi.
-                    </p>
+                    <div>
+                        <div class="max-w-prose md:max-w-none">
+                        <h2 class="text-2xl font-semibold text-red-600 sm:text-3xl lg:text-5xl">
+                            JUARANA <span class="text-blue-600">MANDIRI</span>
+                        </h2>
+                        <p class="mt-4 text-pretty text-gray-700">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque saepe
+                            architecto maiores repudiandae amet perferendis repellendus, reprehenderit voluptas
+                            sequi.
+                        </p>
+                        </div>
                     </div>
-                </div>
                 <div>
                     <img src="{{ asset('juaranaM.png') }}" class="rounded" alt="">
                 </div>
@@ -198,5 +199,37 @@
             </div>   
         </section>
         {{-- end section2 --}}
+
+        {{-- start section3 contact --}}
+        <section>
+                <div class="w-full bg-slate-400 ">
+                    <div class="grid grid-cols-1  md:grid-cols-2  ">
+                        <div class="bg-red-600">
+                            <div class="p-5  flex justify-center ">
+                               <img class="w-3/5 object-cover" src="{{ asset('juaranaM.png') }}" alt="">
+                            </div>
+                            
+                            <div class="flex p-5 mb-3">
+                                <i class="fa-solid fa-house text-blue-500 text-2xl"></i>
+                                <p class="mx-3 text-lg font-bold">Temukan rumah impian Anda bersama kami. Hunian berkualitas dengan desain eksklusif, harga terjangkau, dan lingkungan yang nyaman untuk keluarga tercinta</p> 
+                            </div>
+                            <div class="flex p-5 mb-3">
+                                <i class="fa-solid fa-helmet-safety text-blue-500 text-2xl"></i>
+                                <p class="mx-3 text-lg font-bold">Kami menyediakan layanan pemasangan bahan bangunan dengan kualitas terbaik dan pengerjaan yang profesional. Didukung oleh tenaga kerja berpengalaman, setiap proyek dikerjakan dengan teliti untuk menghasilkan bangunan yang kokoh, rapi, dan sesuai kebutuhan</p> 
+                            </div>
+                            <div class="flex p-5 mb-3">
+                                <i class="fa-solid fa-screwdriver-wrench text-blue-500 text-2xl"></i>
+                                <p class="mx-3 text-lg font-bold">Kami menyediakan layanan service bahan bangunan dengan pengerjaan profesional dan hasil berkualitas. Setiap proyek ditangani oleh tenaga berpengalaman untuk memastikan bangunan tetap kuat, aman, dan tahan lama</p> 
+                            </div>
+                        </div>
+                        <div class="bg-blue-600">
+                            <div class="px-3 flex justify-center">
+                                <p></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
     </body>
 </html>
