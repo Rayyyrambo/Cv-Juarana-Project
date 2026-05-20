@@ -1,14 +1,17 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\JuaranaController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/juarana',[JuaranaController::class, 'index'])->name('juarana');
+Route::get('/service',[ServiceController::class, 'index'])->name('service');
+Route::get('/product', [ProductController::class, 'index'])->name('product');
+Route::get('/about',[AboutController::class, 'index'])->name('about');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
