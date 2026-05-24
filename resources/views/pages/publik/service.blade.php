@@ -1,112 +1,87 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <title>Document</title>
-        
-    </head>
-    <body>
-        <!--  star navbar -->
-        <header class="bg-sky-100 p-3 lg:w-full w-full">
-            <div class="px-4 sm:px-6 lg:px-8">
-                <div class="flex h-16 items-center justify-between relative">
-                    <div class="md:flex md:items-center">
-                        <h1 class="text-red-600 text-3xl font-bold">
-                            JUARANA <span class="text-blue-600">MANDIRI</span>
-                        </h1>
-                    </div>
-                    <nav id="NavMenu" class="hidden lg:block lg:static lg:max-w-full lg:py-3 lg:px-3  lg:w-1/2 lg:bg-gradient-to-r from-red-500  to-blue-500 absolute  bg-blue-400 bg-opacity-40 background-bluer shadow-lg py-5 rounded-lg max-w-[250px] w-full top-full  right-4">
-                            <ul class=" block lg:flex lg:justify-evenly  ">
-                                <li class="group lg:mx-3 hover:bg-blue-400 p-1 rounded-lg">
-                                    <a
-                                        class="flex  mx-8 py-2 lg:py-0 lg:mx-0 text-base text-white font-bold transition group-hover:text-blue-700"
-                                        href="{{ route('about') }}"
-                                    >
-                                        About
-                                    </a>
-                                </li>
-                                <li class="group lg:mx-3 hover:bg-blue-400 p-1 rounded-lg">
-                                    <a
-                                        class="flex mx-8 py-2 lg:py-0 lg:mx-0 text-base text-white font-bold transition group-hover:text-blue-700"
-                                        href="{{ route('home') }}"
-                                    >
-                                        Home
-                                    </a>
-                                </li>
-                                
-                                <li class="group lg:mx-3 hover:bg-red-500 p-1 rounded-lg">
-                                    <a
-                                        class="flex mx-8 py-2 lg:py-0 lg:mx-0 text-base text-white font-bold transition group-hover:text-red-700"
-                                        href="#"
-                                    >
-                                        Services
-                                    </a>
-                                </li>
+@extends('layouts.publik')
+@section('title', 'service')
 
-                                <li class="group lg:mx-3 hover:bg-red-500 p-1 rounded-lg">
-                                    <a
-                                        class="flex mx-8 py-2 lg:py-0 lg:mx-0 text-base text-white font-bold transition group-hover:text-red-700"
-                                        href="{{ route('product') }}"
-                                    >
-                                        Product
-                                    </a>
-                                </li>
+    @section('content')    
+        {{-- start section1 --}}
+       <div class="w-96 text-center mx-auto py-5">
+            <h1 class="text-4xl mb-3 text-green-700 font-bold">This is my Service</h1>
+            <p class="text-1xl font-bold">Kami menyediakan layanan service terbaik dengan pengerjaan cepat, rapi, dan terpercaya. Didukung oleh tenaga profesional dan peralatan yang memadai, kami siap membantu perawatan, perbaikan, hingga pengecekan berbagai kebutuhan Anda dengan hasil yang maksimal dan berkualitas.</p>
+       </div>
 
-                                
-                            </ul>
-                        </nav>
-                    
-                        
-
-                    <div class="flex items-center gap-4">
-                        <div class="hidden sm:flex sm:gap-4">
-                            <a
-                                class="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm"
-                                href="{{ route('login') }}"
-                            >
-                                Login
-                            </a>
-
-                            <div class="hidden sm:flex">
-                                <a
-                                    class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-                                    href="#"
-                                >
-                                    Register
-                                </a>
+       {{-- card service --}}
+       <section class="w-full bg-blue-400 py-12 mt-12 px-4">
+             <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+                    <div class="bg-indigo-100 rounded-xl shadow-lg shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                        <div class="flex flex-col items-center p-6">
+                            <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/helmetproject.png') }}" alt="">
+                            <div class="text-center">
+                                <p class="text-sm font-medium text-gray-700">Kami menyediakan layanan tukang profesional untuk berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
                             </div>
                         </div>
-
-                        <div class="flex items-center px-4">
-                            <button
-                                id="hamburger"
-                                class="lg:hidden"
-                                name="hamburger"
-                                type="button"
-                            >
-                                <span class="hamburger-line transition duration-300 ease-in-out origin-top-left "></span>
-                                <span class="hamburger-line transition duration-300 ease-in-out"></span>
-                                <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
-                            </button>
+                    </div>
+                    <div class="bg-indigo-100 rounded-xl shadow-lg shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                        <div class="flex flex-col items-center p-6">
+                            <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/bangunanproject.png') }}" alt="">
+                            <div class="text-center">
+                                <p class="text-sm font-medium text-gray-700">Kami menyediakan layanan service terbaik dengan pengerjaan cepat, rapi, dan terpercaya. Didukung oleh tenaga profesional.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </header>
-        {{-- end navbar --}}
-    
-        {{-- start section1 --}}
-       <h1 class="text-2xl">Service</h1>
-        {{-- end section1 --}}
+                    <div class="bg-indigo-100 rounded-xl shadow-lg shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                        <div class="flex flex-col items-center p-6">
+                            <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/pemasanganproject.png') }}" alt="">
+                            <div class="text-center">
+                                <p class="text-sm font-medium text-gray-700">Kami menyediakan layanan service terbaik dengan pengerjaan cepat, rapi, dan terpercaya. Didukung oleh tenaga profesional.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-indigo-100 rounded-xl shadow-lg shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                        <div class="flex flex-col items-center p-6">
+                            <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/dliveryproject.png') }}" alt="">
+                            <div class="text-center">
+                                <p class="text-sm font-medium text-gray-700">Kami menyediakan layanan service terbaik dengan pengerjaan cepat, rapi, dan terpercaya. Didukung oleh tenaga profesional.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
 
-        {{-- strat section2 --}}
+                    {{-- Tambahkan card lain di sini sesuai kebutuhan --}}
+                    {{-- Contoh card kedua:
+                    <div class="bg-indigo-100 rounded-xl shadow-lg overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                        <div class="flex flex-col items-center p-6">
+                            <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/service2.png') }}" alt="">
+                            <div class="text-center">
+                                <p class="text-sm font-medium text-gray-700">Deskripsi layanan kedua Anda di sini.</p>
+                            </div>
+                        </div>
+                    </div>
+                    --}}
+                </div>
+             </div>
+       </section>
+       {{-- end section1 --}}
+       
+       {{-- strat section2 --}}
+       <section class="w-full h-screen bg-cover py-16 px-5 flex justify-center items-center " style="background-image: url('{{ asset('images/latarjuaranamandiri.jpg') }}'); ">
+              <div class="bg-black bg-opacity-30 py-16 px-16 rounded-lg">
+                     <div class="max-w-4xl mx-auto px-4 text-center">
+                            <h2 class="text-4xl font-bold text-white mb-6">Hubungi kami melalui via:</h2>
+                            <div class="flex">
+                                    <i class="fa-brands fa-whatsapp text-6xl text-green-500 cursor-pointer"></i>
+                                    <a href="#" class="bg-green-400 flex items-center justify-center px-5 mx-3 rounded-2xl w-full font-bold text-2xl text-green-700 
+                                    hover:bg-green-600 transition  duration-300">Chat</a>
+                            </div>
+                            <div class="flex mt-3">
+                                    <i class="fa-brands fa-instagram text-6xl font-extrabold bg-gradient-to-r from-red-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"></i>
+                                    <a href="#" class="bg-gradient-to-r from-red-600 to-rose-500 flex items-center justify-center px-5 mx-3 rounded-2xl w-full font-bold text-2xl text-white 
+                                    ">Send</a>
+                            </div>
+                     </div>
+              </div>
+       </section>
+    @endsection
         
         {{-- end section2 --}}
 
@@ -119,54 +94,4 @@
         {{-- end section 4 --}}
 
         {{-- footer --}}
-        <footer class="w-full bg-sky-100 pb-12 pt-12 mt-24 ">
-            <div class=" mx-auto">
-                <div class="flex flex-wrap lg:justify-evenly">
-                    <div class=" px-4 mb-12">
-                        <p class="text-3xl text-red-600 font-bold mb-5">Juarana <span class="text-blue-600">Mandiri</span></p>
-                        <p>JuaranaMandiri@gmail.ccom</p>
-                        <p>Jl. Permata Sudiang Raya H6/25</p>
-                        <p>Kota Makassar</p>
-                    </div>
-                    <div class=" px-4 mb-12">
-                        <h1 class="text-3xl font-bold text-blue-500">Contact</h1>
-                        <p class="text-green-600 font-bold">Whatsapp <span class="text-black">085677894392</span></p>
-                        <p class="text-rose-600 font-bold">Instagram <span class="text-black">juarana_mandiri</span></p>
-                        <p class="text-blue-600 font-bold">Facebook <span class="text-black">Juarana Mandiri</span></p>
-                    </div>
-                    <div class=" px-4 mb-12">
-                        <h1 class="text-3xl font-bold text-blue-500">Navigasi</h1>
-                        <p class="text-black font-bold">Home</p>
-                        <p class="text-black font-bold">Project</p>
-                        <p class="text-black font-bold">From to Massagge</p>
-                        <p class="text-black font-bold">Layanan</p>
-                    </div>
-                </div>
-            </div>
-            <div class="container mx-auto ">
-                <div class="flex flex-wrap justify-center">
-                    <h1 class="text-3xl font-semibold text-blue-500 text-center">Hubungi & Ikuti Media Sosial Saya</h1>
-                </div>
-                <p class="font-semibold text-blue-500 text-center">Tetap terhubung dan dapatkan informasi terbaru melalui media sosial saya:</p>
-                <div class="w-96 text-center flex justify-evenly  mx-auto mt-5">
-                    <a href="" class="hover:bg-green-600 transition duration-300 p-3 rounded-full">
-                        <i class="fa-brands fa-whatsapp text-3xl text-gray-700 hover:text-green-500 transition duration-300 cursor-pointer"></i>
-                    </a>
-                    <a href="" class="hover:bg-rose-300 transition duration-300 p-3 rounded-full">
-                        <i class="fa-brands fa-instagram text-3xl text-gray-700 hover:text-red-600 transition duration-300 cursor-pointer"></i>
-                    </a>
-                    <a href="" class="hover:bg-gray-600 p-3 transitoin duration-300 rounded-full">
-                        <i class="fa-brands fa-github text-3xl text-gray-700 hover:text-black transition duration-300 cursor-pointer"></i>
-                    </a>
-                    <a href="" class="hover:bg-red-500 p-3 transition duration-300 rounded-full">
-                        <i class="fa-solid fa-envelope text-2xl text-gray-700 hover:text-white transition duration-300 cursor-pointer"></i>
-                    </a>
-                    <a href="" class="hover:bg-blue-400 p-3 transition duration-300 rounded-full">
-                        <i class="fa-brands fa-facebook text-2xl text-gray-700 hover:text-blue-600 transition duration-300 cursor-pointer"></i>
-                    </a>
-                </div>
-            </div>
-        </footer>
         
-    </body>
-</html>
