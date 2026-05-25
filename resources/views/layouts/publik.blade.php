@@ -17,6 +17,9 @@
         {{-- start section1 --}}
        @yield('content')
         {{-- end section1 --}}
+
+        {{-- scripy --}}
+        @include('layouts.partials.publik.scripts')
    
         {{-- footer --}}
         @include('layouts.partials.publik.footer')

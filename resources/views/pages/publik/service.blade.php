@@ -3,7 +3,7 @@
 
     @section('content')    
         {{-- start section1 --}}
-       <div class="w-96 text-center mx-auto py-5">
+       <div class="w-96 text-center mx-auto py-5 animate-fadeInUp">
             <h1 class="text-4xl mb-3 text-green-700 font-bold">This is my Service</h1>
             <p class="text-1xl font-bold">Kami menyediakan layanan service terbaik dengan pengerjaan cepat, rapi, dan terpercaya. Didukung oleh tenaga profesional dan peralatan yang memadai, kami siap membantu perawatan, perbaikan, hingga pengecekan berbagai kebutuhan Anda dengan hasil yang maksimal dan berkualitas.</p>
        </div>
@@ -12,7 +12,7 @@
        <section class="w-full bg-blue-400 py-12 mt-12 px-4">
              <div class="max-w-6xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
-                    <div class="bg-indigo-100 rounded-xl shadow-lg shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                    <div class="bg-indigo-100 rounded-xl shadow-lg animate-fadeInLeft shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
                         <div class="flex flex-col items-center p-6">
                             <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/helmetproject.png') }}" alt="">
                             <div class="text-center">
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-indigo-100 rounded-xl shadow-lg shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                    <div class="bg-indigo-100 rounded-xl shadow-lg animate-fadeInLeft shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
                         <div class="flex flex-col items-center p-6">
                             <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/bangunanproject.png') }}" alt="">
                             <div class="text-center">
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-indigo-100 rounded-xl shadow-lg shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                    <div class="bg-indigo-100 rounded-xl shadow-lg animate-fadeInLeft shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
                         <div class="flex flex-col items-center p-6">
                             <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/pemasanganproject.png') }}" alt="">
                             <div class="text-center">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-indigo-100 rounded-xl shadow-lg shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                    <div class="bg-indigo-100 rounded-xl shadow-lg animate-fadeInLeft shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
                         <div class="flex flex-col items-center p-6">
                             <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/dliveryproject.png') }}" alt="">
                             <div class="text-center">
