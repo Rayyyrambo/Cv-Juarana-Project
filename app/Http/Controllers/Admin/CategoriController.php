@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class CategoriController extends Controller
 {
@@ -12,7 +13,8 @@ class CategoriController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.categories.index');
+        $categories = Category::latest('created_at')->get();
+        return view('pages.admin.categories.index', compact('categories'));
     }
 
     /**
@@ -20,7 +22,7 @@ class CategoriController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.categories.create');
     }
 
     /**
@@ -28,7 +30,16 @@ class CategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $data = $request->validate([
+                'name'=>'required|string|max:255',
+            ]);
+            // simpan ke database
+            Category::create($data);
+            return to_route('admin.categories.index')->with('success','Categori berhasil tersimpan');
+        } catch (\Throwable $th) {
+            return back()->with('error', $th->getMessage());
+        }
     }
 
     /**
@@ -44,7 +55,8 @@ class CategoriController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $categories = Category::findOrFail($id);
+        return view('pages.admin.categories.edit', compact('categories'));
     }
 
     /**
@@ -52,7 +64,16 @@ class CategoriController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        try {
+            $categories = Category::findOrFail($id);
+            $data = $request->validate([
+                'name'=>'required|string|max:255',
+            ]);
+            $categories->update($data);
+            return to_route('admin.categories.index')->with('success', 'kategori berhasil di edit');
+        } catch (\Throwable $th) {
+            return back()->with('error', $th->getMessage());
+        }
     }
 
     /**
@@ -60,6 +81,12 @@ class CategoriController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try {
+            $categories = Category::findOrFail($id);
+            $categories->delete();
+            return to_route('admin.categories.index')->with('success', 'Data berhasil dihapus');
+        } catch (\Throwable $th) {
+            return back()->with('error', $th->getMessage());
+        }
     }
 }
