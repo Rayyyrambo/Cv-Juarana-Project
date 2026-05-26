@@ -26,7 +26,7 @@
             </div>
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('admin.product.index') }}">
+                <a class="nav-link" href="{{ route('admin.products.index') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Produk</span></a>
             </li>
