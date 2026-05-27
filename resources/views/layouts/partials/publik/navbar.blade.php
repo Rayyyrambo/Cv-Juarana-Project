@@ -6,9 +6,9 @@
                             JUARANA <span class="text-blue-600">MANDIRI</span>
                         </h1>
                     </div>
-                    <nav id="NavMenu" class="hidden lg:block lg:static lg:max-w-full lg:py-3 lg:px-3  lg:w-1/2 lg:bg-gradient-to-r from-red-500  to-blue-500 absolute  bg-blue-400 bg-opacity-40 background-bluer shadow-lg py-5 rounded-lg max-w-[250px] w-full top-full  right-4">
-                            <ul class=" block lg:flex lg:justify-evenly  ">
-                                <li class="group lg:mx-3 hover:bg-blue-400 p-1 rounded-lg">
+                    <nav id="NavMenu" class="hidden lg:mx-5  lg:block lg:static lg:max-w-full lg:py-3 lg:px-3  lg:w-1/2 lg:bg-gradient-to-r from-red-500  to-blue-500 absolute  bg-blue-400 bg-opacity-40 backdrop-blur  shadow-lg py-5 rounded-lg max-w-[250px] w-full top-full  right-4 z-50">
+                            <ul class=" blog justify-end lg:flex lg:justify-evenly   ">
+                                <li class="group lg:mx-3 hover:bg-blue-400 transition ease-in-out duration-500 p-1 rounded-lg">
                                     <a
                                         class="flex  mx-8 py-2 lg:py-0 lg:mx-0 text-base text-white font-bold transition group-hover:text-blue-700"
                                         href="{{ route('project') }}"
@@ -16,7 +16,7 @@
                                         Project
                                     </a>
                                 </li>
-                                <li class="group lg:mx-3 hover:bg-blue-400 p-1 rounded-lg">
+                                <li class="group lg:mx-3 hover:bg-blue-400 transition ease-in-out duration-500 p-1 rounded-lg">
                                     <a
                                         class="flex mx-8 py-2 lg:py-0 lg:mx-0 text-base text-white font-bold transition group-hover:text-blue-700"
                                         href="{{ route('home') }}"
@@ -25,7 +25,7 @@
                                     </a>
                                 </li>
                                 
-                                <li class="group lg:mx-3 hover:bg-red-500 p-1 rounded-lg">
+                                <li class="group lg:mx-3 hover:bg-red-400 transition ease-in-out duration-500 p-1 rounded-lg">
                                     <a
                                         class="flex mx-8 py-2 lg:py-0 lg:mx-0 text-base text-white font-bold transition group-hover:text-red-700"
                                         href="{{ route('service') }}"
@@ -34,7 +34,7 @@
                                     </a>
                                 </li>
 
-                                <li class="group lg:mx-3 hover:bg-red-500 p-1 rounded-lg">
+                                <li class="group lg:mx-3 hover:bg-red-400 transition ease-in-out duration-500 p-1 rounded-lg">
                                     <a
                                         class="flex mx-8 py-2 lg:py-0 lg:mx-0 text-base text-white font-bold transition group-hover:text-red-700"
                                         href="{{ route('product') }}"
