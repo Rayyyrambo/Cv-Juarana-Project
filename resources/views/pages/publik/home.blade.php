@@ -7,9 +7,11 @@
     <section class="w-full  bg-cover bg-no-repeat bg-center"
         style="background-image: url('{{ asset('images/latarCV.jpg') }}') ">
         <div class="container w-full px-12 py-12  ">
-            <h1 class="lg:text-8xl animate-scaleIn-delay-200 text-5xl font-semibold text-red-600">Jumrana <span class="text-blue-600">Mandiri</span>
+            <h1 class="lg:text-8xl animate-scaleIn-delay-200 text-5xl font-semibold text-red-600">Jumrana <span
+                    class="text-blue-600">Mandiri</span>
             </h1>
-            <p class="lg:text-4xl text-2xl animate-scaleIn-delay-200 text-gray-800 font-bold lg:w-1/2">Pemasangan interior dan Ekterior plafon PVC,
+            <p class="lg:text-4xl text-2xl animate-scaleIn-delay-200 text-gray-800 font-bold lg:w-1/2">Pemasangan interior
+                dan Ekterior plafon PVC,
                 lantai Vinyl, Dinding WPC, Pengecatan , pemasangan produk Conwood lantai, Conwood Dinding, Fasad Conwood,
             </p>
             <hr class="border-black  animate-fadeInLeft duration-1000 border-1 w-2/3 mt-2 mb-2 ">
@@ -64,24 +66,22 @@
     {{-- end section1 --}}
 
     {{-- strat section2 --}}
-    <section class="w-full -400">
+    <section class="w-full">
         <div class="grid grid-cols-1 lg:grid-cols-2 ">
             <div class="w-full  px-5 py-5">
                 <div class="container mx-auto py-3 px-3 ">
                     <div
-                        class="w-full rounded-full shadow-xl bg-opacity-50 shadow-sky-400/50 py-3 mx-auto lg:w-2/3 bg-teal-400 text-center">
-                        <h1 class="text-3xl font-bold text-blue-700 font-mono">Silahkan Kunjungi Kantor Kami</h1>
+                        class="w-full rounded-full shadow-lg bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30%  shadow-sky-400/50 py-3 mx-auto lg:w-2/3  text-center">
+                        <h1 class="text-3xl font-bold text-gray-700 font-mono">Silahkan Kunjungi Kantor Kami</h1>
                     </div>
                     <div class="mt-12 flex justify-center ">
-                        <iframe
-                            data-aos="flip-left"
-                            data-aos-duration="1000"
+                        <iframe data-aos="flip-left" data-aos-duration="1000"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.0230144253837!2d119.52321527600833!3d-5.099979994876951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbefb9d871803d1%3A0x1e25201d9d13e800!2sJl.%20Permata%20Sudiang%20Raya%20No.30%2C%20Sudiang%20Raya%2C%20Kec.%20Biringkanaya%2C%20Kota%20Makassar%2C%20Sulawesi%20Selatan%2090552!5e0!3m2!1sid!2sid!4v1779960990472!5m2!1sid!2sid"
-                            class="w-full h-80 lg:w-2/3 lg:h-80 rounded-xl shadow-lg shadow-sky-500/50" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
+                            class="w-full h-80 lg:w-2/3 lg:h-80 rounded-xl shadow-lg shadow-sky-500/50" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
-                    <div  data-aos="fade-right"  data-aos-duration="1000" class="mt-3 w-2/3 mx-auto">
+                    <div data-aos="fade-right" data-aos-duration="1000" class="mt-3 w-2/3 mx-auto">
                         <h1 class="font-bold ">Kantor buka pada pukul:</h1>
                         <p class="font-mono text-gray-800">8:30 WITA</p>
                         <hr class="border-gray-600 w-64">
@@ -90,37 +90,112 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full px-5 py-5">
-                <div class="container mx-auto w-full ">
-                    <div class="lg:w-2/3 w-full mx-auto rounded-full bg-teal-400 shadow-xl shadow-sky-400/50 bg-opacity-50">
-                        <h1 class="text-3xl font-bold text-blue-700 font-mono text-center py-5">For Massage to</h1>
+            <div class="w-full lg:w-2/3 px-5 py-5 mx-auto">
+                <div class="container mx-auto w-full mb-4 ">
+                    <div class="lg:w-2/3 w-full mx-auto rounded-full bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30%  shadow-lg shadow-sky-400/50 bg-opacity-50">
+                        <h1 class="text-3xl font-bold text-gray-700 font-mono text-center py-5">For Massage to</h1>
                     </div>
-                    
                 </div>
-                <div class="container  lg:w-2/3 mt-8 lg:mx-auto w-full">
-                    <form  action="">
-                        <div data-aos="fade-left"  data-aos-duration="1000" class="w-full  px-3 mb-8">
-                            <label for="name">Nama</label>
-                            <input type="text" name="" id="" class="w-full border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"  placeholder="Silahkan isi nama anda">
-                        </div>
-                        <div data-aos="fade-left"  data-aos-duration="1000" class="w-full px-3 mb-8">
-                            <label for="email">email</label>
-                            <input type="email" class="w-full  border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" name="" id="" class="w-full" placeholder="Silahkan isi nama anda">
-                        </div>
-                        <div data-aos="fade-left"  data-aos-duration="1000" class="w-full px-3">
-                            <label for="pesan">Pesan</label>
-                            <textarea name="" class="w-full  border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" id="" cols="30" rows="10" placeholder="Silahkan isi pesan anda"></textarea>
-                        </div>
-                    </form>
-                </div>
-                
+                <form action="">
+                    <div data-aos="fade-left" data-aos-duration="1000" class="w-full  px-3 mb-8">
+                        <label for="name">Nama</label>
+                        <input type="text" name="" id=""
+                            class="w-full border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                            placeholder="Silahkan isi nama anda">
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3 mb-8">
+                        <label for="email">email</label>
+                        <input type="email"
+                            class="w-full  border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                            name="" id="" class="w-full" placeholder="Silahkan isi nama anda">
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3">
+                        <label for="pesan">Pesan</label>
+                        <textarea name=""
+                            class="w-full  border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                            id="" cols="30" rows="10" placeholder="Silahkan isi pesan anda"></textarea>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
     {{-- end section2 --}}
 
     {{-- start section3 --}}
-    
+    <section class="container lg:mx-auto lg:w-1/2 mb-5 px-3  mt-5 ">
+        <div
+            class="w-full mb-12 rounded-full shadow-lg  shadow-sky-400/50 py-3  lg:w-80 bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30% text-center loncat-loncat">
+            <h1 class="text-4xl font-bold text-gray-700 font-mono">For massage</h1>
+            <h1 class="text-3xl text-red-600 font-bold">Juarana <span class="text-blue-600">Mandiri</span></h1>
+        </div>
+    </section>
+    <section class="w-full mb-3 px-4">
+        <div class="container w-full mx-auto">
+            <div class="w-full px-4 py-5 flex flex-wrap justify-center gap-6">
+                <div
+                    class="border-2 bg-gradient-to-tl from-white  to-cyan-300  bg-opacity-30 backdrop-blur-20 rounded-xl shadow-lg animate-fadeInLeft shadow-gray-300/50 overflow-hidden transition duration-300 ease-in-out hover:shadow-cyan-400 hover:-translate-y-2
+                                hover:border-2 hover:border-cyan-300 lg:w-64 w-2/3 h-80 ">
+                    <div class="flex flex-col items-center ">
+                        <div class="mb-3  w-full px-3 py-5  ">
+                            <h1 class="text-1xl font-bold ">Nama</h1>
+                        </div>
+                        <div class="text-center h-80 px-5 py-5 items-center ">
+                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional untuk
+                                berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
+                                berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-2 bg-gradient-to-tl from-white  to-cyan-300  bg-opacity-30 backdrop-blur-20 rounded-xl shadow-lg animate-fadeInLeft shadow-gray-300/50 overflow-hidden transition duration-300 ease-in-out hover:shadow-cyan-400 hover:-translate-y-2
+                                hover:border-2 hover:border-cyan-300 lg:w-64 w-2/3 h-80 ">
+                    <div class="flex flex-col items-center ">
+                        <div class="mb-3  w-full px-3 py-5  ">
+                            <h1 class="text-1xl font-bold ">Nama</h1>
+                        </div>
+                        <div class="text-center h-80 px-5 py-5 items-center ">
+                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional untuk
+                                berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
+                                berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-2 bg-gradient-to-tl from-white  to-cyan-300  bg-opacity-30 backdrop-blur-20 rounded-xl shadow-lg animate-fadeInLeft shadow-gray-300/50 overflow-hidden transition duration-300 ease-in-out hover:shadow-cyan-400 hover:-translate-y-2
+                                hover:border-2 hover:border-cyan-300 lg:w-64 w-2/3 h-80 ">
+                    <div class="flex flex-col items-center ">
+                        <div class="mb-3  w-full px-3 py-5  ">
+                            <h1 class="text-1xl font-bold ">Nama</h1>
+                        </div>
+                        <div class="text-center h-80 px-5 py-5 items-center ">
+                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional untuk
+                                berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
+                                berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-2 bg-gradient-to-tl from-white  to-cyan-300  bg-opacity-30 backdrop-blur-20 rounded-xl shadow-lg animate-fadeInLeft shadow-gray-300/50 overflow-hidden transition duration-300 ease-in-out hover:shadow-cyan-400 hover:-translate-y-2
+                                hover:border-2 hover:border-cyan-300 lg:w-64 w-2/3 h-80 ">
+                    <div class="flex flex-col items-center ">
+                        <div class="mb-3  w-full px-3 py-5  ">
+                            <h1 class="text-1xl font-bold ">Nama</h1>
+                        </div>
+                        <div class="text-center h-80 px-5 py-5 items-center ">
+                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional untuk
+                                berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
+                                berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+
+        </div>
+
+    </section>
     {{-- End section 3 --}}
 
     {{-- star section 4 --}}
