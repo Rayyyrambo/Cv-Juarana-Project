@@ -62,64 +62,45 @@
             </div>
         </div>
     </section>
-     {{-- end section1 --}}
+    {{-- end section1 --}}
 
     {{-- section2 --}}
-    <section class="w-full  py-12 px-5">
-        <div data-aos="fade-up" data-aos-duration="1000"
-            class="w-full lg:w-2/3 mx-auto shadow-lg shadow-teal-400/50 bg-opacity-20 bg-cyan-100 text-center mb-10 p-4 rounded-lg">
-            <h6 class="text-6xl  text-cyan-400 font-bold ">Layanan</h6>
-            <p class="mt-5 text-4xl text-red-500 font-bold">Juarana <spa class="text-blue-500">Mandiri</spa>
-            </p>
-        </div>
-        <div class="container lg:flex lg:gap-6 mx-auto  py-5 px-5 w-full lg:w-2/3">
-            <div data-aos="fade-right" data-aos-duration="1000"
-                class="flex w-full lg:w-1/2 mx-auto p-5 mb-10 bg-blue-300  rounded-lg shadow-lg hover:bg-cyan-300 transition duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 lg:hover:translate-y-0"
-                data-aos="fade-right">
-                <i class="fa-solid fa-house text-blue-600 text-5xl mx-2"></i>
-                <p class="mx-3 text-lg font-bold">Temukan rumah impian Anda bersama kami. Hunian berkualitas dengan desain
-                    eksklusif, harga terjangkau, dan lingkungan yang nyaman untuk keluarga tercinta</p>
-            </div>
-            <div data-aos="fade-right" data-aos-duration="1000"
-                class="flex w-full lg:w-1/2 mx-auto p-5 mb-10 bg-blue-300  rounded-lg shadow-lg hover:bg-cyan-300 transition duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 lg:hover:translate-y-0">
-                <i class="fa-solid fa-helmet-safety text-blue-600 text-5xl mx-2"></i>
-                <p class="mx-3 text-lg font-bold">Kami menyediakan layanan pemasangan bahan bangunan dengan kualitas terbaik
-                    dan
-                    pengerjaan yang profesional. Didukung oleh tenaga kerja berpengalaman, setiap proyek dikerjakan dengan
-                    teliti
-                    untuk menghasilkan bangunan yang kokoh, rapi, dan sesuai kebutuhan</p>
-            </div>
-            <div data-aos="fade-right" data-aos-duration="1000"
-                class="flex w-full lg:w-1/2 mx-auto p-5 mb-10 bg-blue-300  rounded-lg shadow-lg hover:bg-cyan-300 transition duration-500 ease-in-out hover:shadow-2xl hover:-translate-y-2 lg:hover:translate-y-0 animate-fadeInUp ">
-                <i class="fa-solid fa-screwdriver-wrench text-blue-600 text-5xl mx-2"></i>
-                <p class="mx-3 text-lg font-bold">Kami menyediakan layanan service bahan bangunan dengan pengerjaan
-                    profesional dan
-                    hasil berkualitas. Setiap proyek ditangani oleh tenaga berpengalaman untuk memastikan bangunan tetap
-                    kuat, aman,
-                    dan tahan lama</p>
-            </div>
-        </div>
-    </section>
-   {{-- end section2 --}}
+
+    {{-- end section2 --}}
 
     {{-- strat section3 --}}
-    <section class="w-full h-screen bg-cover py-16 px-5 flex justify-center items-center "
-        style="background-image: url('{{ asset('images/latarjuaranamandiri.jpg') }}'); ">
-        <div class="bg-black bg-opacity-30 py-16 px-16 rounded-lg">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-4xl font-bold text-white mb-6">Hubungi kami melalui via:</h2>
-                <div class="flex">
-                    <i class="fa-brands fa-whatsapp text-6xl text-green-500 cursor-pointer"></i>
+    <section class="w-full  bg-cover py-16 px-5 flex justify-center  "
+        >
+        <!-- Gradient Background Elements -->
+
+        <div
+            class="relative  overflow-hidden bg-gradient-to-r from-cyan-600 via-blue-300 to-cyan-400 py-16 px-16 rounded-3xl w-full lg:w-2/3 shadow-2xl border border-blue-600
+            transition ease-in-out duration-300 translate-y-1 hover:shadow-lg hover:shadow-blue-600 hover:translate-y-0 lg:translate-y-0">
+            <div
+                class="absolute top-0 left-0 w-80 h-80 rounded-full bg-gradient-to-br from-purple-500 via-indigo-500 to-sky-800 blur-2xl opacity-30 -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gradient-to-tl from-cyan-500 via-blue-500 to-indigo-500 blur-2xl opacity-30 translate-x-1/2 translate-y-1/3">
+            </div>
+            <div class="  px-4 text-center ">
+                <h2 class="text-4xl font-bold text-slate-800 mb-6">Wujudkan Project Impian Anda </h2>
+                <p class="text-1xl lg:text-center lg:w-96 lg:mx-auto font-semibold text-gray-700">Bersama Kami Juarana Manadiri Dapat Membantu Project Impian Anda</p>
+                <div class="flex flex-wrap justify-center mt-3 ">
                     <a href="#"
-                        class="bg-green-400 flex items-center justify-center px-5 mx-3 rounded-2xl w-full font-bold text-2xl text-green-700 
-                                    hover:bg-green-600 transition  duration-300">Chat</a>
+                        class="py-2 mb-3 translate-y-1 transition ease-in-out duration-300 hover:translate-y-0 hover:shadow-lg hover:shadow-blue-600 shadow-lg shadow-blue-500/40 bg-blue-600 flex items-center justify-center px-5 mx-3 rounded-2xl  font-bold text-1xl text-white 
+                    h">
+                        <i class="fa-brands fa-whatsapp text-4xl mx-3 text-white cursor-pointer"></i>
+                        Chat</a>
+                    <a href="#"
+                        class="py-2 mb-3 translate-y-1 transition ease-in-out duration-300 hover:translate-y-0 hover:shadow-lg hover:shadow-red-600 shadow-lg shadow-blue-500/40 bg-red-600 flex items-center justify-center px-5 mx-3 rounded-2xl  font-bold text-1xl text-white 
+                    h">
+                        <i
+                            class="fa-brands fa-instagram text-4xl mx-3 font-extrabold text-white cursor-pointer"></i>
+                        Send</a>
+                    
                 </div>
                 <div class="flex mt-3">
-                    <i
-                        class="fa-brands fa-instagram text-6xl font-extrabold bg-gradient-to-r from-red-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"></i>
-                    <a href="#"
-                        class="bg-gradient-to-r from-red-600 to-rose-500 flex items-center justify-center px-5 mx-3 rounded-2xl w-full font-bold text-2xl text-white 
-                                    ">Send</a>
+
                 </div>
             </div>
         </div>

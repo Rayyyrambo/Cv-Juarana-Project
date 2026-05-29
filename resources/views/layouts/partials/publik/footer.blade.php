@@ -1,4 +1,4 @@
-<footer class="w-full mx-auto bg-sky-100 pb-12 pt-12  ">
+<footer class="w-full mx-auto bg-teal-200 pb-12 pt-12  ">
             <div class="px-5 mx-auto">
                 <div class="flex flex-wrap lg:justify-evenly md:justify-evenly">
                     <div class=" px-4 mb-12">

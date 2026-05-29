@@ -18,7 +18,34 @@
 
 .navbar-fixed {
     @apply fixed z-[9999];
+    @apply bg-sky-400;
+    @apply bg-opacity-20;
+    backdrop-filter: blur(5px);
 }
+
+.navbar-menu{
+    position: fixed;
+    top: 87px;
+    right: -100%;
+    width: 100%;
+    max-width: 256px;
+    height: calc(100vh - 70px);
+    backdrop-filter: blur(5px);
+    transition: 0.5s;
+
+    @apply bg-sky-400;
+    @apply overflow-y-auto;
+    @apply bg-opacity-20;
+    @apply z-50;
+    
+    /* Desktop */
+    @apply lg:static lg:w-auto lg:h-auto lg:bg-transparent lg:top-auto lg:max-w-none;
+}
+
+.active{
+    right: 0;
+}
+
 
 .background-bluer {
     backdrop-filter: blur(5px);
@@ -141,6 +168,7 @@
     animation: loncat 3s infinite;
 }
 
+
 @keyframes loncat {
     0%, 100% {
         transform: translateY(0);
@@ -149,4 +177,22 @@
         transform: translateY(20px);
     }
    
+}
+
+@layer utilities {
+  /* Menyembunyikan scrollbar di Chrome, Safari, dan Opera */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  /* Menyembunyikan scrollbar di IE, Edge, dan Firefox */
+  .scrollbar-none {
+    -ms-overflow-style: none;  /* IE dan Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+.border-bottom{
+    border-bottom: 1px solid black;
+    
+    
 }

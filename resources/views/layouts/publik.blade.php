@@ -11,8 +11,8 @@
     </head>
     <body>
         <!--  star navbar -->
-        @include('layouts.partials.publik.navbar')
         {{-- end navbar --}}
+        @include('layouts.partials.publik.navbar')
     
         {{-- start section1 --}}
        @yield('content')

@@ -4,65 +4,7 @@
 @section('content')
     {{-- start section1 --}}
 
-    <section class="w-full  bg-cover bg-no-repeat bg-center"
-        style="background-image: url('{{ asset('images/latarCV.jpg') }}') ">
-        <div class="container w-full px-12 py-12  ">
-            <h1 class="lg:text-8xl animate-scaleIn-delay-200 text-5xl font-semibold text-red-600">Juarana <span
-                    class="text-blue-600">Mandiri</span>
-            </h1>
-            <p class="lg:text-4xl text-2xl animate-scaleIn-delay-200 text-gray-800 font-bold lg:w-1/2">Pemasangan interior
-                dan Ekterior plafon PVC,
-                lantai Vinyl, Dinding WPC, Pengecatan , pemasangan produk Conwood lantai, Conwood Dinding, Fasad Conwood,
-            </p>
-            <hr class="border-black  animate-fadeInLeft duration-1000 border-1 w-2/3 mt-2 mb-2 ">
-            <h1 class="text-black animate-slideInUp lg:text-3xl text-2xl font-bold font-sans">Founder:</h1>
-            <p class="text-black animate-slideInUp lg:text-2xl text-1xl font-bold">Nizulul Ramdan</p>
-            <h1 class="text-black animate-slideInUp lg:text-3xl text-2xl font-bold font-sans">Create:</h1>
-            <p class="text-black animate-slideInUp lg:text-2xl text-1xl  font-bold">18 November 2022</p>
-        </div>
-        <div class="container w-full  py-12">
-            <div class="max-w-6xl ">
-                <div class="grid grid-cols-2  lg:grid-cols-4 md:grid-cols-2 gap-6 ">
-                    <div
-                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3 border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
-                        <div class="flex flex-col items-center p-6">
-                            <h1 class="text-3xl font-bold text-black">1</h1>
-                            <div class="text-center ">
-                                <p class="text-2xl text-black font-bold">Cuma di sulawesi</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
-                        <div class="flex flex-col items-center p-6">
-                            <h1 class="text-3xl font-bold text-black">5+</h1>
-                            <div class="text-center">
-                                <p class="text-2xl text-black font-bold"> Project Selesai</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
-                        <div class="flex flex-col items-center p-6">
-                            <h1 class="text-3xl font-bold text-black">15+</h1>
-                            <div class="text-center">
-                                <p class="text-2xl text-black font-bold">Pelanggan puas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
-                        <div class="flex flex-col items-center p-6">
-                            <h1 class="text-3xl font-bold text-black">4+</h1>
-                            <div class="text-center">
-                                <p class="text-2xl text-black font-bold">Tahun Pengalaman</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     {{-- end section1 --}}
 
     {{-- strat section2 --}}
@@ -71,7 +13,7 @@
             <div class="w-full  px-5 py-5">
                 <div class="container mx-auto py-3 px-3 ">
                     <div
-                        class="w-full rounded-full shadow-lg bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30%  shadow-sky-400/50 py-3 mx-auto lg:w-2/3  text-center">
+                        class="w-full px-3 rounded-full shadow-lg bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30%  shadow-sky-400/50 py-3 mx-auto lg:w-2/3  text-center">
                         <h1 class="text-3xl font-bold text-gray-700 font-mono">Silahkan Kunjungi Kantor Kami</h1>
                     </div>
                     <div class="mt-12 flex justify-center ">
@@ -93,7 +35,7 @@
             <div class="w-full lg:w-2/3 px-5 py-5 mx-auto">
                 <div class="container mx-auto w-full mb-4 ">
                     <div
-                        class="lg:w-2/3 w-full mx-auto rounded-full bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30%  shadow-lg shadow-sky-400/50 bg-opacity-50">
+                        class="lg:w-2/3  w-full mx-auto rounded-full bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30%  shadow-lg shadow-sky-400/50 bg-opacity-50">
                         <h1 class="text-3xl font-bold text-gray-700 font-mono text-center py-5">For Massage to</h1>
                     </div>
                 </div>
@@ -117,93 +59,70 @@
                             id="" cols="30" rows="10" placeholder="Silahkan isi pesan anda"></textarea>
                     </div>
                 </form>
+                <button type="submit" class="px-2 py-3 bg-gray-100 border rounded-lg overflow-hidden w-40 mx-3 border-blue-400 shadow-lg text-blue-600 
+                text-lg font-semibold transition ease-in-out duration-500 hover:bg-blue-500 hover:text-gray-100 hover:shadow-lg hover:shadow-blue-600">Kirim</button>
             </div>
         </div>
     </section>
     {{-- end section2 --}}
 
     {{-- start section3 --}}
-    <section class="container lg:mx-auto lg:w-1/2 mb-5 px-3  mt-5 ">
-        <div
-            class="w-full mb-12 rounded-full shadow-lg  shadow-sky-400/50 py-3  lg:w-80 bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30% text-center loncat-loncat">
-            <h1 class="text-4xl font-bold text-gray-700 font-mono">For massage</h1>
-            <h1 class="text-3xl text-red-600 font-bold">Juarana <span class="text-blue-600">Mandiri</span></h1>
-        </div>
-    </section>
-    <section class="w-full mb-3 px-4">
-        <div class="container w-full mx-auto">
-            <div class="w-full px-4 py-5 flex flex-wrap justify-center gap-6">
-                <div
-                    class="border-2 bg-gradient-to-tl from-white  to-cyan-300  bg-opacity-30 backdrop-blur-20 rounded-xl shadow-lg animate-fadeInLeft shadow-gray-300/50 overflow-hidden transition duration-300 ease-in-out hover:shadow-cyan-400 hover:-translate-y-2
-                                hover:border-2 hover:border-cyan-300 lg:w-64 w-2/3 h-80 ">
-                    <div class="flex flex-col items-center ">
-                        <div class="mb-3  w-full px-3 py-5  ">
-                            <h1 class="text-1xl font-bold ">Nama</h1>
-                        </div>
-                        <div class="text-center h-80 px-5 py-5 items-center ">
-                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional
-                                untuk
-                                berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
-                                berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="border-2 bg-gradient-to-tl from-white  to-cyan-300  bg-opacity-30 backdrop-blur-20 rounded-xl shadow-lg animate-fadeInLeft shadow-gray-300/50 overflow-hidden transition duration-300 ease-in-out hover:shadow-cyan-400 hover:-translate-y-2
-                                hover:border-2 hover:border-cyan-300 lg:w-64 w-2/3 h-80 ">
-                    <div class="flex flex-col items-center ">
-                        <div class="mb-3  w-full px-3 py-5  ">
-                            <h1 class="text-1xl font-bold ">Nama</h1>
-                        </div>
-                        <div class="text-center h-80 px-5 py-5 items-center ">
-                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional
-                                untuk
-                                berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
-                                berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="border-2 bg-gradient-to-tl from-white  to-cyan-300  bg-opacity-30 backdrop-blur-20 rounded-xl shadow-lg animate-fadeInLeft shadow-gray-300/50 overflow-hidden transition duration-300 ease-in-out hover:shadow-cyan-400 hover:-translate-y-2
-                                hover:border-2 hover:border-cyan-300 lg:w-64 w-2/3 h-80 ">
-                    <div class="flex flex-col items-center ">
-                        <div class="mb-3  w-full px-3 py-5  ">
-                            <h1 class="text-1xl font-bold ">Nama</h1>
-                        </div>
-                        <div class="text-center h-80 px-5 py-5 items-center ">
-                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional
-                                untuk
-                                berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
-                                berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="border-2 bg-gradient-to-tl from-white  to-cyan-300  bg-opacity-30 backdrop-blur-20 rounded-xl shadow-lg animate-fadeInLeft shadow-gray-300/50 overflow-hidden transition duration-300 ease-in-out hover:shadow-cyan-400 hover:-translate-y-2
-                                hover:border-2 hover:border-cyan-300 lg:w-64 w-2/3 h-80 ">
-                    <div class="flex flex-col items-center ">
-                        <div class="mb-3  w-full px-3 py-5  ">
-                            <h1 class="text-1xl font-bold ">Nama</h1>
-                        </div>
-                        <div class="text-center h-80 px-5 py-5 items-center ">
-                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional
-                                untuk
-                                berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
-                                berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
-                        </div>
-                    </div>
-                </div>
 
-
-
-            </div>
-
-        </div>
-
-    </section>
     {{-- End section 3 --}}
 
     {{-- star section 4 --}}
+    <div class="max-w-4xl mx-auto lg:mr-auto lg:mx-3  px-4 py-8">
+        <div class="flex flex-wrap justify-between items-center mb-6">
+            <div
+                class="w-full  mb-12 rounded-full shadow-lg  shadow-sky-400/50 py-3  lg:w-80 bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30% text-center loncat-loncat">
+                <h1 class="text-4xl font-bold text-gray-700 font-mono">For massage</h1>
+                <h1 class="text-3xl text-red-600 font-bold">Juarana <span class="text-blue-600">Mandiri</span></h1>
+            </div>
+            <div class="flex gap-2">
+                <button id="prevBtn"
+                    class="bg-blue-300 hover:bg-blue-600 text-gray-800 p-2 rounded-full transition-colors focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="nextBtn"
+                    class="bg-blue-300 hover:bg-blue-600 text-gray-800 p-2 rounded-full transition-colors focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
 
+        <div id="sliderContainer"
+            class="flex border-2 rounded-lg bg-gray-300 border-gray-200 py-3 px-2 gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-none pb-4">
+            <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+
+                <h3 class="text-lg font-semibold mb-2">Service AC</h3>
+                <p class="text-gray-600 text-sm">Cuci AC, tambah freon, dan perbaikan bongkar pasang AC bergaransi.</p>
+            </div>
+
+            <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+
+                <h3 class="text-lg font-semibold mb-2">Instalasi Listrik</h3>
+                <p class="text-gray-600 text-sm">Pemasangan instalasi baru, perbaikan korsleting, dan perapian kabel.</p>
+            </div>
+
+            <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+
+                <h3 class="text-lg font-semibold mb-2">Perbaikan Pompa</h3>
+                <p class="text-gray-600 text-sm">Service pompa air mati total, suara bising, atau air tidak naik.</p>
+            </div>
+
+            <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+
+                <h3 class="text-lg font-semibold mb-2">Perawatan Rutin</h3>
+                <p class="text-gray-600 text-sm">Kontrak perawatan berkala untuk kantor, ruko, maupun rumah tinggal.</p>
+            </div>
+
+        </div>
+    </div>
     {{-- end section 4 --}}
 @endsection
