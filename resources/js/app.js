@@ -20,6 +20,7 @@ hamburger.addEventListener("click", function () {
 document.addEventListener("click", function (e) {
     if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove("active");
+         hamburger.classList.toggle("hamburger-active");
     }
 });
 
