@@ -7,7 +7,7 @@
     <section class="w-full  bg-cover bg-no-repeat bg-center"
         style="background-image: url('{{ asset('images/latarCV.jpg') }}') ">
         <div class="container w-full px-12 py-12  ">
-            <h1 class="lg:text-8xl animate-scaleIn-delay-200 text-5xl font-semibold text-red-600">Jumrana <span
+            <h1 class="lg:text-8xl animate-scaleIn-delay-200 text-5xl font-semibold text-red-600">Juarana <span
                     class="text-blue-600">Mandiri</span>
             </h1>
             <p class="lg:text-4xl text-2xl animate-scaleIn-delay-200 text-gray-800 font-bold lg:w-1/2">Pemasangan interior
@@ -24,7 +24,7 @@
             <div class="max-w-6xl ">
                 <div class="grid grid-cols-2  lg:grid-cols-4 md:grid-cols-2 gap-6 ">
                     <div
-                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3 border-2 border-blue-400 bg-opacity-40 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3 border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                         <div class="flex flex-col items-center p-6">
                             <h1 class="text-3xl font-bold text-black">1</h1>
                             <div class="text-center ">
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div
-                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-40 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                         <div class="flex flex-col items-center p-6">
                             <h1 class="text-3xl font-bold text-black">5+</h1>
                             <div class="text-center">
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div
-                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-40 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                         <div class="flex flex-col items-center p-6">
                             <h1 class="text-3xl font-bold text-black">15+</h1>
                             <div class="text-center">
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div
-                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-40 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                        class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                         <div class="flex flex-col items-center p-6">
                             <h1 class="text-3xl font-bold text-black">4+</h1>
                             <div class="text-center">
@@ -77,7 +77,7 @@
                     <div class="mt-12 flex justify-center ">
                         <iframe data-aos="flip-left" data-aos-duration="1000"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.0230144253837!2d119.52321527600833!3d-5.099979994876951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbefb9d871803d1%3A0x1e25201d9d13e800!2sJl.%20Permata%20Sudiang%20Raya%20No.30%2C%20Sudiang%20Raya%2C%20Kec.%20Biringkanaya%2C%20Kota%20Makassar%2C%20Sulawesi%20Selatan%2090552!5e0!3m2!1sid!2sid!4v1779960990472!5m2!1sid!2sid"
-                            class="w-full h-80 lg:w-2/3 lg:h-80 rounded-xl shadow-lg shadow-sky-500/50" allowfullscreen=""
+                            class="w-full h-80 lg:w-2/3 lg:h-80 rounded-xl shadow-lg shadow-gray-400/40" allowfullscreen=""
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -92,7 +92,8 @@
             </div>
             <div class="w-full lg:w-2/3 px-5 py-5 mx-auto">
                 <div class="container mx-auto w-full mb-4 ">
-                    <div class="lg:w-2/3 w-full mx-auto rounded-full bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30%  shadow-lg shadow-sky-400/50 bg-opacity-50">
+                    <div
+                        class="lg:w-2/3 w-full mx-auto rounded-full bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30%  shadow-lg shadow-sky-400/50 bg-opacity-50">
                         <h1 class="text-3xl font-bold text-gray-700 font-mono text-center py-5">For Massage to</h1>
                     </div>
                 </div>
@@ -140,7 +141,8 @@
                             <h1 class="text-1xl font-bold ">Nama</h1>
                         </div>
                         <div class="text-center h-80 px-5 py-5 items-center ">
-                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional untuk
+                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional
+                                untuk
                                 berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
                                 berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
                         </div>
@@ -154,7 +156,8 @@
                             <h1 class="text-1xl font-bold ">Nama</h1>
                         </div>
                         <div class="text-center h-80 px-5 py-5 items-center ">
-                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional untuk
+                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional
+                                untuk
                                 berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
                                 berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
                         </div>
@@ -168,7 +171,8 @@
                             <h1 class="text-1xl font-bold ">Nama</h1>
                         </div>
                         <div class="text-center h-80 px-5 py-5 items-center ">
-                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional untuk
+                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional
+                                untuk
                                 berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
                                 berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
                         </div>
@@ -182,15 +186,16 @@
                             <h1 class="text-1xl font-bold ">Nama</h1>
                         </div>
                         <div class="text-center h-80 px-5 py-5 items-center ">
-                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional untuk
+                            <p class="text-sm font-semibold text-gray-700">Kami menyediakan layanan tukang profesional
+                                untuk
                                 berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
                                 berpengalaman dengan hasil yang rapi, berkualitas, dan terpercaya.</p>
                         </div>
                     </div>
                 </div>
-                
-                
-                
+
+
+
             </div>
 
         </div>
