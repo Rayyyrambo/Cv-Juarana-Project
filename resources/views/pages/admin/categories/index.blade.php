@@ -60,8 +60,8 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td class="d-flex justify-content-end">
-                                            <a href="{{ route('admin.categories.edit', $item->id) }}" class="btn btn-success btn-sm mx-3">Edit</a>
-                                            <form action="{{ route('admin.categories.destroy', $item->id) }}" method="post">
+                                            <a href="{{ route('admin.products.edit', $item->id) }}" class="btn btn-success btn-sm mx-3">Edit</a>
+                                            <form action="{{ route('admin.products.destroy', $item->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button class="btn btn-danger btn-sm" type="submit">

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
@@ -12,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.products.index');
+        $products = Product::latest('created_at')->get();
+        return view('pages.admin.products.index', compact('products'));
     }
 
     /**
@@ -20,7 +23,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view ('pages.admin.products.create', compact('categories'));
     }
 
     /**
@@ -28,7 +32,34 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $data = $request->validate([
+                'category_id'=>'required|string|exists:categories,id',
+                // 'user'=>'required|string|max:255',
+                'name_product'=>'required|string|max:255',
+                'description'=>'nullable|string',
+                'stock'=>'required|integer|min:0',
+                'price'=>'required|numeric|min:0',
+                'image'=>'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:2048',
+                
+
+
+            ]);
+
+            if($request->hasFile('image')){
+                $file = $request->File('image');
+                $imageName = time() . '_' . str_replace(' ', '_', $file->getClientOriginalName());
+                $file->storeAs('products', $imageName, 'public');
+                $data['image']=$imageName;
+            }
+
+            $data['user_id']=auth()->id();
+            $data['user']=auth()->user()->name; 
+            Product::create($data);
+            return to_route('admin.products.index')->with('success', 'Produk berhasil di tambahkan');
+        } catch (\Throwable $th) {
+            return back()->with('error', $th->getMessage());
+        }
     }
 
     /**
@@ -44,7 +75,9 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $products = Product::findOrFail($id);
+        $categories = Category::all();
+        return view('pages.admin.products.edit', compact('products', 'categories'));
     }
 
     /**
@@ -52,7 +85,35 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $products = Product::findOrFail($id);
+        try {
+            $data = $request->validate([
+                'category_id'=>'required|string|exists:categories,id',
+                // 'user'=>'required|string|max:255',
+                'name_product'=>'required|string|max:255',
+                'description'=>'nullable|string',
+                'stock'=>'required|integer|min:0',
+                'price'=>'required|numeric|min:0',
+                'image'=>'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:2048',
+                
+
+
+            ]);
+
+            if($request->hasFile('image')){
+                $file = $request->File('image');
+                $imageName = time() . '_' . str_replace(' ', '_', $file->getClientOriginalName());
+                $file->storeAs('products', $imageName, 'public');
+                $data['image']=$imageName;
+            }
+
+            $data['user_id']=auth()->id();
+            $data['user']=auth()->user()->name; 
+            $products->update($data);
+            return to_route('admin.products.index')->with('success', 'Produk berhasil di tambahkan');
+        } catch (\Throwable $th) {
+        return back()->with('error', $th->getMeassage()); //throw $th;
+        }
     }
 
     /**
@@ -60,6 +121,12 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try {
+            $products = Product::findOrFail($id);
+            $products->delete();
+            return to_route('admin.products.index')->with('success', 'Produk berhasil di hapus');
+        } catch (\Throwable $th) {
+            return back()->with('error', $th->getMessage());
+        }
     }
 }
