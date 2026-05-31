@@ -15,6 +15,12 @@ hamburger.addEventListener("click", function () {
     navMenu.classList.toggle("active");
 });
 
+// kategori
+const kategoriMenu = document.querySelector(".kategori-menu");
+document.querySelector("#kategori").onclick = () => {
+    kategoriMenu.classList.toggle("kategori-active");
+};
+
 // klik di luar elemen
 
 document.addEventListener("click", function (e) {

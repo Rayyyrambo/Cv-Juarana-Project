@@ -1,6 +1,6 @@
 <section class="w-full  bg-cover bg-no-repeat bg-center"
     style="background-image: url('{{ asset('images/latarCV.jpg') }}') ">
-    <header class="bg-teal-300 bg-opacity-10   shadow-lg shadow-cyan-500/20  p-3 lg:w-full w-full">
+    <header class="bg-teal-300 bg-opacity-10 shadow-lg shadow-cyan-500/20  p-3 lg:w-full w-full">
         <div class="px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between relative">
                 <div class="md:flex md:items-center">
@@ -9,55 +9,77 @@
                     </h1>
                 </div>
                 <nav id="NavMenu"
-                    class="navbar-menu lg:mx-3 lg:bg-white lg:background-bluer lg:bg-opacity-30 lg:py-2 lg:px-3 
+                    class="navbar-menu lg:mx-3 lg:bg-white lg:background-bluer   lg:bg-opacity-30 lg:py-2 lg:px-3 
                         lg:rounded-full lg:w-1/2 lg:shadow-lg lg:shadow-blue-700/50   lg:border lg:border-blue-500">
+
                     <ul class="block justify-end lg:flex lg:justify-evenly   ">
                         <li class="group  lg:mx-3 hover:bg-blue-400 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex   mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-blue-800 lg:text-1xl  transition group-hover:text-blue-700"
+                            <a class="flex   mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:lg:text-blue-700 lg:text-1xl  transition group-hover:text-blue-700"
                                 href="{{ route('project') }}">
                                 Project
                             </a>
                         </li>
                         <li class="group lg:mx-3 hover:bg-blue-400 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-blue-600 lg:text-1xl  transition group-hover:text-blue-700"
+                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-blue-700"
                                 href="{{ route('home') }}">
                                 Home
                             </a>
                         </li>
 
                         <li class="group lg:mx-3 hover:bg-red-400 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-blue-600  lg:text-1xl transition group-hover:text-red-700"
+                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700  lg:text-1xl transition group-hover:text-red-700"
                                 href="{{ route('service') }}">
                                 Services
                             </a>
                         </li>
 
                         <li class="group lg:mx-3 hover:bg-red-400 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-blue-600 lg:text-1xl  transition group-hover:text-red-700"
+                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-red-700"
                                 href="{{ route('product') }}">
                                 Product
                             </a>
+
+                        <li class="group  lg:mx-3 hover:bg-red-400 transition ease-in-out duration-500 p-1 rounded-lg"
+                            >
+                            
+                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-red-700"
+                                href="#" id="kategori">
+                                Kategori
+                            </a>
+                            <div class="mobile-kategori lg:hidden">
+
+                            </div>
                         </li>
-
-
                     </ul>
+
+
                 </nav>
+                <div class="kategori-menu hidden lg:block" >
+
+                </div>
 
 
 
                 <div class="flex items-center gap-4">
                     <div class="hidden sm:flex sm:gap-4">
-                        <a class="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-cyan-300 shadow-sm"
-                            href="{{ route('login') }}">
-                            Login
-                        </a>
-
+                        @if (Auth::check())
+                            <a class="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-cyan-300 shadow-sm"
+                                href="{{ route('admin.dashboard') }}">
+                                Dashboard
+                            </a>
+                        @else
+                            <a class="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-cyan-300 shadow-sm"
+                                href="{{ route('login') }}">
+                                Login
+                            </a>
+                        @endif
                         <div class="hidden sm:flex">
                             <a class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
                                 href="{{ route('register') }}">
                                 Register
                             </a>
                         </div>
+
                     </div>
 
                     <div class="flex items-center px-4">
