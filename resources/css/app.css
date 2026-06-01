@@ -23,7 +23,7 @@
     backdrop-filter: blur(5px);
 }
 
-.navbar-menu{
+.navbar-menu {
     position: fixed;
     top: 87px;
     right: -100%;
@@ -37,52 +37,72 @@
     @apply overflow-y-auto;
     @apply bg-opacity-60;
     @apply z-50;
-    
+
+    /* Tablet */
+    /* @apply md:static md:w-auto md:h-auto md:bg-transparent md:top-auto md:max-w-none md:overflow-y-visible; */
+
     /* Desktop */
     @apply lg:static lg:w-auto lg:h-auto lg:bg-transparent lg:top-auto lg:max-w-none;
 }
 
-.active{
+.active {
     right: 0;
 }
 
-.kategori-menu{
-    
+.kategori-menu {
     position: absolute;
-    right: 20%; 
-    @apply w-96;
-    @apply h-24;
-    @apply bg-slate-500;
+    right: 24%;
+    @apply w-80;
+    
+    @apply bg-slate-200;
     top: 100%;
-    transform: scaleY(0);
+    transform: scaleY(1);
     transform-origin: top;
     transition: 0.3s;
     /* @apply bg-gray-500; */
     /* top: 100%; */
-    
 }
 
-.kategori-active{
+@media (width <= 1391px) {
+    .kategori-menu {
+    position: absolute;
+    right: 18%;
+    @apply w-80;
+    
+    @apply bg-slate-500;
+    @apply z-50;
+    top: 70px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+    
+}
+}
+
+
+
+
+
+.kategori-active {
     transform: scaleY(1);
 }
 
-.mobile-kategori{
+.mobile-kategori {
     position: absolute;
-     
+
     @apply w-full;
     @apply h-1/2;
     @apply bg-slate-500;
     transform: scaleY(0);
-    top: 30%;
-   
+    top: 29%;
+    transition: 0.5s ease-in-out;
+
     transform-origin: top;
 }
 
-.mobile-categori-active{
+.mobile-categori-active {
     transform: scaleY(1);
 }
-
-
 
 .background-bluer {
     backdrop-filter: blur(5px);
@@ -205,31 +225,28 @@
     animation: loncat 3s infinite;
 }
 
-
 @keyframes loncat {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(20px);
     }
-   
 }
 
 @layer utilities {
-  /* Menyembunyikan scrollbar di Chrome, Safari, dan Opera */
-  .scrollbar-none::-webkit-scrollbar {
-    display: none;
-  }
-  /* Menyembunyikan scrollbar di IE, Edge, dan Firefox */
-  .scrollbar-none {
-    -ms-overflow-style: none;  /* IE dan Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+    /* Menyembunyikan scrollbar di Chrome, Safari, dan Opera */
+    .scrollbar-none::-webkit-scrollbar {
+        display: none;
+    }
+    /* Menyembunyikan scrollbar di IE, Edge, dan Firefox */
+    .scrollbar-none {
+        -ms-overflow-style: none; /* IE dan Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
 
-.border-bottom{
+.border-bottom {
     border-bottom: 1px solid black;
-    
-    
 }

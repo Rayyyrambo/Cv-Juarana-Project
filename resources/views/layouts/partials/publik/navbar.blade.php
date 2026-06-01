@@ -9,10 +9,10 @@
                     </h1>
                 </div>
                 <nav id="NavMenu"
-                    class="navbar-menu lg:mx-3 lg:bg-white lg:background-bluer   lg:bg-opacity-30 lg:py-2 lg:px-3 
-                        lg:rounded-full lg:w-1/2 lg:shadow-lg lg:shadow-blue-700/50   lg:border lg:border-blue-500">
+                    class="navbar-menu   lg:mx-3 lg:bg-white lg:background-bluer   lg:bg-opacity-30 lg:py-2 lg:px-3 
+                        lg:rounded-full lg:w-1/2 lg:shadow-lg lg:shadow-blue-700/50  lg:border lg:border-blue-500">
 
-                    <ul class="block justify-end lg:flex lg:justify-evenly   ">
+                    <ul class="block  justify-end lg:flex lg:justify-evenly   ">
                         <li class="group  lg:mx-3 hover:bg-blue-400 transition ease-in-out duration-500 p-1 rounded-lg">
                             <a class="flex   mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:lg:text-blue-700 lg:text-1xl  transition group-hover:text-blue-700"
                                 href="{{ route('project') }}">
@@ -39,14 +39,13 @@
                                 Product
                             </a>
 
-                        <li class="group  lg:mx-3 hover:bg-red-400 transition ease-in-out duration-500 p-1 rounded-lg"
-                            >
-                            
+                        <li class="group  lg:mx-3 hover:bg-red-400 transition ease-in-out duration-500 p-1 rounded-lg">
+
                             <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-red-700"
                                 href="#" id="kategori">
                                 Kategori
                             </a>
-                            <div class="mobile-kategori lg:hidden">
+                            <div class="mobile-kategori bg-gray-200 lg:hidden">
 
                             </div>
                         </li>
@@ -54,8 +53,25 @@
 
 
                 </nav>
-                <div class="kategori-menu hidden lg:block" >
-
+                <div class="kategori-menu hidden w-full rounded-xl border border-gray-600   lg:w-64  lg:block">
+                    <div class="w-full px-3 py-2 ">
+                        <div>
+                            <a class="text-1xl">Kategori 1</a>
+                        </div>
+                        <div>
+                            <a class="text-1xl">Kategori 1</a>
+                        </div>
+                        <div>
+                            <a class="text-1xl">Kategori 1</a>
+                        </div>
+                        <div>
+                            <a class="text-1xl">Kategori 1</a>
+                        </div>
+                        <div>
+                            <a class="text-1xl">Kategori 1</a>
+                        </div>
+                        
+                    </div>
                 </div>
 
 

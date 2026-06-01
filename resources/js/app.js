@@ -15,17 +15,25 @@ hamburger.addEventListener("click", function () {
     navMenu.classList.toggle("active");
 });
 
-// kategori
+// kategori-menu/mobile categori
 const kategoriMenu = document.querySelector(".kategori-menu");
+const mobileKategori = document.querySelector(".mobile-kategori");
 document.querySelector("#kategori").onclick = () => {
     kategoriMenu.classList.toggle("kategori-active");
+    mobileKategori.classList.toggle("mobile-categori-active");
 };
 
-// klik di luar elemen
+// mobile categori
 
+// klik di luar elemen
+const kategoriKlik = document.querySelector("#kategori");
 document.addEventListener("click", function (e) {
     if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove("active");
+    }
+
+    if (!kategoriKlik.contains(e.target) && !kategoriMenu.contains(e.target)) {
+        kategoriMenu.classList.remove("kategori-active");
     }
 });
 
