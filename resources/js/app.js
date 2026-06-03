@@ -18,22 +18,28 @@ hamburger.addEventListener("click", function () {
 // kategori-menu/mobile categori
 const kategoriMenu = document.querySelector(".kategori-menu");
 const mobileKategori = document.querySelector(".mobile-kategori");
-document.querySelector("#kategori").onclick = () => {
+document.querySelector("#kategori").onclick = (e) => {
     kategoriMenu.classList.toggle("kategori-active");
     mobileKategori.classList.toggle("mobile-categori-active");
+    e.preventDefault();
 };
 
-// mobile categori
+
 
 // klik di luar elemen
 const kategoriKlik = document.querySelector("#kategori");
 document.addEventListener("click", function (e) {
+    // untuk hamburger 
     if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove("active");
     }
-
+    // untuk ketegori
     if (!kategoriKlik.contains(e.target) && !kategoriMenu.contains(e.target)) {
         kategoriMenu.classList.remove("kategori-active");
+    }
+    // untuk modal pada product
+    if(e.target === detailModal){
+        detailModal.classList.add("hidden");
     }
 });
 
@@ -56,10 +62,42 @@ const nextBtn = document.getElementById("nextBtn");
 // Menentukan jarak scroll setiap kali tombol diklik (lebar kartu + gap)
 const scrollAmount = 344;
 
-nextBtn.addEventListener("click", () => {
-    container.scrollLeft += scrollAmount;
+if (nextBtn && container) {
+    nextBtn.addEventListener("click", () => {
+        container.scrollLeft += scrollAmount;
+    });
+}
+
+if (prevBtn && container) {
+    prevBtn.addEventListener("click", () => {
+        container.scrollLeft -= scrollAmount;
+    });
+}
+
+// modal box
+const detailModal = document.querySelector("#modalProduct");
+const buttonView = document.querySelectorAll(".view-button-product");
+const closeBtn = document.querySelector("#closeModalBtn");
+
+// Open modal ketika check button diklik
+buttonView.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+        detailModal.classList.remove("hidden");
+    });
 });
 
-prevBtn.addEventListener("click", () => {
-    container.scrollLeft -= scrollAmount;
+// Close modal ketika X button diklik
+if (closeBtn) {
+    closeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        detailModal.classList.add("hidden");
+    });
+}
+
+// Close modal ketika tekan ESC
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !detailModal.classList.contains("hidden")) {
+        detailModal.classList.add("hidden");
+    }
 });

@@ -23,7 +23,11 @@
     backdrop-filter: blur(5px);
 }
 
-.navbar-menu {
+.modal-view{
+    display: flex;
+}
+
+.navbar-menu{
     position: fixed;
     top: 87px;
     right: -100%;
@@ -56,7 +60,7 @@
     
     @apply bg-slate-200;
     top: 100%;
-    transform: scaleY(1);
+    transform: scaleY(0);
     transform-origin: top;
     transition: 0.3s;
     /* @apply bg-gray-500; */
