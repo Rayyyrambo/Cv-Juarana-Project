@@ -1,6 +1,7 @@
 // import './bootstrap';
 
 import Alpine from "alpinejs";
+// import { document } from "postcss";
 
 window.Alpine = Alpine;
 
@@ -24,12 +25,10 @@ document.querySelector("#kategori").onclick = (e) => {
     e.preventDefault();
 };
 
-
-
 // klik di luar elemen
 const kategoriKlik = document.querySelector("#kategori");
 document.addEventListener("click", function (e) {
-    // untuk hamburger 
+    // untuk hamburger
     if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove("active");
     }
@@ -38,8 +37,16 @@ document.addEventListener("click", function (e) {
         kategoriMenu.classList.remove("kategori-active");
     }
     // untuk modal pada product
-    if(e.target === detailModal){
+    if (e.target === detailModal) {
         detailModal.classList.add("hidden");
+    }
+    // untuk modal maps
+    if (e.target === modalMaps) {
+        modalMaps.classList.add("hidden");
+    }
+    // untuk modal massage
+    if (e.target === pesanModal) {
+        pesanModal.classList.add("hidden");
     }
 });
 
@@ -74,7 +81,7 @@ if (prevBtn && container) {
     });
 }
 
-// modal box
+// modal box product
 const detailModal = document.querySelector("#modalProduct");
 const buttonView = document.querySelectorAll(".view-button-product");
 const closeBtn = document.querySelector("#closeModalBtn");
@@ -99,5 +106,58 @@ if (closeBtn) {
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !detailModal.classList.contains("hidden")) {
         detailModal.classList.add("hidden");
+    }
+});
+
+//modal box maps
+const modalMaps = document.querySelector("#mapsModal");
+const buttonMaps = document.querySelectorAll(".button-location");
+const closemaps = document.querySelector("#closeMapsBtn");
+
+// Open modal ketika check button diklik
+buttonMaps.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalMaps.classList.remove("hidden");
+    });
+});
+
+// Close modal ketika X button diklik
+if (closemaps) {
+    closemaps.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalMaps.classList.add("hidden");
+    });
+}
+
+// Close modal ketika tekan ESC
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modalMaps.classList.contains("hidden")) {
+        modalMaps.classList.add("hidden");
+    }
+});
+
+// box massage maps
+const pesanModal = document.querySelector("#masageModal");
+const massageButton = document.querySelectorAll(".button-Massage");
+const closeMassage = document.querySelector("#closeMassageBtn");
+
+massageButton.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+        pesanModal.classList.remove("hidden");
+    });
+});
+
+if (closeMassage) {
+    closeMassage.addEventListener("click", (e) => {
+        e.preventDefault();
+        pesanModal.classList.add("hidden");
+    });
+}
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !pesanModal.classList.contains("hidden")) {
+        pesanModal.classList.add("hidden");
     }
 });

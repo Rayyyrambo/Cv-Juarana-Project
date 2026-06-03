@@ -4,7 +4,7 @@
 @section('content')
     {{-- start section1 --}}
 
-   
+
     {{-- end section1 --}}
 
     {{-- strat section2 --}}
@@ -12,56 +12,55 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 ">
             <div class="w-full  px-5 py-5">
                 <div class="container mx-auto py-3 px-3 ">
-                    <div
-                        class="w-full px-3 rounded-full shadow-lg bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30%  shadow-sky-400/50 py-3 mx-auto lg:w-2/3  text-center">
-                        <h1 class="text-3xl font-bold text-gray-700 font-mono">Silahkan Kunjungi Kantor Kami</h1>
-                    </div>
-                    <div class="mt-12 flex justify-center ">
-                        <iframe data-aos="flip-left" data-aos-duration="1000"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.0230144253837!2d119.52321527600833!3d-5.099979994876951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbefb9d871803d1%3A0x1e25201d9d13e800!2sJl.%20Permata%20Sudiang%20Raya%20No.30%2C%20Sudiang%20Raya%2C%20Kec.%20Biringkanaya%2C%20Kota%20Makassar%2C%20Sulawesi%20Selatan%2090552!5e0!3m2!1sid!2sid!4v1779960990472!5m2!1sid!2sid"
-                            class="w-full h-80 lg:w-2/3 lg:h-80 rounded-xl shadow-lg shadow-gray-400/40" allowfullscreen=""
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                    <div data-aos="fade-right" data-aos-duration="1000" class="mt-3 w-2/3 mx-auto">
-                        <h1 class="font-bold ">Kantor buka pada pukul:</h1>
-                        <p class="font-mono text-gray-800">8:30 WITA</p>
-                        <hr class="border-gray-600 w-64">
-                        <h1 class="font-bold ">Kantor tutup pada pukul:</h1>
-                        <p class="text-gray-800 font-bold">5:30 WITA</p>
+                    <div class="bg-slate-300 rounded-lg w-full px-3 py-5 relative shadow-lg">
+                        <div
+                            class="absolute top-10 left-0 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 via-sky-500 to-sky-800 blur-2xl opacity-70 -translate-x-8/2 -translate-y-1/2">
+                        </div>
+                        <div
+                            class="absolute bottom-0 right-0 w-24 h-20 rounded-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-2xl opacity-70 -translate-x-3/2 -translate-y-1/1">
+                        </div>
+                        <h1 class="text-2xl text-center text-gray-800 font-bold">Location from <span
+                                class="text-red-500 font-bold">Juarana</span> <span
+                                class="text-blue-500 font-bold">Mandiri</span>
+                        </h1>
+                        <p class="w-90 text-center text-gray-600 text-lg font-bold">Juarana Mandiri siap melayani kebutuhan
+                            konstruksi, pemasangan, dan service profesional. Kunjungi
+                            lokasi kami atau lihat rute perjalanan melalui peta untuk mendapatkan layanan terbaik.</p>
+                        <hr class="w-full px-2 border border-gray-400 mt-2">
+                        <div class="w-2/3 mx-auto  px-5 py-5 flex justify-center  rounded-lg mt-3">
+                            <a href="#" 
+                                class="bg-blue-500 button-location py-3 px-3 text-2xl font-light rounded-lg hover:bg-blue-700 hover:text-gray-100 hover:shadow-lg hover:shadow-blue-500 tarnsition ease-in-out duration-300 shadow-lg ">View
+                                To Locations</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="w-full lg:w-2/3 px-5 py-5 mx-auto">
-                <div class="container mx-auto w-full mb-4 ">
-                    <div
-                        class="lg:w-2/3  w-full mx-auto rounded-full bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30%  shadow-lg shadow-sky-400/50 bg-opacity-50">
-                        <h1 class="text-3xl font-bold text-gray-700 font-mono text-center py-5">For Massage to</h1>
+            <div class="w-full  px-5 py-5 mx-auto">
+                <div class="container mx-auto py-3 px-3 ">
+                    <div class="bg-slate-300 rounded-lg w-full px-3 py-5 relative shadow-lg">
+                        <div
+                            class="absolute top-10 left-0 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 via-sky-500 to-sky-800 blur-2xl opacity-70 -translate-x-8/2 -translate-y-1/2">
+                        </div>
+                        <div
+                            class="absolute bottom-0 right-0 w-24 h-20 rounded-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-2xl opacity-70 -translate-x-3/2 -translate-y-1/1">
+                        </div>
+                        <h1 class="text-2xl text-center text-gray-800 font-bold">Massage For <span
+                                class="text-red-500 font-bold">Juarana</span> <span
+                                class="text-blue-500 font-bold">Mandiri</span>
+                        </h1>
+                        <p class="w-90 text-center text-gray-600 text-lg font-bold">Masukan dan saran dari pelanggan sangat
+                            berarti bagi kami untuk terus meningkatkan kualitas layanan dan memberikan pengalaman terbaik
+                            kepada setiap pelanggan.</p>
+                        <hr class="w-full px-2 border border-gray-400 mt-2">
+                        <div class="w-2/3 mx-auto  px-5 py-5 flex justify-center  rounded-lg mt-3">
+                            <a href="" id=""
+                                class="bg-blue-500 button-Massage py-3 px-3 text-2xl font-light rounded-lg hover:bg-blue-700 hover:text-gray-100 hover:shadow-lg hover:shadow-blue-500 tarnsition ease-in-out duration-300 shadow-lg ">
+                                Massage</a>
+                        </div>
                     </div>
                 </div>
-                <form action="">
-                    <div data-aos="fade-left" data-aos-duration="1000" class="w-full  px-3 mb-8">
-                        <label for="name">Nama</label>
-                        <input type="text" name="" id=""
-                            class="w-full border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                            placeholder="Silahkan isi nama anda">
-                    </div>
-                    <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3 mb-8">
-                        <label for="email">email</label>
-                        <input type="email"
-                            class="w-full  border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                            name="" id="" class="w-full" placeholder="Silahkan isi nama anda">
-                    </div>
-                    <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3">
-                        <label for="pesan">Pesan</label>
-                        <textarea name=""
-                            class="w-full  border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                            id="" cols="30" rows="10" placeholder="Silahkan isi pesan anda"></textarea>
-                    </div>
-                </form>
-                <button type="submit" class="px-2 py-3 bg-gray-100 border rounded-lg overflow-hidden w-40 mx-3 border-blue-400 shadow-lg text-blue-600 
-                text-lg font-semibold transition ease-in-out duration-500 hover:bg-blue-500 hover:text-gray-100 hover:shadow-lg hover:shadow-blue-600">Kirim</button>
             </div>
+        </div>
         </div>
     </section>
     {{-- end section2 --}}
