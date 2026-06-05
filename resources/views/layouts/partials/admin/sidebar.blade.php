@@ -3,7 +3,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                
-                <div class="sidebar-brand-text mx-3">ADIDAS-STORE</div>
+                <div class="sidebar-brand-text mx-3">CV. Juarana Mandiri</div>
             </a>
 
             <!-- Divider -->
@@ -29,6 +29,12 @@
                 <a class="nav-link" href="{{ route('admin.products.index') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Produk</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin.projects.index') }}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Project</span></a>
             </li>
 
             <li class="nav-item">

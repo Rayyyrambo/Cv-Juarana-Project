@@ -142,6 +142,7 @@ const pesanModal = document.querySelector("#masageModal");
 const massageButton = document.querySelectorAll(".button-Massage");
 const closeMassage = document.querySelector("#closeMassageBtn");
 
+// Open modal ketika button diklik
 massageButton.forEach((button) => {
     button.addEventListener("click", (e) => {
         e.preventDefault();
@@ -149,6 +150,7 @@ massageButton.forEach((button) => {
     });
 });
 
+//ketika tombol close di klik
 if (closeMassage) {
     closeMassage.addEventListener("click", (e) => {
         e.preventDefault();
@@ -156,6 +158,7 @@ if (closeMassage) {
     });
 }
 
+// ketika esc di klik
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !pesanModal.classList.contains("hidden")) {
         pesanModal.classList.add("hidden");
