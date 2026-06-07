@@ -57,30 +57,52 @@
     <div class=" bg-slate-600 relative p-5 m-auto w-80  lg:w-96 mt-24 rounded-lg shadow-lg shadow-gray-800">
         <button id="closeMassageBtn"
             class="absolute top-0 right-0 p-2 text-gray-700 hover:text-black text-2xl font-bold">×</button>
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
         <div class="container">
-            <form action="">
-                <div data-aos="fade-left" data-aos-duration="1000" class="w-full  px-3 mb-8">
-                    <label for="name">Nama</label>
-                    <input type="text" name="" id=""
-                        class="w-full border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                        placeholder="Silahkan isi nama anda">
+            <form action="{{ route('masages.store') }}" method="POST" id="massageForm">
+                @csrf
+                <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3 mb-8">
+                    <label for="user" class="block text-sm font-medium text-gray-700 mb-2">Nama</label>
+                    <input type="text" name="user" id="user" value="{{ old('user') }}"
+                        class="w-full border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        placeholder="Silahkan isi nama anda" required>
+                    @error('user')
+                        <span class="text-red-600 text-xs mt-1 block">{{ $message }}</span>
+                    @enderror
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3 mb-8">
-                    <label for="email">email</label>
-                    <input type="email"
-                        class="w-full  border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                        name="" id="" class="w-full" placeholder="Silahkan isi nama anda">
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" name="email" id="email" value="{{ old('email') }}"
+                        class="w-full border  rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        placeholder="Silahkan isi email anda" required>
+                    @error('email')
+                        <span class="text-red-600 text-xs mt-1 block">{{ $message }}</span>
+                    @enderror
                 </div>
-                <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3">
-                    <label for="pesan">Pesan</label>
-                    <textarea name=""
-                        class="w-full  border border-sky-600 bg-sky-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                        id="" cols="30" rows="10" placeholder="Silahkan isi pesan anda"></textarea>
+                <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3 mb-8">
+                    <label for="description" class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
+                    <textarea name="description" id="description"
+                        class="w-full border derror rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        cols="30" rows="10" placeholder="Silahkan isi pesan anda">{{ old('description') }}</textarea>
+                    @error('description')
+                        <span class="text-red-600 text-xs mt-1 block">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="mt-5 px-3">
+                    <button type="submit"
+                        class="px-4 py-2 bg-gray-100 border rounded-lg w-full border-blue-400 shadow-lg text-blue-600 
+                        text-lg font-semibold transition ease-in-out duration-500 hover:bg-blue-500 hover:text-gray-100 hover:shadow-lg hover:shadow-blue-600">Kirim</button>
                 </div>
             </form>
-            <button type="submit"
-                class="px-2 py-3 bg-gray-100 border rounded-lg overflow-hidden w-40 mx-3 border-blue-400 shadow-lg text-blue-600 
-                text-lg font-semibold transition ease-in-out duration-500 hover:bg-blue-500 hover:text-gray-100 hover:shadow-lg hover:shadow-blue-600">Kirim</button>
         </div>
     </div>
 </div>

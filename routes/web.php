@@ -6,6 +6,7 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\Admin\DasboardController;
 use App\Http\Controllers\Admin\CategoriController;
+use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\HomeController;
@@ -16,10 +17,12 @@ Route::get('/service',[ServiceController::class, 'index'])->name('service');
 Route::get('/product', [ProductController::class, 'index'])->name('product');
 Route::get('/project',[ProjectController::class,  'index'])->name('project');
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/masages', [MessageController::class, 'store'])->name('masages.store');
 
 Route::prefix('administrator')->middleware(['auth', 'verified'])->name('admin.')->group(function(){
     Route::get('dashboard',[DasboardController::class, 'index'])->name('dashboard');
     Route::resource('categories', CategoriController::class);
+    Route::resource('masages', MessageController::class);
     Route::resource('projects', AdminProjectController::class);
     Route::resource('products', AdminProductController::class);
 });

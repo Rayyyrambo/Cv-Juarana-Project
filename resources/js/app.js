@@ -164,3 +164,29 @@ document.addEventListener("keydown", (e) => {
         pesanModal.classList.add("hidden");
     }
 });
+
+// Handle form submission success
+// document.addEventListener("DOMContentLoaded", () => {
+//     const successAlert = pesanModal.querySelector(".alert-success");
+//     const errorInputs = pesanModal.querySelectorAll(
+//         "[class*='border-red-500']",
+//     );
+
+//     if (successAlert) {
+//         // Tampilkan modal saat ada success message
+//         pesanModal.classList.remove("hidden");
+
+//         // Auto close modal setelah 2.5 detik
+//         setTimeout(() => {
+//             pesanModal.classList.add("hidden");
+//             // Reset form
+//             const form = pesanModal.querySelector("form");
+//             if (form) form.reset();
+//         }, 2500);
+//     }
+
+//     // Jika ada validation error, tampilkan modal
+//     if (errorInputs.length > 0) {
+//         pesanModal.classList.remove("hidden");
+//     }
+// });
