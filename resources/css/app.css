@@ -57,7 +57,7 @@
     position: absolute;
     right: 24%;
     @apply w-80;
-    
+    @apply z-50;
     @apply bg-slate-200;
     top: 100%;
     transform: scaleY(0);
@@ -93,10 +93,12 @@
 
 .mobile-kategori {
     position: absolute;
-
+    @apply px-3;
+    @apply py-3;
     @apply w-full;
-    @apply h-1/2;
-    @apply bg-slate-500;
+    @apply bg-sky-400;
+    @apply bg-opacity-60;
+    backdrop-filter: blur(5px);
     transform: scaleY(0);
     top: 29%;
     transition: 0.5s ease-in-out;

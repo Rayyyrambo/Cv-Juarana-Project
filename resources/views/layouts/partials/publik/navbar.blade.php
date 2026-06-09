@@ -45,7 +45,17 @@
                                 href="#" id="kategori">
                                 Kategori
                             </a>
-                            <div class="mobile-kategori bg-gray-200 lg:hidden">
+                            <div class="mobile-kategori rounded-lg bg-gray-200 lg:hidden">
+                                @forelse ($categories as $item)
+                                    <div
+                                        class="py-1 px-2 hover:bg-blue-500 transition ease-in-out duration-300  rounded cursor-pointer">
+                                        <a href="#"
+                                            class="text-1xl text-white  font-bold ">{{ $item->name }}</a>
+                                    </div>
+
+                                @empty
+                                    <div class="py-2 px-3 text-gray-500 text-center">Tidak ada kategori</div>
+                                @endforelse
 
                             </div>
                         </li>
@@ -55,22 +65,18 @@
                 </nav>
                 <div class="kategori-menu hidden w-full rounded-xl border border-gray-600   lg:w-64  lg:block">
                     <div class="w-full px-3 py-2 ">
-                        <div>
-                            <a class="text-1xl">Kategori 1</a>
-                        </div>
-                        <div>
-                            <a class="text-1xl">Kategori 1</a>
-                        </div>
-                        <div>
-                            <a class="text-1xl">Kategori 1</a>
-                        </div>
-                        <div>
-                            <a class="text-1xl">Kategori 1</a>
-                        </div>
-                        <div>
-                            <a class="text-1xl">Kategori 1</a>
-                        </div>
-                        
+                        @forelse ($categories as $item)
+                            <div
+                                class="py-1 px-2 hover:bg-blue-500 transition ease-in-out duration-300  rounded cursor-pointer">
+                                <a href="#"
+                                    class="text-1xl text-gray-700 hover:text-gray-200 font-bold ">{{ $item->name }}</a>
+                            </div>
+
+                        @empty
+                            <div class="py-2 px-3 text-gray-500 text-center">Tidak ada kategori</div>
+                        @endforelse
+
+
                     </div>
                 </div>
 

@@ -31,6 +31,7 @@ document.addEventListener("click", function (e) {
     // untuk hamburger
     if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove("active");
+         hamburger.classList.remove("hamburger-active");
     }
     // untuk ketegori
     if (!kategoriKlik.contains(e.target) && !kategoriMenu.contains(e.target)) {

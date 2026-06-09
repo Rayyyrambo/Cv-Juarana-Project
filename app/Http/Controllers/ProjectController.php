@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Project;
 class ProjectController extends Controller
 {
     public function index(){
-        return view('pages.publik.project');
+        $projects = Project::latest()->get();
+        return view('pages.publik.project',compact('projects'));
     }
 }

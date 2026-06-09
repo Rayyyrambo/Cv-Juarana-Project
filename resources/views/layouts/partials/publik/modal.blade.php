@@ -71,31 +71,25 @@
             <form action="{{ route('masages.store') }}" method="POST" id="massageForm">
                 @csrf
                 <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3 mb-8">
-                    <label for="user" class="block text-sm font-medium text-gray-700 mb-2">Nama</label>
-                    <input type="text" name="user" id="user" value="{{ old('user') }}"
-                        class="w-full border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    <label for="user" class="block text-sm font-medium text-gray-200 mb-2">Nama</label>
+                    <input type="text" name="user" id="user"
+                        class="w-full border bg-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                         placeholder="Silahkan isi nama anda" required>
-                    @error('user')
-                        <span class="text-red-600 text-xs mt-1 block">{{ $message }}</span>
-                    @enderror
+
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3 mb-8">
-                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input type="email" name="email" id="email" value="{{ old('email') }}"
-                        class="w-full border  rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    <label for="email" class="block text-sm font-medium text-gray-200 mb-2">Email</label>
+                    <input type="email" name="email" id="email"
+                        class="w-full border bg-gray-300  rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                         placeholder="Silahkan isi email anda" required>
-                    @error('email')
-                        <span class="text-red-600 text-xs mt-1 block">{{ $message }}</span>
-                    @enderror
+
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000" class="w-full px-3 mb-8">
-                    <label for="description" class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
+                    <label for="description" class="block text-sm font-medium text-gray-200 mb-2">Pesan</label>
                     <textarea name="description" id="description"
-                        class="w-full border derror rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                        cols="30" rows="10" placeholder="Silahkan isi pesan anda">{{ old('description') }}</textarea>
-                    @error('description')
-                        <span class="text-red-600 text-xs mt-1 block">{{ $message }}</span>
-                    @enderror
+                        class="w-full border bg-gray-300 derror rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        cols="30" rows="10" placeholder="Silahkan isi pesan anda"></textarea>
+
                 </div>
                 <div class="mt-5 px-3">
                     <button type="submit"
