@@ -14,19 +14,25 @@
             @forelse ($projects as $item)
                 <div class="w-full px-4">
                     <div
-                        class="shadow-xl bg-blue-400 rounded-xl border border-gray-600  mb-10 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                        class="shadow-xl relative  bg-gray-200 rounded-xl border border-gray-600  mb-10 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
+                        <div
+                            class="absolute bottom-0 left-0 w-80 h-20 rounded-full bg-gradient-to-br from-purple-500 via-sky-500 to-sky-800 blur-2xl opacity-30 -translate-x-1/2 ">
+                        </div>
                         <img class="w-full object-cover " src="{{ Storage::url('projects/' . $item->image) }}"
                             alt="{{ $item->name }}">
                         <div class="py-8 px-3">
-                            <div class="bg-blue-600 px-2 py-2 flex  rounded-xl mb-3 items-center justify-center">
+                            <div class="bg-slate-300 shadow-lg border border-gray-500 px-2 py-2 flex  rounded-xl mb-3 items-center justify-center">
                                 <h1 class="text-lg font-bold mb-2">{{ $item->name_project }}</h1>
                             </div>
-                            <p class="text-md font-bold text-gray-300">{{ $item->tanggal_project }}</p>
-                            <p class="text-md font-bold text-gray-300">{{ $item->alamat_project }}</p>
-                            <h1 class="font-semibold text-red-700">Cv.Juarana Mandiri</h1>
-                            <button class="bg-emerald-400 p-3 rounded-xl hover:bg-emerald-700 mt-3">
-                                check
-                            </button>
+                            <p class="text-md font-bold text-gray-800 mt-3">{{ $item->tanggal_project }}</p>
+                            <p class="text-md font-bold text-gray-800 mt-3">{{ $item->alamat_project }}</p>
+                            <h1 class="font-semibold text-red-700 mt-3">Cv.Juarana Mandiri</h1>
+                            <div class="mt-3 p-3 flex justify-end ">
+                                <a href="#"
+                                    class="bg-teal-300 shadow-lg transition ease-in-out duration-300 font-semibold open-project px-3 py-3 rounded-xl  hover:bg-cyan-600"
+                                    data-image="{{ Storage::url('projects/' . $item->image) }}">chek</a>
+                            </div>
+
                         </div>
                     </div>
                 </div>

@@ -31,7 +31,7 @@ document.addEventListener("click", function (e) {
     // untuk hamburger
     if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove("active");
-         hamburger.classList.remove("hamburger-active");
+        hamburger.classList.remove("hamburger-active");
     }
     // untuk ketegori
     if (!kategoriKlik.contains(e.target) && !kategoriMenu.contains(e.target)) {
@@ -48,6 +48,10 @@ document.addEventListener("click", function (e) {
     // untuk modal massage
     if (e.target === pesanModal) {
         pesanModal.classList.add("hidden");
+    }
+
+    if (e.target === modalProjetcs) {
+        modalProjetcs.classList.add("hidden");
     }
 });
 
@@ -110,6 +114,31 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
+// modal box project
+const modalProjetcs = document.querySelector("#modalProject");
+const buttonProject = document.querySelectorAll(".open-project");
+const closeProject = document.querySelector("#closeProjectBtn");
+
+buttonProject.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalProjetcs.classList.remove("hidden");
+    });
+});
+
+if (closeProject) {
+    closeProject.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalProjetcs.classList.add("hidden");
+    });
+}
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modalProjetcs.classList.contains("hidden")) {
+        modalProjetcs.classList.add("hidden");
+    }
+});
+
 //modal box maps
 const modalMaps = document.querySelector("#mapsModal");
 const buttonMaps = document.querySelectorAll(".button-location");
@@ -166,28 +195,44 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-// Handle form submission success
-// document.addEventListener("DOMContentLoaded", () => {
-//     const successAlert = pesanModal.querySelector(".alert-success");
-//     const errorInputs = pesanModal.querySelectorAll(
-//         "[class*='border-red-500']",
-//     );
+// data modal project
+document.addEventListener("DOMContentLoaded", function(){
+    const imagemdl = document.getElementById("modalImgProject");
+    buttonProject.forEach((button) => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const images = this.dataset.image;
+            imagemdl.src = images;
+            
+        });
+    });
+});
 
-//     if (successAlert) {
-//         // Tampilkan modal saat ada success message
-//         pesanModal.classList.remove("hidden");
+// data modal product
+document.addEventListener("DOMContentLoaded", function () {
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalPrice = document.getElementById("modalPrice");
+    const modalStock = document.getElementById("modalStock");
+    const modalCategory = document.getElementById("modalCategory");
+    const modalDesc = document.getElementById("modalDesc");
 
-//         // Auto close modal setelah 2.5 detik
-//         setTimeout(() => {
-//             pesanModal.classList.add("hidden");
-//             // Reset form
-//             const form = pesanModal.querySelector("form");
-//             if (form) form.reset();
-//         }, 2500);
-//     }
+    buttonView.forEach((button) => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const name = this.dataset.name;
+            const price = this.dataset.price;
+            const stock = this.dataset.stock;
+            const category = this.dataset.category;
+            const image = this.dataset.image;
+            const desc = this.dataset.desc;
 
-//     // Jika ada validation error, tampilkan modal
-//     if (errorInputs.length > 0) {
-//         pesanModal.classList.remove("hidden");
-//     }
-// });
+            modalTitle.innerText = name;
+            modalPrice.innerText = "Rp" + Number(price).toLocaleString("id-ID");
+            modalStock.innerText = stock + " pcs tersedia";
+            modalCategory.innerText = category;
+            modalDesc.innerText = desc ? desc : "tidak ada description";
+            modalImg.src = image;
+        });
+    });
+});
