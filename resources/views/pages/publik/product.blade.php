@@ -2,13 +2,13 @@
     @section('title', 'product')
 
     @section('content')
-        <section class="container mx-auto py-8">
-            <div class="w-96 text-center mx-auto">
+        <section class=" mx-auto ">
+            <div class="bg-blue-300 w-full py-3 text-center mx-auto">
                 <h1 class="text-4xl mb-3 text-green-700 font-bold">This is my product</h1>
                 <p class="text-1xl font-bold">Berikut adalah beberapa produk yang saya sediakan dengan kualitas terbaik dan
                     pelayanan terpercaya untuk memenuhi kebutuhan Anda.</p>
             </div>
-            <div class="grid grid-cols-2 px-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-1 lg:gap-6 mt-12">
+            <div class="container mx-auto grid grid-cols-2 px-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-1 lg:gap-6 mt-12">
                 @forelse ($products as $item)
                     <div class="w-full px-4">
                         <div
