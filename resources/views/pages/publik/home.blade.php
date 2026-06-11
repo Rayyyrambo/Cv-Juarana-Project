@@ -67,7 +67,59 @@
 
     {{-- start section3 --}}
 
-    {{-- End section 3 --}}
+    {{-- end section3 --}}
+
+    {{-- start section - products --}}
+    <section class="w-full container shadow-lg mx-auto rounded-2xl mt-12 py-12 px-12 bg-gradient-to-r from-slate-200 to-blue-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">
+                    Produk Unggulan <span class="text-red-600">Juarana</span> <span class="text-blue-600">Mandiri</span>
+                </h2>
+                <p class="text-gray-600 text-lg">Lihat koleksi lengkap produk berkualitas kami yang siap memenuhi kebutuhan
+                    Anda</p>
+            </div>
+
+            <div class="flex justify-center">
+                <a href="{{ route('product') }}"
+                    class="inline-block bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition ease-in-out duration-300 transform hover:-translate-y-1">
+                    <span class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                        Lihat Semua Produk
+                    </span>
+                </a>
+            </div>
+        </div>
+        <hr class="border border-gray-600 mt-12 mb-12 w-full">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">
+                    Ayo liat semua project kami <span class="text-red-600">Juarana</span> <span class="text-blue-600">Mandiri</span>
+                </h2>
+                <p class="text-gray-600 text-lg">Lihat koleksi lengkap project yang sudah kami selesaikan 
+                    </p>
+            </div>
+
+            <div class="flex justify-center">
+                <a href="{{ route('project') }}"
+                    class="inline-block bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <span class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                        Lihat Semua Project
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    {{-- end section - products --}}
 
     {{-- star section 4 --}}
     <div class="max-w-6xl mx-auto lg:mr-auto lg:mx-3 px-4 py-8">
@@ -100,7 +152,8 @@
 
             @forelse ($messages as $item)
                 <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
-                    <h3 class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">{{ $item->user }}</h3>
+                    <h3 class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">
+                        {{ $item->user }}</h3>
                     <h3 class="text-lg  mb-2">{{ $item->email }}</h3>
                     <p class="text-gray-600 text-sm font-semibold">{{ $item->description }}</p>
                 </div>

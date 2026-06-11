@@ -16,6 +16,8 @@ hamburger.addEventListener("click", function () {
     navMenu.classList.toggle("active");
 });
 
+
+
 // kategori-menu/mobile categori
 const kategoriMenu = document.querySelector(".kategori-menu");
 const mobileKategori = document.querySelector(".mobile-kategori");

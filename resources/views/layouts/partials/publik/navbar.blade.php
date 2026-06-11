@@ -46,11 +46,11 @@
                                 Kategori
                             </a>
                             <div class="mobile-kategori rounded-lg bg-gray-200 lg:hidden">
-                                @forelse ($categories as $item)
+                                @forelse ($categories as $category)
                                     <div
                                         class="py-1 px-2 hover:bg-blue-500 transition ease-in-out duration-300  rounded cursor-pointer">
-                                        <a href="#"
-                                            class="text-1xl text-white  font-bold ">{{ $item->name }}</a>
+                                        <a href="{{ route('product', ['category'=> $category->name]) }}"
+                                            class="text-1xl text-white category-clik font-bold {{ request('category')=== $category->name }} ">{{ $category->name }}</a>
                                     </div>
 
                                 @empty
@@ -68,7 +68,7 @@
                         @forelse ($categories as $item)
                             <div
                                 class="py-1 px-2 hover:bg-blue-500 transition ease-in-out duration-300  rounded cursor-pointer">
-                                <a href="#"
+                                <a href="{{ route('product', ['category' => $item->name]) }}"
                                     class="text-1xl text-gray-700 hover:text-gray-200 font-bold ">{{ $item->name }}</a>
                             </div>
 
