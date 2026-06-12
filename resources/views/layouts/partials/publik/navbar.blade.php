@@ -84,7 +84,7 @@
 
                 <div class="flex items-center gap-4">
                     <div class="hidden sm:flex sm:gap-4">
-                        @if (Auth::check())
+                        @if (Auth::check() && Auth::user()->isAdmin())
                             <a class="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-cyan-300 shadow-sm"
                                 href="{{ route('admin.dashboard') }}">
                                 Dashboard

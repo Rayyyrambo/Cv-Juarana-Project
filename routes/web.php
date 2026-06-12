@@ -19,7 +19,7 @@ Route::get('/project',[ProjectController::class,  'index'])->name('project');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/masages', [MessageController::class, 'store'])->name('masages.store');
 
-Route::prefix('administrator')->middleware(['auth', 'verified'])->name('admin.')->group(function(){
+Route::prefix('administrator')->middleware(['auth', 'verified', 'admin'])->name('admin.')->group(function(){
     Route::get('dashboard',[DasboardController::class, 'index'])->name('dashboard');
     Route::resource('categories', CategoriController::class);
     Route::resource('masages', MessageController::class);

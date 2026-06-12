@@ -70,7 +70,8 @@
     {{-- end section3 --}}
 
     {{-- start section - products --}}
-    <section class="w-full container shadow-lg mx-auto rounded-2xl mt-12 py-12 px-12 bg-gradient-to-r from-slate-200 to-blue-200">
+    <section
+        class="w-full container shadow-lg mx-auto rounded-2xl mt-12 py-12 px-12 bg-gradient-to-r from-slate-200 to-blue-200">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-10">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">
@@ -98,10 +99,11 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-10">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">
-                    Ayo liat semua project kami <span class="text-red-600">Juarana</span> <span class="text-blue-600">Mandiri</span>
+                    Ayo liat semua project kami <span class="text-red-600">Juarana</span> <span
+                        class="text-blue-600">Mandiri</span>
                 </h2>
-                <p class="text-gray-600 text-lg">Lihat koleksi lengkap project yang sudah kami selesaikan 
-                    </p>
+                <p class="text-gray-600 text-lg">Lihat koleksi lengkap project yang sudah kami selesaikan
+                </p>
             </div>
 
             <div class="flex justify-center">
