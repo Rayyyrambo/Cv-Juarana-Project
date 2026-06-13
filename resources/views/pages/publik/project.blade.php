@@ -10,6 +10,7 @@
             <p class="text-1xl font-bold">Berikut adalah beberapa project yang kami selesaikan dengan kualitas terbaik dan
                 pelayanan terpercaya untuk memenuhi kebutuhan Anda.</p>
         </div>
+         <hr class="border border-gray-600 mt-12 mb-12 w-full">
         <div class="grid grid-cols-1 px-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             @forelse ($projects as $item)
                 <div class="w-full px-4">

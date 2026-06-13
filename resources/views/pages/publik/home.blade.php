@@ -71,7 +71,7 @@
 
     {{-- start section - products --}}
     <section
-        class="w-full container shadow-lg mx-auto rounded-2xl mt-12 py-12 px-12 bg-gradient-to-r from-slate-200 to-blue-200">
+        class="w-full border border-blue-500 container shadow-lg mx-auto rounded-2xl mt-12 py-12 px-12 bg-gradient-to-r from-slate-200 to-blue-200">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-10">
                 <h2 class="text-4xl font-bold text-gray-800 mb-2">
