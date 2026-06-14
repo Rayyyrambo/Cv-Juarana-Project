@@ -118,7 +118,8 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        
+        transform: translateY(-50px);
     }
     to {
         opacity: 1;
@@ -126,24 +127,43 @@
     }
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeInBlur {
     from {
         opacity: 0;
-        transform: translateX(-50px);
+        filter: blur(10px);
+        transform: scale(0.95);
+
+        /* transform: translateX(-50px); */
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        filter: blur(0);
+        transform: scale(1);
+        /* transform: translateX(0); */
     }
 }
 
 @keyframes fadeInRight {
     from {
         opacity: 0;
+        filter: blur(20px);
         transform: translateX(50px);
     }
     to {
         opacity: 1;
+        filter: (0);
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        filter: (0);
         transform: translateX(0);
     }
 }
@@ -159,16 +179,31 @@
     }
 }
 
-.animate-fadeInUp {
-    animation: fadeInUp 0.8s ease-out;
+.animate-fadeInUp1 {
+    animation: fadeInUp 0.8s ease-in-out 0s forwards;
+}
+.animate-fadeInUp2 {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+}
+.animate-fadeInUp3 {
+    animation: fadeInUp 0.8s ease-out 0.8s forwards;
+    opacity: 0;
+}
+.animate-fadeInUp4 {
+    animation: fadeInUp 0.8s ease-out 1.2s forwards;
+    opacity: 0;
 }
 
-.animate-fadeInLeft {
-    animation: fadeInLeft 0.8s ease-out 0.1s both;
+.animate-fadeInBlur {
+    animation: fadeInBlur 1.2s ease-in-out forwards;
 }
 
 .animate-fadeInRight {
     animation: fadeInRight 0.8s ease-out 0.4s both;
+}
+.animate-fadeInLeft {
+    animation: fadeInLeft 1.2s ease-in-out forwards;
 }
 
 .animate-slideUp {
@@ -255,4 +290,16 @@
 
 .border-bottom {
     border-bottom: 1px solid black;
+}
+
+/* scrol animated */
+.scroll-animated{
+    opacity: 0;
+}
+
+.scroll-animated.muncul{
+    animation:fadeInUp 0.8s ease-in-out 0s forwards; ;
+}
+.scroll-animated.muncul:nth-child(2){
+    animation-delay: 0.3s;
 }

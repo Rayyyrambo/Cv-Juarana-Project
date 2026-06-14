@@ -117,24 +117,24 @@
     </header>
 
     <div class="container w-full px-12 py-12  ">
-        <h1 class="lg:text-8xl animate-scaleIn-delay-200 text-5xl font-semibold text-red-600">Juarana <span
+        <h1 class="lg:text-8xl  animate-fadeInBlur text-5xl font-semibold text-red-600">Juarana <span
                 class="text-blue-600">Mandiri</span>
         </h1>
-        <p class="lg:text-4xl text-2xl animate-scaleIn-delay-200 text-gray-800 font-bold lg:w-1/2">Pemasangan interior
+        <p class="lg:text-4xl text-2xl animate-fadeInBlur text-gray-800 font-bold lg:w-1/2">Pemasangan interior
             dan Ekterior plafon PVC,
             lantai Vinyl, Dinding WPC, Pengecatan , pemasangan produk Conwood lantai, Conwood Dinding, Fasad Conwood,
         </p>
-        <hr class="border-black  animate-fadeInLeft duration-1000 border-1 w-2/3 mt-2 mb-2 ">
-        <h1 class="text-black animate-slideInUp lg:text-3xl text-2xl font-bold font-sans">Founder:</h1>
-        <p class="text-black animate-slideInUp lg:text-2xl text-1xl font-bold">Nizulul Ramdan</p>
-        <h1 class="text-black animate-slideInUp lg:text-3xl text-2xl font-bold font-sans">Create:</h1>
-        <p class="text-black animate-slideInUp lg:text-2xl text-1xl  font-bold">18 November 2022</p>
+        <hr class="border-black animate-fadeInRight  transition ease-in-out duration-1000 border-1 w-2/3 mt-2 mb-2 ">
+        <h1 class="text-black animate-fadeInLeft lg:text-3xl text-2xl font-bold font-sans">Founder:</h1>
+        <p class="text-black animate-fadeInLeft lg:text-2xl text-1xl font-bold">Nizulul Ramdan</p>
+        <h1 class="text-black animate-fadeInLeft lg:text-3xl text-2xl font-bold font-sans">Create:</h1>
+        <p class="text-black animate-fadeInLeft lg:text-2xl text-1xl  font-bold">18 November 2022</p>
     </div>
     <div class="container w-full  py-12">
         <div class="max-w-6xl ">
             <div class="grid grid-cols-2  lg:grid-cols-4 md:grid-cols-2 gap-6 ">
                 <div
-                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    class="lg:w-64 md:w-64 w-40 animate-fadeInUp1 mx-3 mb-3 border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                     <div class="flex flex-col items-center p-6">
                         <h1 class="text-3xl font-bold text-black">1</h1>
                         <div class="text-center ">
@@ -142,8 +142,8 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                <div 
+                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp2  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                     <div class="flex flex-col items-center p-6">
                         <h1 class="text-3xl font-bold text-black">5+</h1>
                         <div class="text-center">
@@ -152,7 +152,7 @@
                     </div>
                 </div>
                 <div
-                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp3 border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                     <div class="flex flex-col items-center p-6">
                         <h1 class="text-3xl font-bold text-black">15+</h1>
                         <div class="text-center">
@@ -161,7 +161,7 @@
                     </div>
                 </div>
                 <div
-                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg animate-fadeInLeft hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp4  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                     <div class="flex flex-col items-center p-6">
                         <h1 class="text-3xl font-bold text-black">4+</h1>
                         <div class="text-center">

@@ -16,8 +16,6 @@ hamburger.addEventListener("click", function () {
     navMenu.classList.toggle("active");
 });
 
-
-
 // kategori-menu/mobile categori
 const kategoriMenu = document.querySelector(".kategori-menu");
 const mobileKategori = document.querySelector(".mobile-kategori");
@@ -39,22 +37,7 @@ document.addEventListener("click", function (e) {
     if (!kategoriKlik.contains(e.target) && !kategoriMenu.contains(e.target)) {
         kategoriMenu.classList.remove("kategori-active");
     }
-    // untuk modal pada product
-    if (e.target === detailModal) {
-        detailModal.classList.add("hidden");
-    }
-    // untuk modal maps
-    if (e.target === modalMaps) {
-        modalMaps.classList.add("hidden");
-    }
-    // untuk modal massage
-    if (e.target === pesanModal) {
-        pesanModal.classList.add("hidden");
-    }
-
-    if (e.target === modalProjetcs) {
-        modalProjetcs.classList.add("hidden");
-    }
+   
 });
 
 // nav fixed
@@ -88,153 +71,19 @@ if (prevBtn && container) {
     });
 }
 
-// modal box product
-const detailModal = document.querySelector("#modalProduct");
-const buttonView = document.querySelectorAll(".view-button-product");
-const closeBtn = document.querySelector("#closeModalBtn");
-
-// Open modal ketika check button diklik
-buttonView.forEach((button) => {
-    button.addEventListener("click", (e) => {
-        e.preventDefault();
-        detailModal.classList.remove("hidden");
-    });
-});
-
-// Close modal ketika X button diklik
-if (closeBtn) {
-    closeBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        detailModal.classList.add("hidden");
-    });
-}
-
-// Close modal ketika tekan ESC
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !detailModal.classList.contains("hidden")) {
-        detailModal.classList.add("hidden");
-    }
-});
-
-// modal box project
-const modalProjetcs = document.querySelector("#modalProject");
-const buttonProject = document.querySelectorAll(".open-project");
-const closeProject = document.querySelector("#closeProjectBtn");
-
-buttonProject.forEach((button) => {
-    button.addEventListener("click", (e) => {
-        e.preventDefault();
-        modalProjetcs.classList.remove("hidden");
-    });
-});
-
-if (closeProject) {
-    closeProject.addEventListener("click", (e) => {
-        e.preventDefault();
-        modalProjetcs.classList.add("hidden");
-    });
-}
-
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !modalProjetcs.classList.contains("hidden")) {
-        modalProjetcs.classList.add("hidden");
-    }
-});
-
-//modal box maps
-const modalMaps = document.querySelector("#mapsModal");
-const buttonMaps = document.querySelectorAll(".button-location");
-const closemaps = document.querySelector("#closeMapsBtn");
-
-// Open modal ketika check button diklik
-buttonMaps.forEach((button) => {
-    button.addEventListener("click", (e) => {
-        e.preventDefault();
-        modalMaps.classList.remove("hidden");
-    });
-});
-
-// Close modal ketika X button diklik
-if (closemaps) {
-    closemaps.addEventListener("click", (e) => {
-        e.preventDefault();
-        modalMaps.classList.add("hidden");
-    });
-}
-
-// Close modal ketika tekan ESC
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !modalMaps.classList.contains("hidden")) {
-        modalMaps.classList.add("hidden");
-    }
-});
-
-// box massage maps
-const pesanModal = document.querySelector("#masageModal");
-const massageButton = document.querySelectorAll(".button-Massage");
-const closeMassage = document.querySelector("#closeMassageBtn");
-
-// Open modal ketika button diklik
-massageButton.forEach((button) => {
-    button.addEventListener("click", (e) => {
-        e.preventDefault();
-        pesanModal.classList.remove("hidden");
-    });
-});
-
-//ketika tombol close di klik
-if (closeMassage) {
-    closeMassage.addEventListener("click", (e) => {
-        e.preventDefault();
-        pesanModal.classList.add("hidden");
-    });
-}
-
-// ketika esc di klik
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !pesanModal.classList.contains("hidden")) {
-        pesanModal.classList.add("hidden");
-    }
-});
-
-// data modal project
+// scrol animated
 document.addEventListener("DOMContentLoaded", function(){
-    const imagemdl = document.getElementById("modalImgProject");
-    buttonProject.forEach((button) => {
-        button.addEventListener("click", function (e) {
-            e.preventDefault();
-            const images = this.dataset.image;
-            imagemdl.src = images;
-            
-        });
+    const elemenAnimasi = document.querySelectorAll(".scroll-animated");
+    const observe = new IntersectionObserver((enteries, observe)=>{
+        enteries.forEach(entry =>{
+            if(entry.isIntersecting){
+                entry.target.classList.add("muncul");
+                entry.target.classList.remove("opacity-0");
+                observe.unobserve(entry.target);
+            }
+        }); 
+        threshold:0.90
     });
+    elemenAnimasi.forEach(el => observe.observe(el));
 });
 
-// data modal product
-document.addEventListener("DOMContentLoaded", function () {
-    const modalImg = document.getElementById("modalImg");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalPrice = document.getElementById("modalPrice");
-    const modalStock = document.getElementById("modalStock");
-    const modalCategory = document.getElementById("modalCategory");
-    const modalDesc = document.getElementById("modalDesc");
-
-    buttonView.forEach((button) => {
-        button.addEventListener("click", function (e) {
-            e.preventDefault();
-            const name = this.dataset.name;
-            const price = this.dataset.price;
-            const stock = this.dataset.stock;
-            const category = this.dataset.category;
-            const image = this.dataset.image;
-            const desc = this.dataset.desc;
-
-            modalTitle.innerText = name;
-            modalPrice.innerText = "Rp" + Number(price).toLocaleString("id-ID");
-            modalStock.innerText = stock + " pcs tersedia";
-            modalCategory.innerText = category;
-            modalDesc.innerText = desc ? desc : "tidak ada description";
-            modalImg.src = image;
-        });
-    });
-});
