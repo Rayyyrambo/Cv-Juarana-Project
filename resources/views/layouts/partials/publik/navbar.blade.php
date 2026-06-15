@@ -71,17 +71,12 @@
                                 <a href="{{ route('product', ['category' => $item->name]) }}"
                                     class="text-1xl text-gray-700 hover:text-gray-200 font-bold ">{{ $item->name }}</a>
                             </div>
-
                         @empty
                             <div class="py-2 px-3 text-gray-500 text-center">Tidak ada kategori</div>
                         @endforelse
-
-
                     </div>
                 </div>
-
-
-
+                
                 <div class="flex items-center gap-4">
                     <div class="hidden sm:flex sm:gap-4">
                         @if (Auth::check() && Auth::user()->isAdmin())

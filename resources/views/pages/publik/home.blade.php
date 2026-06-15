@@ -8,7 +8,7 @@
     {{-- end section1 --}}
 
     {{-- strat section2 --}}
-    
+
     {{-- end section2 --}}
 
     {{-- start section3 --}}
@@ -125,48 +125,110 @@
     </section>
 
     {{-- star section 4 --}}
-    <div class="max-w-6xl mx-auto lg:mr-auto lg:mx-3 px-4 py-8">
-        <div class="flex flex-wrap justify-between items-center mb-6">
-            <div
-                class="w-full mb-12 rounded-full shadow-lg shadow-sky-400/50 py-3 lg:w-80 bg-gradient-to-br from-cyan-300 from-0% to-cyan-50 to-30% text-center loncat-loncat">
-                <h1 class="text-4xl font-bold text-gray-700 font-mono">For message</h1>
-                <h1 class="text-3xl text-red-600 font-bold">Juarana <span class="text-blue-600">Mandiri</span></h1>
+    <div
+        class="conatiner w-4/5 rounded-xl relative bg-gradient-to-br shadow-lg mb-12 from-sky-500 via-sky-300 to-sky-500 mx-auto  px-4 py-8">
+
+        <div class="flex flex-wrap justify-center mb-5 ">
+            <div class="flex mb-12">
+                <svg class="w-40 lg:w-40  mx-auto loncat-loncat text-sky-800" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" xmlns="http://w3.org">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.966L3 20l1.326-3.945A8.963 8.963 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                    </path>
+                </svg>
+
             </div>
-            <div class="flex gap-2">
-                <button id="prevBtn"
-                    class="bg-blue-300 hover:bg-blue-600 text-gray-800 p-2 rounded-full transition-colors focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button id="nextBtn"
-                    class="bg-blue-300 hover:bg-blue-600 text-gray-800 p-2 rounded-full transition-colors focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
+            <hr class="h-48 lg:flex lg:justify-center lg:items-center bg-black hidden  mx-5" style="width: 3px; ">
+            <div class="flex  flex-col justify-center items-center mx-5">
+                <p class="lg:text-6xl text-3xl text-center text-gray-800  font-semibold">Kata Mareka untuk</p>
+                <p class="lg:text-5xl text-3xl text-center text-blue-800 font-bold">Juarana Mandiri</p>
+
             </div>
         </div>
 
-        <div id="sliderContainer"
-            class="flex border-2 rounded-lg bg-gray-300 border-gray-200 py-3 px-2 gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-none pb-4">
 
-            @forelse ($messages as $item)
-                <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
-                    <h3 class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">
-                        {{ $item->user }}</h3>
-                    <h3 class="text-lg  mb-2">{{ $item->email }}</h3>
-                    <p class="text-gray-600 text-sm font-semibold">{{ $item->description }}</p>
-                </div>
-            @empty
-                <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
-                    <h3 class="text-lg font-semibold mb-2">Belum ada pesan</h3>
-                </div>
-            @endforelse
 
+        <div class="relative max-w-4xl mx-auto">
+            <!-- Prev Button -->
+            <button id="prevBtn"
+                class="absolute  left-12 top-1/2 -translate-y-1/2 -translate-x-12 z-50  hover:bg-blue-700 hover:bg-opacity-25 hover:text-white text-blue-600 text-bold p-3 rounded-lg transition duration-300 ease-out focus:outline-none ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <!-- Slider Container -->
+            <div id="sliderContainer"
+                class="flex   py-3 px-2 gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-none pb-4">
+
+                @forelse ($messages as $item)
+                    <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+                        <h3
+                            class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">
+                            {{ $item->user }}</h3>
+                        <h3 class="text-lg  mb-2">{{ $item->email }}</h3>
+                        <p class="text-gray-600 text-sm font-semibold">{{ $item->description }}</p>
+                    </div>
+                @empty
+                    <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+                        <h3 class="text-lg font-semibold mb-2">Belum ada pesan</h3>
+                    </div>
+                @endforelse
+
+            </div>
+
+            <!-- Next Button -->
+            <button id="nextBtn"
+                class="absolute ml-5 right-12 top-1/2 -translate-y-1/2 translate-x-12 z-50  hover:bg-blue-700 hover:bg-opacity-25 hover:text-white text-blue-600 text-bold p-3 rounded-lg transition-colors focus:outline-none ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
         </div>
     </div>
     {{-- end section 4 --}}
+    {{-- <div
+        class="flex max-w-96 border-2 rounded-lg bg-gray-600 border-gray-200 py-3 px-2 gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-none pb-4">
+        <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+            <h3 class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">
+                test</h3>
+            <h3 class="text-lg  mb-2">nama</h3>
+            <p class="text-gray-600 text-sm font-semibold">haii</p>
+        </div>
+        <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+            <h3 class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">
+                test</h3>
+            <h3 class="text-lg  mb-2">nama</h3>
+            <p class="text-gray-600 text-sm font-semibold">haii</p>
+        </div>
+        <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+            <h3 class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">
+                test</h3>
+            <h3 class="text-lg  mb-2">nama</h3>
+            <p class="text-gray-600 text-sm font-semibold">haii</p>
+        </div>
+        <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+            <h3 class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">
+                test</h3>
+            <h3 class="text-lg  mb-2">nama</h3>
+            <p class="text-gray-600 text-sm font-semibold">haii</p>
+        </div>
+        <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+            <h3 class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">
+                test</h3>
+            <h3 class="text-lg  mb-2">nama</h3>
+            <p class="text-gray-600 text-sm font-semibold">haii</p>
+        </div>
+        <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+            <h3 class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">
+                test</h3>
+            <h3 class="text-lg  mb-2">nama</h3>
+            <p class="text-gray-600 text-sm font-semibold">haii</p>
+        </div>
+
+    </div> --}}
+
+
 @endsection
