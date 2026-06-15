@@ -148,7 +148,7 @@
 
 
 
-        <div class="relative max-w-4xl mx-auto">
+        <div class="relative max-w-4xl  mx-auto">
             <!-- Prev Button -->
             <button id="prevBtn"
                 class="absolute  left-12 top-1/2 -translate-y-1/2 -translate-x-12 z-50  hover:bg-blue-700 hover:bg-opacity-25 hover:text-white text-blue-600 text-bold p-3 rounded-lg transition duration-300 ease-out focus:outline-none ">
@@ -160,10 +160,10 @@
 
             <!-- Slider Container -->
             <div id="sliderContainer"
-                class="flex   py-3 px-2 gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-none pb-4">
+                class="flex  py-3 px-2 gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-none pb-4">
 
                 @forelse ($messages as $item)
-                    <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+                    <div class="flex-shrink-0 w-80 bg-white p-6 lg:rounded-lg shadow-md border border-cyan-300 snap-center">
                         <h3
                             class="text-lg text-blue-800 font-semibold mb-2 bg-sky-300 px-2 py-2 w-20 text-center rounded-xl">
                             {{ $item->user }}</h3>
@@ -171,7 +171,7 @@
                         <p class="text-gray-600 text-sm font-semibold">{{ $item->description }}</p>
                     </div>
                 @empty
-                    <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-md border border-cyan-300 snap-center">
+                    <div class="flex-shrink-0 w-80 bg-white p-6 shadow-md border border-cyan-300 snap-center">
                         <h3 class="text-lg font-semibold mb-2">Belum ada pesan</h3>
                     </div>
                 @endforelse

@@ -303,3 +303,11 @@
 .scroll-animated.muncul:nth-child(2){
     animation-delay: 0.3s;
 }
+
+.ful-height-scren{
+    height: 100dvh;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
