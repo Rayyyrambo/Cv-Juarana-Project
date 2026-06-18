@@ -12,17 +12,26 @@ const hamburger = document.querySelector("#hamburger"); //yang dimana carikan sa
 const navMenu = document.querySelector(".navbar-menu");
 hamburger.addEventListener("click", function () {
     //<------ yang dimana ketika hamburger di klik
-    hamburger.classList.toggle("hamburger-active"); //<------ ketika hamburger di klik maka muncul clas hamburge active begitupun sebaliknya
-    navMenu.classList.toggle("active");
+    if (navMenu && hamburger) {
+        // Pastikan elemen ditemukan sebelum menambahkan event listener
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("hamburger-active");
+    } else {
+        console.warn(
+            "Elemen hamburger atau navMenu tidak ditemukan di halaman ini.",
+        );
+    }
 });
 
 // kategori-menu/mobile categori
 const kategoriMenu = document.querySelector(".kategori-menu");
 const mobileKategori = document.querySelector(".mobile-kategori");
 document.querySelector("#kategori").onclick = (e) => {
-    kategoriMenu.classList.toggle("kategori-active");
-    mobileKategori.classList.toggle("mobile-categori-active");
-    e.preventDefault();
+    if (kategoriMenu && mobileKategori) {
+        kategoriMenu.classList.toggle("kategori-active");
+        mobileKategori.classList.toggle("mobile-categori-active");
+        e.preventDefault();
+    }
 };
 
 // klik di luar elemen
@@ -37,7 +46,6 @@ document.addEventListener("click", function (e) {
     if (!kategoriKlik.contains(e.target) && !kategoriMenu.contains(e.target)) {
         kategoriMenu.classList.remove("kategori-active");
     }
-   
 });
 
 // nav fixed
@@ -72,18 +80,17 @@ if (prevBtn && container) {
 }
 
 // scrol animated
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     const elemenAnimasi = document.querySelectorAll(".scroll-animated");
-    const observe = new IntersectionObserver((enteries, observe)=>{
-        enteries.forEach(entry =>{
-            if(entry.isIntersecting){
+    const observe = new IntersectionObserver((enteries, observe) => {
+        enteries.forEach((entry) => {
+            if (entry.isIntersecting) {
                 entry.target.classList.add("muncul");
                 entry.target.classList.remove("opacity-0");
                 observe.unobserve(entry.target);
             }
-        }); 
-        threshold:0.90
+        });
+        threshold: 0.9;
     });
-    elemenAnimasi.forEach(el => observe.observe(el));
+    elemenAnimasi.forEach((el) => observe.observe(el));
 });
-
