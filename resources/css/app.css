@@ -52,6 +52,54 @@
 .active {
     right: 0;
 }
+.search-menu{
+    position: absolute;
+    right: 4px;
+    @apply w-full;
+    @apply z-50;
+    @apply bg-slate-200;
+    @apply rounded-xl;
+    top: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.search-active{
+    transform: scaleY(1);
+}
+
+.user-down{
+    position: absolute;
+    right: 0;
+    @apply w-64;
+    @apply z-50;
+    @apply bg-red-500;
+    @apply rounded-l-lg;
+    top: 100%;
+    transform: scalex(0);
+    transform-origin: right;
+    transition: 0.3s;
+}
+
+.user-down-active{
+    transform: scaleX(1);
+}
+
+.kategori-admin{
+    position: absolute;
+    right: 10px;
+    @apply w-full;
+    @apply z-50;
+    @apply rounded-xl;
+    top: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+.categori-admin-active{
+    transform:scaleY(1);
+}
 
 .kategori-menu {
     position: absolute;

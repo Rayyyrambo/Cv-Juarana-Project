@@ -1,73 +1,51 @@
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
+ <nav class="w-full flex relative justify-between bg-gray-100 shadow-lg px-12 py-5 flex-shrink-0">
+                <div class="flex flex-wrap justify-center lg:flex lg:justify-start  w-1/2 ">
+                    <div class="px-2 py-2 rounded-lg lg:flex lg:justify-star  text-center ">
+                        <button href="#" id="toggle-produk" type="submit" class="bg-gradient-to-r from-sky-400 to-cyan-600  mx-3 w-full text-white font-semibold  px-2 py-2
+                        shadow-lg translate-y-1 transition ease-in-out duration-200 hover:translate-y-0 hover:shadow-lg hover:shadow-cyan-500 rounded-lg ">
+                            Search Produk
+                        </button>
+                    </div>
+                    <div class="px-2 py-2  rounded-lg lg:flex lg:justify-center  text-center ">
+                        <button href="#" id="toggle-kategori" type="submit" class="bg-gradient-to-r from-sky-400 to-cyan-600 text-white font-semibold mx-3 w-full  px-2 py-2
+                        shadow-lg translate-y-1 transition ease-in-out duration-200 hover:translate-y-0 hover:shadow-lg hover:shadow-cyan-500 rounded-lg ">
+                            Kategori
+                        </button>
+                    </div>
+                </div>
+               
+                <div class="flex justify-center items-center   mx-3">
+                    <hr class="h-10 lg:flex lg:justify-center lg:items-center bg-black hidden  mx-5"
+                        style="width: 3px; ">
+                    <a href="" id="dropUser">
+                        <h1
+                            class="font-semibold text-lg hover:bg-slate-300 transition duration-300 ease-in-out px-5 py-2 rounded-lg">
+                            RayyAdmin</h1>
+                    </a>
+                </div>
+                <div class="user-down flex justify-center">
+                    <div class="px-3 py-2 w-full text-center ">
+                        <a href="" class="">Logout</a>
+
+                    </div>
+                </div>
+                <div class="search-menu flex justify-between lg:w-80 lg:left-5 lg:flex lg:justify-center py-3 px-3  ">
+                    <form action="{{ route('admin.products.index') }}" method="get" class="flex w-full">
+                        <input type="text" name="search" class="px-2 py-2 w-full rounded-lg" placeholder="cari produk...." value="{{ $search ?? '' }}">
+                    
+                        <div class="mx-5 bg-cyan-300 rounded-xl flex flex-col justify-center items-center ">
+                            <button type="submit">
+                                <i class="fa-solid  mx-5 fa-magnifying-glass text-gray-500"></i>
+                            </button>
                         </div>
-                    </form>  
-                   <ul class="navbar-nav ml-auto">
-                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-                        
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-900 font-bold ">
-                                    <div class="">{{Auth::user()->name}}</div>
-                                </span>
-                                <img class="img-profile rounded-circle" src="{{asset('sbadmin2/img/undraw_profile.svg')}}" alt="">
-                                
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+                    </form>
+                </div>
+                <div class="kategori-admin px-10  lg:w-80 lg:left-5 lg:flex lg:justify-center ">
+                    <form action="{{ route('admin.products.index') }}" method="get" class="">
+                        <select name="" id="" class="rounded-xl ">
+                            <option value="" class="text-center font-bold w-full  ">Silahkan pilih kategori</option>
+                        </select>
+                    </form>
+                </div>
+                
+            </nav>

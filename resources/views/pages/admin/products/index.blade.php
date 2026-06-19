@@ -3,100 +3,55 @@
 
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <form action="{{ route('admin.products.index') }}" method="get"
-                    class="d-flex flex-wrap justify-content-end gap-2 flex-grow-1 mx-3">
-                    <input type="text" name="search" class="form-control mb-3" style="width: 300px"
-                        placeholder="Cari produk...." value="{{ $search ?? '' }}">
-                    <select name="category_id" id="categoryFilter" class="rounded-pill mx-2" style="min-width: 200px; h">
-                        <option value="" class="text-center text-success">pilih kategori</option>
-                        @foreach ($golongan as $item)
-                            <option value="{{ $item->id }}" @if ($categoryFilter == $item->id) selected @endif{{ $item->name }}>{{ $item->name }}</option>
-                        @endforeach
-                    </select>
-                    <button type="submit" class="btn btn-primary mx-2">Cari</button>
-                    @if ($search||$categoryFilter)
-                        <a href="{{ route('admin.products.index') }}" class="btn btn-secondary">Reset</a>
-                    @endif
-                </form>
-                <div class="row">
-                    <div class="col-md-12 d-flex justify-content-end">
-                        <a href="{{ route('admin.products.create') }}" class="btn btn-success mx-4 mt-5 ">
-                            <i class="bi bi-plus-lg"></i>
-                        </a>
-                    </div>
-                </div>
+    <div class="flex-1 overflow-y-auto bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-8 py-8">
+            <div class="w-full flex flex-wrap justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Table Product</h2>
+                <a href=""
+                    class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition duration-200 ease-in-out shadow-lg">
+                    + Tambah Product
+                </a>
             </div>
-        </div>
-        @if (session('success'))
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-success">
-                        {{ session('success') }}
-                    </div>
-                </div>
-            </div>
-        @endif
-        @if (session('error'))
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-danger">
-                        {{ session('error') }}
-                    </div>
-                </div>
-            </div>
-        @endif
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card-body table-responsive">
-                    <table class="table table-bordered table-hover">
-                        <thead>
-                            <tr class="bg-primary text-center fw-bold text-white">
-                                <th>No</th>
-                                <th>Nama Produk</th>
-                                <th>Nama kategori</th>
-                                <th>Harga</th>
-                                <th>stock</th>
-                                <th>Gambar</th>
-                                <th>aksi</th>
 
+            <!-- Table Wrapper untuk Responsive -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-blue-500 text-white">
+                                <th class="px-4 py-3 text-left font-semibold">No</th>
+                                <th class="px-4 py-3 text-left font-semibold">Nama Produk</th>
+                                <th class="px-4 py-3 text-left font-semibold">Kategori</th>
+                                <th class="px-4 py-3 text-left font-semibold">Harga</th>
+                                <th class="px-4 py-3 text-left font-semibold">Stock</th>
+                                <th class="px-4 py-3 text-left font-semibold">Gambar</th>
+                                <th class="px-4 py-3 text-center font-semibold">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($products as $item)
-                                <tr class="fw-bold text-dark">
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $item->name_product }}</td>
-                                    <td>{{ $item->category->name }}</td>
-                                    <td>{{ number_format($item->price) }}</td>
-                                    <td>{{ $item->stock }}</td>
-                                    <td>
-                                        @if ($item->image)
-                                            <img src="{{ asset('storage/products/' . $item->image) }}"
-                                                alt="{{ $item->name }} " width="100">
-                                        @endif
-                                    </td>
-                                    <td class="text-center">
-                                        <a href="{{ route('admin.products.edit', $item->id) }}"
-                                            class="btn btn-success btn-sm mx-3">Edit</a>
-                                        <form action="{{ route('admin.products.destroy', $item->id) }}" method="post">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger btn-sm mt-3" type="submit">
-                                                Hapus
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            @empty
-                                <tr>
-                                    <td colspan="7" class="text-center">
-                                        Data tidak tersedia
-                                    </td>
-                                </tr>
-                            @endforelse
+                            <tr class="border-b hover:bg-gray-100 transition duration-150">
+                                <td class="px-4 py-3 text-gray-700">1</td>
+                                <td class="px-4 py-3 text-gray-700 font-medium">Plafon</td>
+                                <td class="px-4 py-3 text-gray-700">Bahan Keras</td>
+                                <td class="px-4 py-3 text-gray-700">Rp 200.000</td>
+                                <td class="px-4 py-3">
+                                    <span
+                                        class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">5</span>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700">gambar1</td>
+                                <td class="px-4 py-3">
+                                    <div class="flex gap-2 justify-center flex-wrap">
+                                        <a href=""
+                                            class="px-3 py-1 bg-green-500 hover:bg-green-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
+                                            Edit
+                                        </a>
+                                        <button type="submit"
+                                            class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
+                                            Hapus
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
