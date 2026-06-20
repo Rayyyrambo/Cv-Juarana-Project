@@ -25,7 +25,7 @@
                 </a>
             </div>
             <div class="flex  justify-center px-5 mt-5">
-                <a href=""
+                <a href="{{ route('admin.categories.index') }}"
                     class="text-cyan-200 flex justify-center text-md font-bold hover:bg-cyan-800  transition duration-200 ease-in-out rounded-xl px-5 py-2 w-full text-center">
                     <i class="fas fa-fw fa-table mx-3 text-3xl"></i>
                     <span class="flex justify-center mt-1">Kategory</span>

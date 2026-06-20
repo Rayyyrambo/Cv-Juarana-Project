@@ -22,7 +22,7 @@
         {{-- end sidebar --}}
 
         {{-- content --}}
-        <div class="w-full h-screen bg-black flex flex-col">
+        <div class="w-full h-screen  flex flex-col">
             {{-- top bar --}}
            @include('layouts.partials.admin.topbar')
             {{-- end topbar --}}

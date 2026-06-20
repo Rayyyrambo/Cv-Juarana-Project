@@ -1,86 +1,60 @@
 @extends('layouts.admin')
 @section('title', 'categori')
-    
+
 
 @section('content')
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <form action="" method="get" class="d-flex flex-wrap justify-content-end gap-2 flex-grow-1 mx-3"
-                    >
-                        <input type="text" name="search" class="form-control mb-3"
-                        style="width: 300px"
-                        placeholder="Cari Kategori...." value="">
-                        <select name="#" id="#" class="rounded-pill mx-2" style="min-width: 200px; h">
-                            <option value="" class="text-center text-success">pilih kategori</option>
-                        </select>
-                         <button type="submit" class="btn btn-primary mx-2">Cari</button>
-                    </form>
-                    <div class="row">
-                        <div class="col-md-12 d-flex justify-content-end">
-                            <a href="{{ route('admin.categories.create') }}" class="btn btn-success mx-4 mt-5 ">
-                                <i class="bi bi-plus-lg"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <div class="flex-1 overflow-y-auto bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-8 py-8">
+            <div class="w-full flex flex-wrap justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Table Kategori</h2>
+                <a href="{{ route('admin.categories.create') }}"
+                    class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition duration-200 ease-in-out shadow-lg">
+                    + Tambah Kategory
+                </a>
             </div>
-            @if (session('success'))
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    </div>
-                </div>
-            @endif
-            @if (session('error'))
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-danger">
-                            {{ session('error') }}
-                        </div>
-                    </div>
-                </div>
-            @endif
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card-body table-responsive">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr class="bg-primary text-center fw-bold text-white">
-                                    <th>No</th>
-                                    <th>Nama</th>
-                                    <th>Aksi</th>  
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse ($categories as $item)
-                                    <tr class="fw-bold text-dark">
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->name }}</td>
-                                        <td class="d-flex justify-content-end">
-                                            <a href="{{ route('admin.products.edit', $item->id) }}" class="btn btn-success btn-sm mx-3">Edit</a>
-                                            <form action="{{ route('admin.products.destroy', $item->id) }}" method="post">
+
+            <!-- Table Wrapper untuk Responsive -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-blue-500 text-white">
+                                <th class="px-4 py-3 text-left font-semibold">No</th>
+                                <th class="px-4 py-3 text-left font-semibold">Nama Kategory</th>
+                                <th class="px-4 py-3 text-center font-semibold">aksi</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse ($categories as $item)
+                                <tr class="border-b hover:bg-gray-100 transition duration-150">
+                                    <td class="px-4 py-3 text-gray-700">{{ $loop->iteration }}</td>
+                                    <td class="px-4 py-3 text-gray-700 font-medium">{{ $item->name}}</td>
+                                    
+                                    <td class="px-4 py-3">
+                                        <div class="flex gap-2 justify-center flex-wrap">
+                                            <a href="{{ route('admin.categories.edit', $item->id) }}"
+                                                class="px-3 py-1 bg-green-500 hover:bg-green-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
+                                                Edit
+                                            </a>
+                                            <form action="{{ route('admin.categories.destroy', $item->id) }}"method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                <button type="submit"
+                                                    class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
                                                     Hapus
                                                 </button>
                                             </form>
-                                        </td>
-                                    </tr> 
-                                @empty
-                                   <tr>
-                                        <td colspan="3" class="text-center">
-                                            Data tidak tersedia
-                                        </td>
-                                   </tr>
-                                @endforelse
-                            </tbody>
-                        </table>
-                    </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @empty
+                            @endforelse
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
 @endsection

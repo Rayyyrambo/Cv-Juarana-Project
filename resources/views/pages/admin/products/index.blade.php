@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'categori')
+@section('title', 'product')
 
 
 @section('content')
@@ -7,7 +7,7 @@
         <div class="container mx-auto px-4 lg:px-8 py-8">
             <div class="w-full flex flex-wrap justify-between items-center mb-6">
                 <h2 class="text-2xl font-bold text-gray-800">Table Product</h2>
-                <a href=""
+                <a href="{{ route('admin.products.create') }}"
                     class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition duration-200 ease-in-out shadow-lg">
                     + Tambah Product
                 </a>
@@ -29,29 +29,42 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b hover:bg-gray-100 transition duration-150">
-                                <td class="px-4 py-3 text-gray-700">1</td>
-                                <td class="px-4 py-3 text-gray-700 font-medium">Plafon</td>
-                                <td class="px-4 py-3 text-gray-700">Bahan Keras</td>
-                                <td class="px-4 py-3 text-gray-700">Rp 200.000</td>
-                                <td class="px-4 py-3">
-                                    <span
-                                        class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">5</span>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700">gambar1</td>
-                                <td class="px-4 py-3">
-                                    <div class="flex gap-2 justify-center flex-wrap">
-                                        <a href=""
-                                            class="px-3 py-1 bg-green-500 hover:bg-green-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
-                                            Edit
-                                        </a>
-                                        <button type="submit"
-                                            class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
-                                            Hapus
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+                            @forelse ($products as $item)
+                                <tr class="border-b hover:bg-gray-100 transition duration-150">
+                                    <td class="px-4 py-3 text-gray-700">{{ $loop->iteration }}</td>
+                                    <td class="px-4 py-3 text-gray-700 font-medium">{{ $item->name_product }}</td>
+                                    <td class="px-4 py-3 text-gray-700">{{ $item->category->name }}</td>
+                                    <td class="px-4 py-3 text-gray-700">{{ number_format($item->price) }}</td>
+                                    <td class="px-4 py-3">
+                                        <span
+                                            class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">{{ $item->stock }}</span>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-700">
+                                        @if ($item->image)
+                                            <img src="{{ asset('storage/products/' . $item->image) }}"
+                                                alt="{{ $item->name }}" width="100">
+                                        @endif
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        <div class="flex gap-2 justify-center flex-wrap">
+                                            <a href="{{ route('admin.products.edit', $item->id) }}"
+                                                class="px-3 py-1 bg-green-500 hover:bg-green-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
+                                                Edit
+                                            </a>
+                                            <form action="{{ route('admin.products.destroy', $item->id) }}"method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit"
+                                                    class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
+                                                    Hapus
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @empty
+                            @endforelse
+
                         </tbody>
                     </table>
                 </div>
