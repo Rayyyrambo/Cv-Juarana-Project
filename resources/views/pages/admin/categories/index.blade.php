@@ -22,15 +22,15 @@
                                 <th class="px-4 py-3 text-left font-semibold">No</th>
                                 <th class="px-4 py-3 text-left font-semibold">Nama Kategory</th>
                                 <th class="px-4 py-3 text-center font-semibold">aksi</th>
-                               
+
                             </tr>
                         </thead>
                         <tbody>
                             @forelse ($categories as $item)
                                 <tr class="border-b hover:bg-gray-100 transition duration-150">
                                     <td class="px-4 py-3 text-gray-700">{{ $loop->iteration }}</td>
-                                    <td class="px-4 py-3 text-gray-700 font-medium">{{ $item->name}}</td>
-                                    
+                                    <td class="px-4 py-3 text-gray-700 font-medium">{{ $item->name }}</td>
+
                                     <td class="px-4 py-3">
                                         <div class="flex gap-2 justify-center flex-wrap">
                                             <a href="{{ route('admin.categories.edit', $item->id) }}"
@@ -49,6 +49,11 @@
                                     </td>
                                 </tr>
                             @empty
+                                <tr>
+                                    <td colspan="3" class="px-6 py-10 text-center text-gray-400 italic">
+                                        Category Kosong
+                                    </td>
+                                </tr>
                             @endforelse
 
                         </tbody>

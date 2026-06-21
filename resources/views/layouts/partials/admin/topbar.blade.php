@@ -47,8 +47,12 @@
      </div>
      <div class="kategori-admin px-10  lg:w-80 lg:left-5 lg:flex lg:justify-center ">
          <form action="{{ route('admin.products.index') }}" method="get" class="">
-             <select name="" id="" class="rounded-xl ">
+             <select name="category_id" id="categoryFilter" onchange="this.form.submit()" class="rounded-xl ">
                  <option value="" class="text-center font-bold w-full  ">Silahkan pilih kategori</option>
+                 @foreach ($golongan as $item)
+                     <option value="{{ $item->id }}" {{ request('category_id') == $item->id ? 'selected': '' }}
+                     >{{ $item->name }}</option>
+                 @endforeach
              </select>
          </form>
      </div>

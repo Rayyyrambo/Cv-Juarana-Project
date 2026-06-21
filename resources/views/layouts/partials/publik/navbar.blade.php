@@ -1,5 +1,6 @@
-<section class="w-full  bg-cover bg-no-repeat bg-center"
+<section class="w-full   bg-cover bg-no-repeat bg-center"
     style="background-image: url('{{ asset('images/latarCV.jpg') }}') ">
+    
     <header class="bg-teal-300 bg-opacity-10 shadow-lg shadow-cyan-500/20  p-3 lg:w-full w-full">
         <div class="px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between relative">
@@ -49,8 +50,8 @@
                                 @forelse ($categories as $category)
                                     <div
                                         class="py-1 px-2 hover:bg-blue-500 transition ease-in-out duration-300  rounded cursor-pointer">
-                                        <a href="{{ route('product', ['category'=> $category->name]) }}"
-                                            class="text-1xl text-white category-clik font-bold {{ request('category')=== $category->name }} ">{{ $category->name }}</a>
+                                        <a href="{{ route('product', ['category' => $category->name]) }}"
+                                            class="text-1xl text-white category-clik font-bold {{ request('category') === $category->name }} ">{{ $category->name }}</a>
                                     </div>
 
                                 @empty
@@ -76,7 +77,7 @@
                         @endforelse
                     </div>
                 </div>
-                
+
                 <div class="flex items-center gap-4">
                     <div class="hidden sm:flex sm:gap-4">
                         @if (Auth::check() && Auth::user()->isAdmin())
@@ -137,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <div 
+                <div
                     class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp2  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                     <div class="flex flex-col items-center p-6">
                         <h1 class="text-3xl font-bold text-black">5+</h1>

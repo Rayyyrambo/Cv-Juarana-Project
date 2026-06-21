@@ -27,26 +27,30 @@
 
                         <div class="w-full px-3 mb-3 mt-3">
                             <label for="" class="text-lg font-semibold  text-gray-800">NamaProduk</label>
-                            <input type="text" class="w-full border-sky-800 bg-cyan-100  rounded-lg" name="name_product"
-                                placeholder="Silahkan isi produk"required>
+                            <input type="text" value="{{ old('name_product', $products->name_product) }}" class="w-full border-sky-800 bg-cyan-100  rounded-lg" name="name_product"
+                                placeholder="Silahkan isi produk">
                         </div>
                         <div class="w-full px-3 mb-3 mt-3 ">
                             <label for="" class="text-lg font-semibold  text-gray-800">Harga</label>
-                            <input type="number" class="w-full border-sky-800 bg-cyan-100  rounded-lg" name="price"
-                                placeholder="Silahkan isi harga produk"required>
+                            <input type="number" value="{{ old('price', $products->price) }}" class="w-full border-sky-800 bg-cyan-100  rounded-lg" name="price"
+                                placeholder="Silahkan isi harga produk">
                         </div>
                         <div class="w-full px-3 mt-3 ">
                             <label for="" class="text-lg font-semibold  text-gray-800">Stock</label>
-                            <input type="number" class="w-full border-sky-800 bg-cyan-100  rounded-lg" name="stock"
-                                placeholder="Silahkan isi harga stock"required>
+                            <input type="number" value="{{ old('stock', $products->stock) }}" class="w-full border-sky-800 bg-cyan-100  rounded-lg" name="stock"
+                                placeholder="Silahkan isi harga stock">
                         </div>
                         <div class="w-full px-3 mb-3 mt-3">
                             <label for="" class="text-lg font-semibold  text-gray-800">Gambar</label>
                             <input type="file" class="w-full border border-sky-800 bg-cyan-100  rounded-lg" name="image" placeholder="Silahkan isi produk">
+                            @if ($products->image)
+                                <p class="text-sm text-gray-600 mt-1">Gambar saat ini: <span
+                                        class="font-medium">{{ $products->image }}</span></p>
+                            @endif
                         </div>
                         <div class="w-full px-3 mb-3 mt-3">
                             <label for="" class="text-lg font-semibold  text-gray-800">Description</label>
-                            <textarea name="description" id="description"
+                            <textarea name="description" id="description" value="{{ old('description', $products->description) }}"
                                 class="w-full border-sky-800 bg-cyan-100 derror rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 cols="30" rows="10" placeholder="Silahkan isi pesan anda"></textarea>
                         </div>

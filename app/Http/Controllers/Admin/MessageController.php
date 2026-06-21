@@ -34,8 +34,10 @@ class MessageController extends Controller
         $data = $request->validate([
             'user' => 'required|string|max:255',
             'email' => 'required|string|email|max:100|unique:massages,email',
-            'description' => 'nullable|string'
+            'description' => 'nullable|string',
+            
         ]);
+        $data['created_at'] = now();
         
         Message::create($data);
         return back()->with('success', 'Pesan Anda telah terkirim! Terima kasih sudah menghubungi kami.');

@@ -68,16 +68,17 @@
         </div>
     </section>
     {{-- end section - products --}}
-    <section class="w-full">
+    <section class="w-full bg-blue-200 mt-12 mb-12 px-12 py-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 ">
             <div class="w-full  px-5 py-5">
                 <div class="container mx-auto py-3 px-3 ">
-                    <div class="bg-slate-200 scroll-animated   rounded-lg w-full px-3 py-5 relative shadow-lg">
+                    <div class="bg-slate-100 scroll-animated   rounded-xl w-full px-3 py-5 relative shadow-lg border-2 border-indigo-300">
                         <div
-                            class="absolute top-16 left-5 w-20 h-20 rounded-t-sm bg-gradient-to-br  from-sky-500 via-indigo-500 to-sky-800 blur-2xl opacity-70 -translate-x-8/2 -translate-y-1/2">
+                            class="absolute top-0 left-0 w-20 h-24 rounded-r-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-3xl bg-opacity-70">
                         </div>
+
                         <div
-                            class="absolute bottom-2 right-5 w-24 h-20 rounded-t-sm bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-2xl opacity-70 -translate-x-3/2 -translate-y-1/1">
+                            class="absolute bottom-6 right-0 w-24 h-24 rounded-l-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-3xl bg-opacity-70">
                         </div>
                         <h1 class="text-2xl text-center text-gray-800 font-bold">Location from <span
                                 class="text-red-500 font-bold">Juarana</span> <span
@@ -97,12 +98,13 @@
             </div>
             <div class="w-full  px-5 py-5 mx-auto">
                 <div class="container mx-auto py-3 px-3 ">
-                    <div class="bg-slate-200 scroll-animated  rounded-lg w-full px-3 py-5 relative shadow-lg">
+                    <div class="bg-slate-100 scroll-animated  rounded-xl w-full px-3 py-5 relative shadow-lg border-2 border-indigo-300">
                         <div
-                            class="absolute top-10 left-0 w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 via-sky-500 to-sky-800 blur-2xl opacity-70 -translate-x-8/2 -translate-y-1/2">
+                            class="absolute top-0 left-0 w-20 h-24 rounded-r-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-3xl bg-opacity-70">
                         </div>
+
                         <div
-                            class="absolute bottom-0 right-0 w-24 h-20 rounded-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-2xl opacity-70 -translate-x-3/2 -translate-y-1/1">
+                            class="absolute bottom-6 right-0 w-24 h-24 rounded-l-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-3xl bg-opacity-70">
                         </div>
                         <h1 class="text-2xl text-center text-gray-800 font-bold">Message For <span
                                 class="text-red-500 font-bold">Juarana</span> <span
@@ -126,12 +128,12 @@
 
     {{-- star section 4 --}}
     <div
-        class="conatiner w-4/5 rounded-xl relative bg-gradient-to-br shadow-lg mb-12 from-sky-500 via-sky-300 to-sky-500 mx-auto  px-4 py-8">
+        class="conatiner w-4/5 rounded-xl relative bg-gradient-to-br shadow-2xl shadow-blue-300 mb-12 from-sky-500 via-sky-300 to-sky-500 mx-auto  px-4 py-8">
 
         <div class="flex flex-wrap justify-center mb-5 ">
             <div class="flex mb-12">
-                <svg class="w-40 lg:w-40  mx-auto loncat-loncat text-sky-800" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24" xmlns="http://w3.org">
+                <svg class="w-40 lg:w-40  mx-auto loncat-loncat text-sky-800" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24" xmlns="http://w3.org">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.966L3 20l1.326-3.945A8.963 8.963 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
                     </path>

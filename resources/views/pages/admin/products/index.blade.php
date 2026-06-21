@@ -63,6 +63,11 @@
                                     </td>
                                 </tr>
                             @empty
+                                <tr>
+                                    <td colspan="7" class="px-6 py-10 text-center text-gray-400 italic">
+                                        Belum ada product pesan yang masuk.
+                                    </td>
+                                </tr>
                             @endforelse
 
                         </tbody>
