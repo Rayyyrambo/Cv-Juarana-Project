@@ -68,11 +68,11 @@
         </div>
     </section>
     {{-- end section - products --}}
-    <section class="w-full bg-blue-200 mt-12 mb-12 px-12 py-10">
+    <section class="w-full bg-blue-200  mt-12 mb-12 lg:px-12 py-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 ">
             <div class="w-full  px-5 py-5">
-                <div class="container mx-auto py-3 px-3 ">
-                    <div class="bg-slate-100 scroll-animated   rounded-xl w-full px-3 py-5 relative shadow-lg border-2 border-indigo-300">
+                <div class="container mx-auto py-3 px-3  hover:-translate-y-2 transition duration-200 ease-in-out  ">
+                    <div class="bg-slate-100 scroll-animated shadow-lg  transition duration-300 ease-in-out hover:shadow-lg hover:shadow-indigo-400 rounded-xl w-full px-3 py-5 relative  border-2 border-indigo-300">
                         <div
                             class="absolute top-0 left-0 w-20 h-24 rounded-r-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-3xl bg-opacity-70">
                         </div>
@@ -97,8 +97,8 @@
                 </div>
             </div>
             <div class="w-full  px-5 py-5 mx-auto">
-                <div class="container mx-auto py-3 px-3 ">
-                    <div class="bg-slate-100 scroll-animated  rounded-xl w-full px-3 py-5 relative shadow-lg border-2 border-indigo-300">
+                <div class="container mx-auto py-3 px-3 hover:-translate-y-2 transition duration-200 ease-in-out ">
+                    <div class="bg-slate-100 scroll-animated transition duration-300 ease-in-out hover:shadow-lg hover:shadow-indigo-400 rounded-xl w-full px-3 py-5 relative shadow-lg border-2 border-indigo-300">
                         <div
                             class="absolute top-0 left-0 w-20 h-24 rounded-r-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-3xl bg-opacity-70">
                         </div>
@@ -128,7 +128,7 @@
 
     {{-- star section 4 --}}
     <div
-        class="conatiner w-4/5 rounded-xl relative bg-gradient-to-br shadow-2xl shadow-blue-300 mb-12 from-sky-500 via-sky-300 to-sky-500 mx-auto  px-4 py-8">
+        class="conatiner w-4/5 scroll-animatedtwo rounded-xl relative bg-gradient-to-br shadow-2xl shadow-blue-300 mb-12 from-sky-500 via-sky-300 to-sky-500 mx-auto  px-4 py-8">
 
         <div class="flex flex-wrap justify-center mb-5 ">
             <div class="flex mb-12">

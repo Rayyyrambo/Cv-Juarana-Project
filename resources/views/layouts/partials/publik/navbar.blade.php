@@ -14,35 +14,35 @@
                         lg:rounded-full lg:w-1/2 lg:shadow-lg lg:shadow-blue-700/50  lg:border lg:border-blue-500">
 
                     <ul class="block  justify-end lg:flex lg:justify-evenly   ">
-                        <li class="group  lg:mx-3 hover:bg-blue-400 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex   mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:lg:text-blue-700 lg:text-1xl  transition group-hover:text-blue-700"
+                        <li class="group  lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
+                            <a class="flex   mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
                                 href="{{ route('project') }}">
                                 Project
                             </a>
                         </li>
-                        <li class="group lg:mx-3 hover:bg-blue-400 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-blue-700"
+                        <li class="group lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
+                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
                                 href="{{ route('home') }}">
                                 Home
                             </a>
                         </li>
 
-                        <li class="group lg:mx-3 hover:bg-red-400 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700  lg:text-1xl transition group-hover:text-red-700"
+                        <li class="group lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
+                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700  lg:text-1xl transition group-hover:text-white"
                                 href="{{ route('service') }}">
                                 Services
                             </a>
                         </li>
 
-                        <li class="group lg:mx-3 hover:bg-red-400 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-red-700"
+                        <li class="group lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
+                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
                                 href="{{ route('product') }}">
                                 Product
                             </a>
 
-                        <li class="group  lg:mx-3 hover:bg-red-400 transition ease-in-out duration-500 p-1 rounded-lg">
+                        <li class="group  lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
 
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-red-700"
+                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
                                 href="#" id="kategori">
                                 Kategori
                             </a>
@@ -64,7 +64,7 @@
 
 
                 </nav>
-                <div class="kategori-menu hidden w-full rounded-xl border border-gray-600   lg:w-64  lg:block">
+                <div class="kategori-menu hidden w-full rounded-xl border border-blue-600   lg:w-64  lg:block">
                     <div class="w-full px-3 py-2 ">
                         @forelse ($categories as $item)
                             <div
@@ -130,7 +130,7 @@
         <div class="max-w-6xl ">
             <div class="grid grid-cols-2  lg:grid-cols-4 md:grid-cols-2 gap-6 ">
                 <div
-                    class="lg:w-64 md:w-64 w-40 animate-fadeInUp1 mx-3 mb-3 border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    class="lg:w-64 md:w-64 w-40 animate-fadeInUp1 mx-3 mb-3 border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-500/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                     <div class="flex flex-col items-center p-6">
                         <h1 class="text-3xl font-bold text-black">1</h1>
                         <div class="text-center ">
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div
-                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp2  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp2  border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                     <div class="flex flex-col items-center p-6">
                         <h1 class="text-3xl font-bold text-black">5+</h1>
                         <div class="text-center">
@@ -148,7 +148,7 @@
                     </div>
                 </div>
                 <div
-                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp3 border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp3 border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                     <div class="flex flex-col items-center p-6">
                         <h1 class="text-3xl font-bold text-black">15+</h1>
                         <div class="text-center">
@@ -157,7 +157,7 @@
                     </div>
                 </div>
                 <div
-                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp4  border-2 border-blue-400 bg-opacity-70 bg-blue-300 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp4  border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
                     <div class="flex flex-col items-center p-6">
                         <h1 class="text-3xl font-bold text-black">4+</h1>
                         <div class="text-center">

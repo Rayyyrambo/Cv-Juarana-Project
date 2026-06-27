@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="h-screen overflow-hidden">
+<body class="h-screen overflow-hidden bg-slate-500">
     <div class="w-full h-screen flex">
         <a id="menu-toggle" 
             class="fixed top-4 left-4 z-50 lg:hidden bg-blue-500 text-white p-3 rounded-xl shadow-md hover:bg-blue-600 transition">

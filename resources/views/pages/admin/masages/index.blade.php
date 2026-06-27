@@ -3,19 +3,20 @@
 
 
 @section('content')
-    <div class="flex-1 overflow-y-auto bg-gray-50">
+    <div class="flex-1 overflow-y-auto ">
         <div class="container mx-auto px-4 lg:px-8 py-8">
             <div class="w-full flex flex-wrap justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-gray-800">Table Messages</h2>
+                <h2 class="text-2xl px-3 py-3 rounded-lg font-bold border-2 border-green-500 text-green-400">Table Messages
+                </h2>
 
             </div>
 
             <!-- Table Wrapper untuk Responsive -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="bg-indigo-400 border border-white rounded-lg shadow-lg overflow-hidden">
                 <div class="overflow-x-auto">
                     <table class="w-full border-collapse">
                         <thead>
-                            <tr class="bg-blue-500 text-white">
+                            <tr class="bg-blue-800 text-white">
                                 <th class="px-4 py-3 text-left font-semibold">No</th>
                                 <th class="px-4 py-3 text-left font-semibold">User Name</th>
                                 <th class="px-4 py-3 text-left font-semibold">Email</th>
@@ -26,12 +27,12 @@
                         </thead>
                         <tbody>
                             @forelse ($messages as $item)
-                                <tr class="border-b hover:bg-gray-100 transition duration-150">
-                                    <td class="px-4 py-3 text-gray-700">{{ $loop->iteration }}</td>
-                                    <td class="px-4 py-3 text-gray-700 font-medium">{{ $item->user }}</td>
-                                    <td class="px-4 py-3 text-gray-700">{{ $item->email }}</td>
-                                    <td class="px-4 py-3 text-gray-700">{{ $item->description ?? '-' }}</td>
-                                    <td class="px-4 py-3 text-gray-700">
+                                <tr class="border-b border-indigo-300 hover:bg-indigo-300 transition duration-150">
+                                    <td class="px-4 py-3 text-black font-bold">{{ $loop->iteration }}</td>
+                                    <td class="px-4 py-3 text-black font-bold ">{{ $item->user }}</td>
+                                    <td class="px-4 py-3 text-black font-bold">{{ $item->email }}</td>
+                                    <td class="px-4 py-3 text-black font-bold">{{ $item->description ?? '-' }}</td>
+                                    <td class="px-4 py-3 text-black font-bold">
                                         {{ $item->created_at->translatedFormat('d F Y H:i') }}</td>
                                     <td class="px-4 py-3">
                                         <div class="flex gap-2 justify-center flex-wrap">

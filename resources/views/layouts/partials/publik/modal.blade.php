@@ -20,8 +20,11 @@
                     inventore officia maiores veniam molestias, facilis, asperiores omnis neque? Sit eius laboriosam
                     ipsum quo dolorem aut rerum nulla?</p>
                 <div class="flex justify-end ">
-                    <a href=""
+                    @foreach ($products as $item)
+                    <a href="https://api.whatsapp.com/send?phone=6282194809529&text=Halo%20Admin%20Saya%20ingin%20pesan%20 {{ $item->name_products }}" target="_blank"
                         class="bg-sky-700 px-3 py-3 rounded-lg font-bold shadow-lg transition ease-in-out duration-300 hover:bg-sky-400 hover:text-white text-lg  ">Pesan</a>
+                        
+                    @endforeach
                 </div>
             </div>
         </div>

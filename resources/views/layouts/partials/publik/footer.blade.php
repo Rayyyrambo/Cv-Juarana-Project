@@ -28,10 +28,10 @@
                 </div>
                 <p class="font-semibold text-blue-500 text-center px-3">Tetap terhubung dan dapatkan informasi terbaru melalui media sosial saya:</p>
                 <div class="w-96 text-center flex justify-evenly  mx-auto mt-5">
-                    <a href="" class="hover:bg-green-600 transition duration-300 p-3 rounded-full">
+                    <a href="https://api.whatsapp.com/send?phone=6282194809529&text=Silahkan%20Chat%20Saya%20Admin%20Juarana%20Mandiri%20" class="hover:bg-green-600 transition duration-300 p-3 rounded-full">
                         <i class="fa-brands fa-whatsapp text-3xl text-gray-700 hover:text-green-500 transition duration-300 cursor-pointer"></i>
                     </a>
-                    <a href="" class="hover:bg-rose-300 transition duration-300 p-3 rounded-full">
+                    <a href="https://www.instagram.com/juarana_mandiri" class="hover:bg-rose-300 transition duration-300 p-3 rounded-full">
                         <i class="fa-brands fa-instagram text-3xl text-gray-700 hover:text-red-600 transition duration-300 cursor-pointer"></i>
                     </a>
                     <a href="" class="hover:bg-gray-600 p-3 transitoin duration-300 rounded-full">

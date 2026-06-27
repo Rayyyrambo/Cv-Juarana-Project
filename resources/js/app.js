@@ -79,7 +79,7 @@ if (prevBtn && container) {
     });
 }
 
-// scrol animated
+// scrol animated 1
 document.addEventListener("DOMContentLoaded", function () {
     const elemenAnimasi = document.querySelectorAll(".scroll-animated");
     const observe = new IntersectionObserver((enteries, observe) => {
@@ -93,4 +93,20 @@ document.addEventListener("DOMContentLoaded", function () {
         threshold: 0.9;
     });
     elemenAnimasi.forEach((el) => observe.observe(el));
+});
+
+//scrol animated 2 
+document.addEventListener("DOMContentLoaded", function () {
+    const elemenAnimasi_two = document.querySelectorAll(".scroll-animatedtwo");
+    const observe = new IntersectionObserver((enteries, observe) => {
+        enteries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animated2");
+                entry.target.classList.remove("opacity-0");
+                observe.unobserve(entry.target);
+            }
+        });
+        threshold: 0.9;
+    });
+    elemenAnimasi_two.forEach((el) => observe.observe(el));
 });
