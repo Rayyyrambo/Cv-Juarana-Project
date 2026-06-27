@@ -13,8 +13,9 @@ class MessageController extends Controller
      */
     public function index()
     {
+        $totalMessage = Message::count();
         $messages = Message::latest('created_at')->get();
-        return view('pages.admin.masages.index', compact('messages'));
+        return view('pages.admin.masages.index', compact('messages','totalMessage'));
     }
 
     /**

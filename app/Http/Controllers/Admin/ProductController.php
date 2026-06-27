@@ -17,6 +17,7 @@ class ProductController extends Controller
         $search = $request->input('search');
         $golongan = Category::all();
         $categoryFilter = $request->input('category_id');
+        $totalProduct = Product::count();
         
 
         if($search){
@@ -29,7 +30,7 @@ class ProductController extends Controller
         else{
             $products = Product::latest('created_at')->get();
         }
-        return view('pages.admin.products.index', compact('products', 'search', 'golongan', 'categoryFilter'));
+        return view('pages.admin.products.index', compact('products', 'totalProduct', 'search', 'golongan', 'categoryFilter'));
     }
 
     /**

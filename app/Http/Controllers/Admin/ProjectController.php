@@ -13,8 +13,9 @@ class ProjectController extends Controller
      */
     public function index()
     {
+        $totalProject = Project::count();
         $projects = Project::latest('created_at')->get();
-        return view('pages.admin.projects.index', compact('projects'));
+        return view('pages.admin.projects.index', compact('projects', 'totalProject'));
     }
 
     /**

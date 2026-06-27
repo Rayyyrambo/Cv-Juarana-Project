@@ -1,61 +1,52 @@
 @extends('layouts.admin')
 @section('title', 'dasboard')
-    
+
 
 @section('content')
-       <div class="flex-1 overflow-y-auto ">
-                <div class="container mx-auto px-4 lg:px-8 py-8">
-                    <div class="w-full flex flex-wrap justify-between items-center mb-6">
-                        <h2 class="text-2xl font-bold text-gray-800">ini Dashboard</h2>
-                        <a href=""
-                            class="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition duration-200 ease-in-out shadow-lg">
-                            + Tambah Product
-                        </a>
-                    </div>
+    <div class=" overflow-y-auto ">
+        <div class="container  mx-auto px-4 lg:px-8 py-8">
+            <div class="w-full shadow-lg shadow-slate-800 bg-slate-800 rounded-xl px-3 py-8 mb-6">
+                <h2 class="text-3xl font-bold text-slate-200">Selama Datang di Halaman Dashboard</h2>
+                <div class="">
+                    <p class="text-red-600 font-bold text-2xl">Juarana <span class="text-blue-600">Mandiri</span></p>
+                </div>
+            </div>
 
-                    <!-- Table Wrapper untuk Responsive -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div class="overflow-x-auto">
-                            <table class="w-full border-collapse">
-                                <thead>
-                                    <tr class="bg-blue-500 text-white">
-                                        <th class="px-4 py-3 text-left font-semibold">No</th>
-                                        <th class="px-4 py-3 text-left font-semibold">Nama Produk</th>
-                                        <th class="px-4 py-3 text-left font-semibold">Kategori</th>
-                                        <th class="px-4 py-3 text-left font-semibold">Harga</th>
-                                        <th class="px-4 py-3 text-left font-semibold">Stock</th>
-                                        <th class="px-4 py-3 text-left font-semibold">Gambar</th>
-                                        <th class="px-4 py-3 text-center font-semibold">Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="border-b hover:bg-gray-100 transition duration-150">
-                                        <td class="px-4 py-3 text-gray-700">1</td>
-                                        <td class="px-4 py-3 text-gray-700 font-medium">Plafon</td>
-                                        <td class="px-4 py-3 text-gray-700">Bahan Keras</td>
-                                        <td class="px-4 py-3 text-gray-700">Rp 200.000</td>
-                                        <td class="px-4 py-3">
-                                            <span
-                                                class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">5</span>
-                                        </td>
-                                        <td class="px-4 py-3 text-gray-700">gambar1</td>
-                                        <td class="px-4 py-3">
-                                            <div class="flex gap-2 justify-center flex-wrap">
-                                                <a href=""
-                                                    class="px-3 py-1 bg-green-500 hover:bg-green-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
-                                                    Edit
-                                                </a>
-                                                <button type="submit"
-                                                    class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
-                                                    Hapus
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+            <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
+                <div class="container rounded-xl  px-5 py-5">
+                    <div class="w-full mx-auto rounded-lg overflow-hidden flex bg-slate-200 hover:bg-slate-300  shadow-lg shadow-gray-600 ">
+                        <div class=" w-3 bg-red-600">
+                        </div>
+                        <div class="flex justify-center flex-col px-5 py-5">
+                            <h1 class="text-2xl font-bold ">Total Produk</h1>
+                            <p class="text-gray-700 text-lg font-bold">{{ $totalProduct }} Produk</p>
                         </div>
                     </div>
                 </div>
+                <div class="container rounded-xl  px-5 py-5">
+                    <div class="w-full mx-auto rounded-lg overflow-hidden flex bg-slate-200 hover:bg-slate-300  shadow-lg shadow-gray-600 ">
+                        <div class=" w-3 bg-blue-600">
+                        </div>
+                        <div class="flex justify-center flex-col px-5 py-5">
+                            <h1 class="text-2xl font-bold ">Total Project</h1>
+                            <p class="text-gray-700 text-lg font-bold">{{ $totalProject }} Project</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container rounded-xl  px-5 py-5">
+                    <div class="w-full mx-auto rounded-lg overflow-hidden flex bg-slate-200 hover:bg-slate-300 shadow-lg shadow-gray-600  ">
+                        <div class=" w-3 bg-orange-600">
+                        </div>
+                        <div class="flex justify-center flex-col px-5 py-5">
+                            <h1 class="text-2xl font-bold ">Total Pesan Yang Masuk</h1>
+                            <p class="text-gray-700 text-lg font-bold">{{ $totalMessage }} Pesan</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
+        </div>
+    </div>
 @endsection
