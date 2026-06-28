@@ -28,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('products', Product::all());
         View::share('golongan', Category::all());
         View::share('totalProduct', Product::count());
+        View::share('product', Product::first());
         View::share('totalProject', Project::count());
         View::share('totalMessage', Message::count());
 

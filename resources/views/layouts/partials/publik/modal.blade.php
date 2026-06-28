@@ -1,6 +1,6 @@
 <div class="hidden bg-gray-400 px-2 py-3 bg-opacity-90  fixed z-50 left-0 top-0 w-full h-screen overflow-auto"
     id="modalProduct">
-    <div class=" bg-slate-600 relative p-5 m-auto w-80  lg:w-96 mt-24 rounded-lg shadow-lg">
+    <div class=" bg-slate-600 shadow-gray-800 relative p-5 m-auto w-80  lg:w-96 mt-24 rounded-lg shadow-lg">
         <button id="closeModalBtn"
             class="absolute top-0 right-0 p-2 text-gray-700 hover:text-black text-2xl font-bold">×</button>
         <div class="container    ">
@@ -20,11 +20,9 @@
                     inventore officia maiores veniam molestias, facilis, asperiores omnis neque? Sit eius laboriosam
                     ipsum quo dolorem aut rerum nulla?</p>
                 <div class="flex justify-end ">
-                    @foreach ($products as $item)
-                    <a href="https://api.whatsapp.com/send?phone=6282194809529&text=Halo%20Admin%20Saya%20ingin%20pesan%20 {{ $item->name_products }}" target="_blank"
+                    <a href="https://api.whatsapp.com/send?phone=6282194809529&text=Halo%20Admin%20Saya%20ingin%20pesan%20 {{ $product->name_product }}"
+                        target="_blank"
                         class="bg-sky-700 px-3 py-3 rounded-lg font-bold shadow-lg transition ease-in-out duration-300 hover:bg-sky-400 hover:text-white text-lg  ">Pesan</a>
-                        
-                    @endforeach
                 </div>
             </div>
         </div>
@@ -113,7 +111,8 @@
         <button id="closeProjectBtn"
             class="absolute top-0 right-0 p-2 text-gray-700 hover:text-black text-2xl font-bold">×</button>
         <div class="container ">
-            <img id="modalImgProject" class="w-full  shadow-xl border object-cover " src="{{ asset('images/project1.jpg') }}" alt="">
+            <img id="modalImgProject" class="w-full  shadow-xl border object-cover "
+                src="{{ asset('images/project1.jpg') }}" alt="">
             {{-- <div class="mt-3 border border-gray-400 rounded-lg px-3 p-5 bg-slate-800">
                 <h1 id="modalTitle"
                     class="text-1xl shadow-lg shadow-slate-600 text-center font-bold bg-yellow-400 rounded-lg w-40 px-5 py-2 mb-2">

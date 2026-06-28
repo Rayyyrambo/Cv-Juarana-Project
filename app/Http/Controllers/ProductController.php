@@ -11,6 +11,7 @@ class ProductController extends Controller
 
         $categories = Category::all();
         $selecdCategory = $request->query('category');
+        $product = Product::first();
 
         if($selecdCategory){
             $products = Product::whereHas('category', function($query) use ($selecdCategory){
@@ -19,6 +20,6 @@ class ProductController extends Controller
         }else{
             $products = Product::latest()->get();
         }
-        return view('pages.publik.product', compact('products', 'categories'));
+        return view('pages.publik.product', compact('products', 'categories', 'product'));
     }
 }
