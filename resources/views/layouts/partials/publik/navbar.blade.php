@@ -1,6 +1,6 @@
 <section class="w-full   bg-cover bg-no-repeat bg-center"
     style="background-image: url('{{ asset('images/latarCV.jpg') }}') ">
-    
+
     <header class="bg-teal-300 bg-opacity-10 shadow-lg shadow-cyan-500/20  p-3 lg:w-full w-full">
         <div class="px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between relative">
@@ -16,7 +16,7 @@
                     <ul class="block  justify-end lg:flex lg:justify-evenly   ">
                         <li class="group  lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
                             <a class="flex   mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
-                                href="{{ route('project') }}">
+                                href="{{ route('project') }}#project">
                                 Project
                             </a>
                         </li>
@@ -36,7 +36,7 @@
 
                         <li class="group lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
                             <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
-                                href="{{ route('product') }}">
+                                href="{{ route('product') }}#product">
                                 Product
                             </a>
 
@@ -50,7 +50,7 @@
                                 @forelse ($categories as $category)
                                     <div
                                         class="py-1 px-2 hover:bg-blue-500 transition ease-in-out duration-300  rounded cursor-pointer">
-                                        <a href="{{ route('product', ['category' => $category->name]) }}"
+                                        <a href="{{ route('product', ['category' => $category->name]) }}#product"
                                             class="text-1xl text-white category-clik font-bold {{ request('category') === $category->name }} ">{{ $category->name }}</a>
                                     </div>
 
@@ -69,7 +69,7 @@
                         @forelse ($categories as $item)
                             <div
                                 class="py-1 px-2 hover:bg-blue-500 transition ease-in-out duration-300  rounded cursor-pointer">
-                                <a href="{{ route('product', ['category' => $item->name]) }}"
+                                <a href="{{ route('product', ['category' => $item->name]) }}#product"
                                     class="text-1xl text-gray-700 hover:text-gray-200 font-bold ">{{ $item->name }}</a>
                             </div>
                         @empty
@@ -128,43 +128,48 @@
     </div>
     <div class="container w-full  py-12">
         <div class="max-w-6xl ">
-            <div class="grid grid-cols-2  lg:grid-cols-4 md:grid-cols-2 gap-6 ">
+            <div class="grid grid-cols-2  lg:grid-cols-4 md:grid-cols-2 gap-6 px-3 ">
                 <div
-                    class="lg:w-64 md:w-64 w-40 animate-fadeInUp1 mx-3 mb-3 border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-500/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
-                    <div class="flex flex-col items-center p-6">
-                        <h1 class="text-3xl font-bold text-black">1</h1>
+                    class="lg:w-64 md:w-64  animate-fadeInUp1  border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-500/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    <div class="  ">
+                        <h1 class="lg:text-3xl text-center text- text-xl font-bold text-black">1</h1>
                         <div class="text-center ">
-                            <p class="text-2xl text-black font-bold">Cuma di sulawesi</p>
+                            <p class="lg:text-2xl text-center  text-black font-bold">Cuma </p>
+                            <p class="lg:text-2xl text-center  text-black font-bold">di sulawesi</p>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp2  border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
-                    <div class="flex flex-col items-center p-6">
-                        <h1 class="text-3xl font-bold text-black">5+</h1>
-                        <div class="text-center">
-                            <p class="text-2xl text-black font-bold"> Project Selesai</p>
+                    class="lg:w-64 md:w-64  animate-fadeInUp1  border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-500/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    <div class="  ">
+                        <h1 class="lg:text-3xl text-center text- text-xl font-bold text-black">5+</h1>
+                        <div class="text-center ">
+                            <p class="lg:text-2xl text-center  text-black font-bold">Project </p>
+                            <p class="lg:text-2xl text-center  text-black font-bold">Selesai </p>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp3 border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
-                    <div class="flex flex-col items-center p-6">
-                        <h1 class="text-3xl font-bold text-black">15+</h1>
-                        <div class="text-center">
-                            <p class="text-2xl text-black font-bold">Pelanggan puas</p>
+                    class="lg:w-64 md:w-64  animate-fadeInUp1  border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-500/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    <div class="  ">
+                        <h1 class="lg:text-3xl text-center text- text-xl font-bold text-black">15+</h1>
+                        <div class="text-center ">
+                            <p class="lg:text-2xl text-center  text-black font-bold">Pelanggan </p>
+                            <p class="lg:text-2xl text-center  text-black font-bold">Puas</p>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="lg:w-64 md:w-64 w-40 mx-3 mb-3 animate-fadeInUp4  border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-400/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
-                    <div class="flex flex-col items-center p-6">
-                        <h1 class="text-3xl font-bold text-black">4+</h1>
-                        <div class="text-center">
-                            <p class="text-2xl text-black font-bold">Tahun Pengalaman</p>
+                    class="lg:w-64 md:w-64  animate-fadeInUp1  border-2 border-blue-200 bg-opacity-70 bg-gray-100 shadow-blue-800 rounded-xl shadow-lg hover:shadow-lg  hover:shadow-blue-500/90 overflow-hidden transition duration-300 ease-in-out  hover:-translate-y-2">
+                    <div class="  ">
+                        <h1 class="lg:text-3xl text-center text- text-xl font-bold text-black">4+</h1>
+                        <div class="text-center ">
+                            <p class="lg:text-2xl text-center  text-black font-bold">Tahun </p>
+                            <p class="lg:text-2xl text-center  text-black font-bold">Pengalaman</p>
                         </div>
                     </div>
                 </div>
+               
             </div>
         </div>
     </div>

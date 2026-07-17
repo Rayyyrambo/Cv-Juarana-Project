@@ -3,12 +3,16 @@
 
 @section('content')
     {{-- start section1 --}}
-    <div class="w-96 text-center mx-auto py-5 animate-fadeInUp">
-        <h1 class="text-4xl mb-3 text-green-700 font-bold">This is my Service</h1>
-        <p class="text-1xl font-bold">Kami menyediakan layanan service terbaik dengan pengerjaan cepat, rapi, dan terpercaya.
-            Didukung oleh tenaga profesional dan peralatan yang memadai, kami siap membantu perawatan, perbaikan, hingga
-            pengecekan berbagai kebutuhan Anda dengan hasil yang maksimal dan berkualitas.</p>
+    <div class="w-full bg-slate-100 px-2 py-5 text-center mx-auto">
+        <h1 class="text-4xl mb-3 text-slate-900 font-bold">This Is My Service</h1>
+        <p class="lg:text-2xl text-sm w-full text-gray-600 text-center mx-auto font-bold">
+        <p class="lg:text-2xl text-sm w-full text-gray-600 text-center mx-auto font-bold">We offer a selection of
+            high-quality products backed
+            by reliable service to meet your needs.</p>
+        </p>
+
     </div>
+    <hr class="border border-gray-400 w-full ">
 
     {{-- card service --}}
     <section class="w-full bg-blue-400 py-12 mt-12 px-4">
@@ -17,7 +21,8 @@
                 <div
                     class="bg-indigo-100  rounded-xl shadow-lg scroll-animated shadow-blue-800/90 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
                     <div class="flex flex-col items-center p-6">
-                        <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/helmetproject.png') }}" alt="">
+                        <img class="w-32 h-32 object-cover mb-4" src="{{ asset('images/helmetproject.png') }}"
+                            alt="">
                         <div class="text-center">
                             <p class="text-sm font-medium text-gray-700">Kami menyediakan layanan tukang profesional untuk
                                 berbagai kebutuhan pembangunan, renovasi, dan perbaikan. Dikerjakan oleh tenaga ahli
@@ -69,21 +74,21 @@
     {{-- end section2 --}}
 
     {{-- strat section3 --}}
-    <section class="w-full  bg-cover py-16 px-5 flex justify-center  ">
+    <section class="w-full  bg-cover py-16  flex justify-center  ">
         <!-- Gradient Background Elements -->
 
         <div
             class="relative  scroll-animatedtwo overflow-hidden bg-gradient-to-r from-cyan-600 via-blue-300 to-cyan-400 py-16 px-16 rounded-3xl w-full lg:w-2/3 shadow-2xl border border-blue-600
             transition ease-in-out duration-300 translate-y-1 hover:shadow-lg hover:shadow-blue-600 hover:translate-y-0 lg:translate-y-0">
             <div
-                class="absolute top-0 left-0 w-80 h-80 rounded-full bg-gradient-to-br from-purple-500 via-indigo-500 to-sky-800 blur-2xl opacity-30 -translate-x-1/2 -translate-y-1/2">
+                class="absolute top-0 left-0 w-80 h-80 rounded-full bg-gradient-to-br from-cyan-200 via-cyan-300 to-cyan-600 blur-2xl opacity-80 -translate-x-1/2 -translate-y-1/2">
             </div>
             <div
-                class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gradient-to-tl from-cyan-500 via-blue-500 to-indigo-500 blur-2xl opacity-30 translate-x-1/2 translate-y-1/3">
+                class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gradient-to-tl from-cyan-200 via-blue-300 to-indigo-500 blur-1xl opacity-30 translate-x-1/2 translate-y-1/2">
             </div>
-            <div class="  px-4 text-center ">
-                <h2 class="text-4xl font-bold text-slate-800 mb-6">Wujudkan Project Impian Anda </h2>
-                <p class="text-1xl lg:text-center lg:w-96 lg:mx-auto font-semibold text-gray-700">Bersama Kami Juarana
+            <div class="  px-3  ">
+                <h2 class="text-4xl text-center font-bold text-slate-800 mb-6">Wujudkan Project Impian Anda </h2>
+                <p class="text-1xl text-center lg:text-center lg:w-96 lg:mx-auto font-semibold text-gray-700">Bersama Kami Juarana
                     Manadiri Dapat Membantu Project Impian Anda</p>
                 <div class="flex flex-wrap justify-center mt-3 ">
                     <a href="https://api.whatsapp.com/send?phone=6282194809529&text=Silahkan%20Chat%20Saya%20Admin%20Juarana%20Mandiri%20"

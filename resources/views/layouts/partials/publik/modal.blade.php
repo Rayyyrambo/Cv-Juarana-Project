@@ -1,3 +1,5 @@
+
+{{-- modal product --}}
 <div class="hidden bg-gray-400 px-2 py-3 bg-opacity-90  fixed z-50 left-0 top-0 w-full h-screen overflow-auto"
     id="modalProduct">
     <div class=" bg-slate-600 shadow-gray-800 relative p-5 m-auto w-80  lg:w-96 mt-24 rounded-lg shadow-lg">
@@ -30,7 +32,7 @@
 </div>
 
 
-
+{{-- maps modal --}}
 <div class="hidden bg-gray-400 px-2 py-3 bg-opacity-90  fixed z-50 left-0 top-0 w-full h-screen overflow-auto"
     id="mapsModal">
     <div class=" bg-slate-600 relative p-5 m-auto w-80  lg:w-96 mt-24 rounded-lg shadow-lg shadow-gray-800">
@@ -56,6 +58,7 @@
     </div>
 </div>
 
+{{-- masagemodal --}}
 <div class="hidden bg-gray-400 px-2 py-3 bg-opacity-90  fixed z-50 left-0 top-0 w-full h-screen overflow-auto"
     id="masageModal">
     <div class=" bg-slate-600 relative p-5 m-auto w-80  lg:w-96 mt-24 rounded-lg shadow-lg shadow-gray-800">
@@ -105,6 +108,7 @@
     </div>
 </div>
 
+{{-- modalproject --}}
 <div class=" hidden bg-gray-400 px-2 py-3 bg-opacity-90  fixed z-50 left-0 top-0 w-full h-screen overflow-auto flex items-center justify-center"
     id="modalProject">
     <div class=" bg-slate-600 relative w-80  lg:w-1/2  rounded-lg shadow-lg">

@@ -128,7 +128,7 @@
 
     {{-- star section 4 --}}
     <div
-        class="conatiner w-4/5 scroll-animatedtwo rounded-xl relative bg-gradient-to-br shadow-2xl shadow-blue-300 mb-12 from-sky-500 via-sky-300 to-sky-500 mx-auto  px-4 py-8">
+        class="conatiner w-4/5 scroll-animatedtwo rounded-xl relative bg-gradient-to-br shadow-2xl shadow-blue-300 mb-12 from-sky-500 via-sky-300 to-sky-500 mx-auto  px-2 py-8">
 
         <div class="flex flex-wrap justify-center mb-5 ">
             <div class="flex mb-12">

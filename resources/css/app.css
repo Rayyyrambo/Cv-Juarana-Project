@@ -21,6 +21,7 @@
     @apply bg-sky-400;
     @apply bg-opacity-20;
     backdrop-filter: blur(5px);
+    
 }
 
 .modal-view{
@@ -367,3 +368,53 @@ body{
     margin: 0;
     padding: 0;
 }
+
+/* <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    
+  </head>
+  <body>
+    <section class="  py-12 px-5">
+        <!-- header start -->
+         <header class="w-full relative">
+            
+            <nav class="nav-menu ">
+              <ul class="">
+                <li><a href="" class="text-lg text-gray-500 font-semibold"> Home </a></li>
+              
+              
+                <li><a href="" class="text-lg text-gray-500 font-semibold"> About </a></li>
+              
+              
+                <li><a href="" class="text-lg text-gray-500 font-semibold"> Contact </a></li>
+              
+              
+                <li><a href="" class="text-lg text-gray-500 font-semibold"> Sosial Media </a></li>
+              </ul>
+          </nav>
+         </header>
+         
+         <!-- header end -->
+
+    </section>
+   
+     
+
+     </div>
+  </body>
+</html> */
+/* .nav-menu{
+     
+    width: 100%;
+    position: absolute;
+    right: -120%;
+    top: 87px;
+
+    @apply bg-red-500;
+}
+.nav-menu.active{
+    right: 0;
+} */

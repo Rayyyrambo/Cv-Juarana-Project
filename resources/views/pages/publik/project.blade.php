@@ -4,13 +4,16 @@
 
 
 @section('content')
-    <section class="container mx-auto py-8">
-        <div class="w-96 text-center mx-auto">
-            <h1 class="text-4xl mb-3 text-green-700 font-bold">This is my project</h1>
-            <p class="text-1xl font-bold">Berikut adalah beberapa project yang kami selesaikan dengan kualitas terbaik dan
-                pelayanan terpercaya untuk memenuhi kebutuhan Anda.</p>
+    <section id="project" class="container mx-auto py-8">
+        <div class="w-full bg-slate-100 px-2 py-5 text-center mx-auto">
+            <h1 class="text-4xl mb-3 text-slate-900 font-bold">This Is Project</h1>
+            <p class="lg:text-2xl text-sm w-full text-gray-600 text-center mx-auto font-bold">
+            <p class="lg:text-2xl text-sm w-full text-gray-600 text-center mx-auto font-bold">We offer a selection of
+                Explore some of our completed projects, showcasing quality craftsmanship and trusted results.</p>
+            </p>
+
         </div>
-         <hr class="border border-gray-600 mt-12 mb-12 w-full">
+        <hr class="border border-gray-400 w-full ">
         <div class="grid grid-cols-1 px-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             @forelse ($projects as $item)
                 <div class="w-full px-4">
@@ -22,7 +25,8 @@
                         <img class="w-full object-cover " src="{{ Storage::url('projects/' . $item->image) }}"
                             alt="{{ $item->name }}">
                         <div class="py-8 px-3">
-                            <div class="bg-sky-100 shadow-lg border border-gray-500 px-2 py-2 flex  rounded-xl mb-3 items-center justify-center">
+                            <div
+                                class="bg-sky-100 shadow-lg border border-gray-500 px-2 py-2 flex  rounded-xl mb-3 items-center justify-center">
                                 <h1 class="text-lg font-bold mb-2">{{ $item->name_project }}</h1>
                             </div>
                             <p class="text-md font-bold text-gray-900 mt-3">{{ $item->tanggal_project }}</p>
