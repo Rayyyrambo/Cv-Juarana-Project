@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     elemenAnimasi.forEach((el) => observe.observe(el));
 });
 
-//scrol animated 2 
+//scrol animated 2
 document.addEventListener("DOMContentLoaded", function () {
     const elemenAnimasi_two = document.querySelectorAll(".scroll-animatedtwo");
     const observe = new IntersectionObserver((enteries, observe) => {

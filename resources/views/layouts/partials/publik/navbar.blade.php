@@ -13,36 +13,52 @@
                     class="navbar-menu   lg:mx-3 lg:bg-white lg:background-bluer   lg:bg-opacity-30 lg:py-2 lg:px-3 
                         lg:rounded-full lg:w-1/2 lg:shadow-lg lg:shadow-blue-700/50  lg:border lg:border-blue-500">
 
+                    @php
+                        $isHome = request()->routeIs('home');
+                        $isService = request()->routeIs('service');
+                        $isProduct = request()->routeIs('product');
+                        $isProject = request()->routeIs('project');
+                    @endphp
+
                     <ul class="block  justify-end lg:flex lg:justify-evenly   ">
-                        <li class="group  lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex   mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
+                        <li
+                            class="group lg:mx-3 transition ease-in-out  duration-500 p-1 rounded-lg {{ $isProject ? 'bg-blue-600' : 'hover:bg-blue-600 hover:text-white' }}">
+                            <a class="nav-btn flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold lg:text-1xl transition {{ $isProject ? 'text-white' : 'text-white lg:text-blue-700 group-hover:text-white' }}"
                                 href="{{ route('project') }}#project">
                                 Project
                             </a>
                         </li>
-                        <li class="group lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
+                        <li
+                            class="group lg:mx-3 transition ease-in-out duration-500 p-1 rounded-lg {{ $isHome ? 'bg-blue-600' : 'hover:bg-blue-600 hover:text-white' }}">
+                            <a data-target="home"
+                                class="nav-btn flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold lg:text-1xl transition {{ $isHome ? 'text-white' : 'text-white lg:text-blue-700 group-hover:text-white' }}"
                                 href="{{ route('home') }}">
                                 Home
                             </a>
                         </li>
 
-                        <li class="group lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700  lg:text-1xl transition group-hover:text-white"
+                        <li
+                            class="group lg:mx-3 transition ease-in-out duration-500 p-1 rounded-lg {{ $isService ? 'bg-blue-600' : 'hover:bg-blue-600 hover:text-white' }}">
+                            <a data-target="service"
+                                class="nav-btn flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold lg:text-1xl transition {{ $isService ? 'text-white' : 'text-white lg:text-blue-700 group-hover:text-white' }}"
                                 href="{{ route('service') }}">
                                 Services
                             </a>
                         </li>
 
-                        <li class="group lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
+                        <li
+                            class="group lg:mx-3 transition ease-in-out duration-500 p-1 rounded-lg {{ $isProduct ? 'bg-blue-600' : 'hover:bg-blue-600 hover:text-white' }}">
+                            <a data-target="product"
+                                class="nav-btn flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold lg:text-1xl transition {{ $isProduct ? 'text-white' : 'text-white lg:text-blue-700 group-hover:text-white' }}"
                                 href="{{ route('product') }}#product">
                                 Product
                             </a>
+                        </li>
 
                         <li class="group  lg:mx-3 hover:bg-blue-600 transition ease-in-out duration-500 p-1 rounded-lg">
 
-                            <a class="flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
+                            <a data-target="kategori"
+                                class="nav-btn flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold text-white lg:text-blue-700 lg:text-1xl  transition group-hover:text-white"
                                 href="#" id="kategori">
                                 Kategori
                             </a>
@@ -51,7 +67,7 @@
                                     <div
                                         class="py-1 px-2 hover:bg-blue-500 transition ease-in-out duration-300  rounded cursor-pointer">
                                         <a href="{{ route('product', ['category' => $category->name]) }}#product"
-                                            class="text-1xl text-white category-clik font-bold {{ request('category') === $category->name }} ">{{ $category->name }}</a>
+                                            class="nav-btn text-1xl text-white category-clik font-bold {{ request('category') === $category->name }} ">{{ $category->name }}</a>
                                     </div>
 
                                 @empty
@@ -169,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>

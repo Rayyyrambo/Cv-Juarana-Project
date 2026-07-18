@@ -6,7 +6,7 @@
         <p class="text-slate-300">Kota Makassar</p>
     </div>
     <hr class="border border-sky-900 mb-9 ">
-    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 ">
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
         {{-- grid 1 --}}
         <div class="w-full  ">
             <h1 class="text-lg font-semibold mb-2 text-white ">Specialist in Interior & Exterior Finishing</h1>
@@ -39,7 +39,7 @@
             <p class="text-md text-slate-300">Layanan</p>
         </div>
     </section>
-    <div class="w-full  flex justify-between flex-wrap mt-12 ">
+    <div class="lg:w-full w-1/2 md:w-full  flex justify-between flex-wrap mt-12 ">
         <h1 class="text-lg font-semibold mb-2 text-white">Contact Us</h1>
         <div class="flex gap-6  ">
             <a href="https://instagram.com/username_kamu" target="_blank" class="flex items-center border-2 border-slate-400 px-3 py-3  rounded-full ">
