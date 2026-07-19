@@ -30,7 +30,7 @@
                         </li>
                         <li
                             class="group lg:mx-3 transition ease-in-out duration-500 p-1 rounded-lg {{ $isHome ? 'bg-blue-600' : 'hover:bg-blue-600 hover:text-white' }}">
-                            <a data-target="home"
+                            <a 
                                 class="nav-btn flex mx-8 py-2 lg:py-0 lg:mx-0 font-bold lg:text-1xl transition {{ $isHome ? 'text-white' : 'text-white lg:text-blue-700 group-hover:text-white' }}"
                                 href="{{ route('home') }}">
                                 Home
@@ -77,6 +77,7 @@
                             </div>
                         </li>
                     </ul>
+                    
 
 
                 </nav>

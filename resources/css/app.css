@@ -21,14 +21,13 @@
     @apply bg-sky-400;
     @apply bg-opacity-20;
     backdrop-filter: blur(5px);
-    
 }
 
-.modal-view{
+.modal-view {
     display: flex;
 }
 
-.navbar-menu{
+.navbar-menu {
     position: fixed;
     top: 87px;
     right: -100%;
@@ -53,7 +52,7 @@
 .active {
     right: 0;
 }
-.search-menu{
+.search-menu {
     position: absolute;
     right: 4px;
     @apply w-full;
@@ -66,11 +65,11 @@
     transition: 0.3s;
 }
 
-.search-active{
+.search-active {
     transform: scaleY(1);
 }
 
-.user-down{
+.user-down {
     position: absolute;
     right: 0;
     @apply w-64;
@@ -83,11 +82,13 @@
     transition: 0.3s;
 }
 
-.user-down-active{
+.user-down-active {
     transform: scaleX(1);
 }
 
-.kategori-admin{
+
+
+.kategori-admin {
     position: absolute;
     right: 10px;
     @apply w-full;
@@ -98,8 +99,8 @@
     transform-origin: top;
     transition: 0.3s;
 }
-.categori-admin-active{
-    transform:scaleY(1);
+.categori-admin-active {
+    transform: scaleY(1);
 }
 
 .kategori-menu {
@@ -118,23 +119,18 @@
 
 @media (width <= 1391px) {
     .kategori-menu {
-    position: absolute;
-    right: 18%;
-    @apply w-80;
-    
-    @apply bg-slate-500;
-    @apply z-50;
-    top: 70px;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: 0.3s;
-    
+        position: absolute;
+        right: 18%;
+        @apply w-80;
+
+        @apply bg-slate-500;
+        @apply z-50;
+        top: 70px;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: 0.3s;
+    }
 }
-}
-
-
-
-
 
 .kategori-active {
     transform: scaleY(1);
@@ -167,7 +163,7 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        
+
         transform: translateY(-50px);
     }
     to {
@@ -342,29 +338,29 @@
 }
 
 /* scrol animated */
-.scroll-animated{
+.scroll-animated {
     opacity: 0;
 }
 
-.scroll-animated.muncul{
-    animation:fadeInUp 0.8s ease-in-out 0s forwards; ;
+.scroll-animated.muncul {
+    animation: fadeInUp 0.8s ease-in-out 0s forwards;
 }
-.scroll-animated.muncul:nth-child(2){
+.scroll-animated.muncul:nth-child(2) {
     animation-delay: 0.3s;
 }
 
 /* scrol animated2 */
-.scroll-animatedtwo{
+.scroll-animatedtwo {
     opacity: 0;
 }
-.scroll-animatedtwo.animated2{
-    animation: fadeInLeft 1.8s ease-in-out 0s forwards; 
+.scroll-animatedtwo.animated2 {
+    animation: fadeInLeft 1.8s ease-in-out 0s forwards;
 }
 
-.ful-height-scren{
+.ful-height-scren {
     height: 100dvh;
 }
-body{
+body {
     margin: 0;
     padding: 0;
 }
