@@ -52,7 +52,7 @@ document.addEventListener("click", function (e) {
         !dropdownBtn.contains(e.target) &&
         !dropdownMenu.contains(e.target)
     ) {
-        dropdownMenu.classList.add("max-h-0",  "scale-y-95");
+        dropdownMenu.classList.add("max-h-0", "scale-y-95");
         dropdownMenu.classList.remove("max-h-96", "opacity-100");
     }
 });
@@ -99,3 +99,38 @@ if (userDown && buttonDropUser) {
         e.preventDefault();
     });
 }
+
+// pop - up
+document.addEventListener("DOMContentLoaded", () => {
+    // mengambil semua tombol navigasi dan semua section about contact dan project
+    const NavButtons = document.querySelectorAll(".nav-btn");
+    const TabsContent = document.querySelectorAll(".tab-content");
+
+    //  menambahkan perintah ketika di click pada setiap tombol
+    NavButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            
+            // ambil target section dari atribut data target
+            const targetId = button.getAttribute("data-target");
+
+            // sembunyikan semua section
+            TabsContent.forEach((content) => {
+                content.classList.add("hidden", "opacity-0", "translate-y-4");
+                content.classList.remove("opacity-100", "translate-y-0");
+            });
+
+            // tampilkan section ketika di klik
+            const activeButtons = document.getElementById(targetId);
+            if (activeButtons) {
+                activeButtons.classList.remove("hidden");
+                setTimeout(() => {
+                    activeButtons.classList.remove(
+                        "opacity-0",
+                        "translate-y-4",
+                    );
+                    activeButtons.classList.add("opacity-100", "translate-y-0");
+                }, 20);
+            }
+        });
+    });
+});

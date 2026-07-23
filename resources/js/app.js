@@ -25,7 +25,7 @@ hamburger.addEventListener("click", function () {
 
 // menu-kategori-produk-detail
 const btnDropdown = document.querySelector(".btn-menuProduct");
-const menuProduct = document.querySelector(".")
+
 
 // kategori-menu/mobile categori
 const kategoriMenu = document.querySelector(".kategori-menu");
