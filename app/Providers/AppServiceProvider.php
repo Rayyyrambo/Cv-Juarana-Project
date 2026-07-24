@@ -24,9 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share('categories', Category::all());
+        View::share('categories', Category::with('products')->get());
         View::share('products', Product::all());
-        View::share('golongan', Category::all());
+        View::share('golongan', Category::with('products')->get());
         View::share('totalProduct', Product::count());
         View::share('product', Product::first());
         View::share('totalProject', Project::count());
