@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Http\Requests\Product\StoreProductRequest;
+use App\Services\ProductService;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
@@ -45,32 +46,14 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+
+    public function __construct(
+        protected ProductService $productService
+    ){}
+    public function store(StoreProductRequest $request)
     {
         try {
-            $data = $request->validate([
-                'category_id'=>'required|string|exists:categories,id',
-                // 'user'=>'required|string|max:255',
-                'name_product'=>'required|string|max:255',
-                'description'=>'nullable|string',
-                'stock'=>'required|integer|min:0',
-                'price'=>'required|numeric|min:0',
-                'image'=>'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:2048',
-                
-
-
-            ]);
-
-            if($request->hasFile('image')){
-                $file = $request->File('image');
-                $imageName = time() . '_' . str_replace(' ', '_', $file->getClientOriginalName());
-                $file->storeAs('products', $imageName, 'public');
-                $data['image']=$imageName;
-            }
-
-            $data['user_id']=auth()->id();
-            $data['user']=auth()->user()->name; 
-            Product::create($data);
+            $products = $this->ProductService->createtProduct($request->validated());
             return to_route('admin.products.index')->with('success', 'Produk berhasil di tambahkan');
         } catch (\Throwable $th) {
             return back()->with('error', $th->getMessage());
