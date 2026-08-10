@@ -6,6 +6,17 @@
             <div class="w-full flex flex-wrap justify-between items-center mb-6">
                 <h2 class="text-2xl font-bold text-gray-800">Create Product</h2>
             </div>
+             <!-- Alert Error Validasi Input (WAJIB DITAMBAHKAN) -->
+            @if ($errors->any())
+                <div class="w-full px-3 py-2 bg-red-500 text-white mb-3 mt-3 rounded">
+                    <strong class="font-bold">Gagal menyimpan data:</strong>
+                    <ul class="mt-1 list-disc list-inside">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <div class="w-full  ">
                 <div class="lg:w-3/2 w-full container mx-auto shadow-xl border border-white rounded-xl bg-blue-400 py-5  px-3">
@@ -47,7 +58,7 @@
                                 cols="30" rows="10" placeholder="Silahkan isi pesan anda"></textarea>
                         </div>
                         <div class="w-full px-5 mt-5">
-                            <button class="bg-white font-bold text-blue-800 shadow-lg border border-blue-800
+                            <button type="submit" class="bg-white font-bold text-blue-800 shadow-lg border border-blue-800
                             hover:bg-blue-800 hover:text-white hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-800 transition duration-200 ease-in-out
                              px-3 py-2 rounded-lg ">
                                 Simpan

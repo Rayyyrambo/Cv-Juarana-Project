@@ -6,8 +6,9 @@
     <div class="flex-1 overflow-y-auto ">
         <div class="container relative mx-auto px-4 lg:px-8 py-8">
             <div class="w-full flex flex-wrap justify-between items-center mb-6">
-                <h2 class="text-2xl px-2 py-3 rounded-lg border-2 border-green-500 font-bold text-green-400">Table Product</h2>
-            
+                <h2 class="text-2xl px-2 py-3 rounded-lg border-2 border-green-500 font-bold text-green-400">Table Product
+                </h2>
+
             </div>
             <div class="absolute -top-100  -right-48 w-64">
                 <a href="{{ route('admin.products.create') }}"
@@ -15,6 +16,17 @@
                     +
                 </a>
             </div>
+           
+            @if (session('success'))
+                <div class="w-full px-3 py-2 bg-green-400 mb-3 mt-3 ">
+                    {{ session('success') }}
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="w-full px-3 py-2 bg-red-400 mb-3 mt-3 ">
+                    {{ session('error') }}
+                </div>
+            @endif
 
             <!-- Table Wrapper untuk Responsive -->
             <div class="bg-indigo-400 border border-white rounded-lg shadow-lg overflow-hidden">

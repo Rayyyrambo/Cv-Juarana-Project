@@ -53,6 +53,7 @@ document.addEventListener("click", function (e) {
         !dropdownMenu.contains(e.target)
     ) {
         dropdownMenu.classList.add("max-h-0", "scale-y-95");
+        dropdownMenu.classList.add("hidden");
         dropdownMenu.classList.remove("max-h-96", "opacity-100");
     }
 });
@@ -76,6 +77,8 @@ if (dropdownBtn && dropdownMenu) {
         dropdownMenu.classList.toggle("scale-y-95");
         dropdownMenu.classList.toggle("max-h-96");
         dropdownMenu.classList.toggle("opacity-100");
+        dropdownMenu.classList.toggle("hidden");
+        
         e.preventDefault();
     });
 }

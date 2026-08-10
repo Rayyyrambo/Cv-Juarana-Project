@@ -57,12 +57,12 @@
                     <p class="text-4xl font-bold text-slate-600">{{ $totalProduct }} product</p>
                 </div>
                 <div
-                    class="bg-slate-500 hover:bg-slate-600  transition duration-200 ease-in-out shadow-md mt-12 lg:text-center rounded-lg btn-menuProduct w-full lg:w-72 text-start px-2   text-md py-2 cursor-pointer">
+                    class="bg-slate-500 hover:bg-slate-600 mb-4 transition duration-200 ease-in-out shadow-md mt-12  lg:text-center rounded-lg btn-menuProduct w-full lg:w-72 text-start px-2   text-md py-2 cursor-pointer">
                     <h1 class="text-slate-200 font-bold ">Nama Kategori Berdasarkan Produk</h1>
                 </div>
                 {{-- dropdwo kategori berdasarkan produk --}}
                 <div
-                    class="dropdown-product  border border-slate-700 mb-5  scale-y-95 opacity-0 overflow-hidden bg-gray-600/30 px-2 py-2 transition duration-300 ease-in-out origin-top">
+                    class="dropdown-product hidden mb-5 border border-slate-700   scale-y-95 opacity-0 overflow-hidden bg-gray-600/30 px-2 py-2 transition duration-300 ease-in-out origin-top">
                     
                     @forelse ($golongan as $item)
                         <div class="mb-4 border-b border-slate-500 pb-3">
@@ -92,7 +92,7 @@
                 <h1 class="text-3xl text-slate-800 font-bold">Detail data Project </h1>
                 <div class="mt-12 ">
                     <h1 class="text-xl text-black font-semibold">Total Project</h1>
-                    <p class="text-4xl font-bold text-slate-600 mb-12">4 Project</p>
+                    <p class="text-4xl font-bold text-slate-600 mb-12">{{ $totalProject }} Project</p>
                 </div>
                 <a href="{{ route('admin.projects.index') }}"
                     class="px-2 py-3 rounded-lg bg-blue-500 shadow-lg text-white">Views Table Project</a>
@@ -106,18 +106,18 @@
                 <h1 class="text-3xl text-slate-800 font-bold">Detail data Message </h1>
                 <div class="mt-12 ">
                     <h1 class="text-xl text-black font-semibold">Total Pesan Yang Masuk</h1>
-                    <p class="text-4xl font-bold text-slate-600">6 Pesan Yang masuk</p>
+                    <p class="text-4xl font-bold text-slate-600">{{ $totalMessage }} Pesan Yang masuk</p>
                 </div>
                 <div class="w-full mt-6 flex gap-8 mb-8 flex-wrap">
                     <div class="mt-5 ">
                         <label for="" class="font-semibold border-b border-gray-900 py-2">Total Email
                             masuk</label>
-                        <p class="text-xl font-bold text-slate-600 mt-6">6 Email</p>
+                        <p class="text-xl font-bold text-slate-600 mt-6">{{ $totalEmail }} Email</p>
                     </div>
                     <div class="mt-5 ">
                         <label for="" class="font-semibold border-b border-gray-900 py-2">Total username
                             masuk</label>
-                        <p class="text-xl font-bold text-slate-600 mt-6">6 Username</p>
+                        <p class="text-xl font-bold text-slate-600 mt-6">{{ $totalUser }} Username</p>
                     </div>
                 </div>
                 <a href="{{ route('admin.masages.index') }}"

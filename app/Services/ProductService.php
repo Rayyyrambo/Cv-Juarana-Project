@@ -2,28 +2,17 @@
 
 namespace App\Services;
 use App\Models\Product;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 class ProductService
 {
     /**
      * Create a new class instance.
      */
    public function createtProduct(array $data, ?UploadedFile $imageFile = null):  Product{
-    return Product::create([
-        'category_id'=>$data['category_id'],
-        // 'user'=>'required|string|max:255',
-        'name_product'=>$data['name_product'],
-        'description'=>$data['description'],
-        'stock'=>$data['stock'],
-        'price'=>$data['price'],
-        'image'=>$data['image'],
-
-        
-
-
-
-    ]);
+   
     if($imageFile){
-            $imageName = time() . '_' . str_replace(' ', '_', $file->getClientOriginalName());
+            $imageName = time() . '_' . str_replace(' ', '_', $imageFile->getClientOriginalName());
             $imageFile->storeAs('products', $imageName, 'public');
             $data['image'] = $imageName;
             
@@ -32,5 +21,19 @@ class ProductService
      $data['user_id']=auth()->id();
      $data['user']=auth()->user()->name; 
      return Product::create($data);
+   }
+
+   public function updateProduct(Product $product, array $data, ?UploadedFile $imageFile = null):Product{
+        if($imageFile){
+            if($product->image){
+                Storage::disk('public')->delete('products/' .$product->image);
+            }
+            $imageName = time() . '_' . str_replace(' ', '_', $imageFile->getClientOriginalName());
+            $imageFile->storeAs('products', $imageName, 'public');
+            $data['image'] =($imageFile);
+        }
+         $product->update($data);
+        
+        return $product;
    }
 }

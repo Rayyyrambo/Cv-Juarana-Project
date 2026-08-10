@@ -31,6 +31,8 @@ class AppServiceProvider extends ServiceProvider
         View::share('product', Product::first());
         View::share('totalProject', Project::count());
         View::share('totalMessage', Message::count());
+        View::share('totalEmail', Message::distinct('email')->count('email'));
+        View::share('totalUser', Message::count('user'));
 
         // View::composer('*', function ($view) {
         //     $view->with('golongan', Category::all());

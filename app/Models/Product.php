@@ -3,13 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Category;
 
 class Product extends Model
 {
+    use HasFactory;
     protected $fillable = [
-        'category_id', 'name', 'price', 'stock', 'image',
+        
+        'category_id', 'price', 'stock', 'image',
         'description', 'is_available', 'user_id', 'name_product', 'user'
     ];
 
@@ -17,7 +19,7 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function user(){
+    public function creator(){
         return $this->belongsTo(User::class);
     }
 }
