@@ -57,10 +57,10 @@
      </div>
      <div class="kategori-admin px-10  lg:w-80 lg:left-5 lg:flex lg:justify-center ">
          <form action="{{ route('admin.products.index') }}" method="get" class="">
-             <select name="category_id" id="categoryFilter" onchange="this.form.submit()" class="rounded-xl ">
+             <select name="category_name" id="categoryFilter" onchange="this.form.submit()" class="rounded-xl ">
                  <option value="" class="text-center font-bold w-full  ">Silahkan pilih kategori</option>
                  @foreach ($golongan as $item)
-                     <option value="{{ $item->id }}" {{ request('category_id') == $item->id ? 'selected' : '' }}>
+                     <option value="{{ $item->name }}" {{ request('category_name') == $item->name ? 'selected' : '' }}>
                          {{ $item->name }}</option>
                  @endforeach
              </select>

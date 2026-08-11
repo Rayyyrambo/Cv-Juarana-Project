@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Http\Requests\Project\StoreProjectRequest;
+use App\Http\Requests\Project\UpdateProjectRequest;
+use App\Services\ProjectService;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
@@ -29,24 +31,15 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function __construct(protected ProjectService $projectService){}
+
+    public function store(StoreProjectRequest $request)
     {
         try {
-            $data = $request->validate([
-                'name_project'=>'required|string|max:255',
-                'tanggal_project'=>'required|date',
-                'alamat_project'=>'required|string|max:255',
-                'image'=>'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:2048',
-            ]);
+           $projects = $this->projectService->createProject($request->validated(), $request->file('image'));
 
-            if($request->hasFile('image')){
-                $file = $request->File('image');
-                $imageName = time() . '_' . str_replace(' ', '_', $file->getClientOriginalName());
-                $file->storeAs('projects', $imageName, 'public');
-                $data['image']=$imageName;
-            }
-            Project::create($data);
-            return to_route('admin.projects.index')->with('succes', 'Project berhasil ditambahkan');
+           
+            return to_route('admin.projects.index')->with('success', 'Project berhasil ditambahkan');
         } catch (\Throwable $th) {
              return back()->with('error', $th->getMessage());
         }
@@ -72,25 +65,14 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateProjectRequest $request, Project $project)
     {
-         $projects = Project::findOrFail($id);
+         
           try {
-            $data = $request->validate([
-                'name_project'=>'required|string|max:255',
-                'tanggal_project'=>'required|date',
-                'alamat_project'=>'required|string|max:255',
-                'image'=>'nullable|image|mimes:jpeg,jpg,png,gif,svg|max:2048',
-            ]);
-
-            if($request->hasFile('image')){
-                $file = $request->File('image');
-                $imageName = time() . '_' . str_replace(' ', '_', $file->getClientOriginalName());
-                $file->storeAs('projects', $imageName, 'public');
-                $data['image']=$imageName;
-            }
-            $projects->update($data);
-            return to_route('admin.projects.index')->with('succes', 'Project berhasil ditambahkan');
+            
+            $this->projectService->updateProject($project,$request->validated(), $request->file('image'));
+            
+            return to_route('admin.projects.index')->with('succes', 'Project berhasil diperbaruhi');
         } catch (\Throwable $th) {
              return back()->with('error', $th->getMessage());
         }

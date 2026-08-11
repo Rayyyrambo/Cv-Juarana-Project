@@ -8,6 +8,16 @@
             <div class="w-full flex flex-wrap justify-between items-center mb-6">
                 <h2 class="text-2xl font-bold text-gray-800">Create Project</h2>
             </div>
+             @if ($errors->any())
+                <div class="w-full px-3 py-2 bg-red-500 text-white mb-3 mt-3 rounded">
+                    <strong class="font-bold">Gagal menyimpan data:</strong>
+                    <ul class="mt-1 list-disc list-inside">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <div class="w-full  ">
                 <div
@@ -19,16 +29,16 @@
                         <div class="w-full px-3 mb-3 mt-3">
                             <label for="" class="text-lg font-semibold  text-gray-800">Nama Project</label>
                             <input type="text" class="w-full border-sky-800 bg-indigo-200  rounded-lg"
-                                name="name_product" placeholder="Silahkan isi produk"required>
+                                name="name_project" placeholder="Silahkan isi project"required>
                         </div>
                         <div class="w-full px-3 mb-3 mt-3 ">
                             <label for="" class="text-lg font-semibold  text-gray-800">Tanggal Project </label>
-                            <input type="number" class="w-full border-sky-800 bg-indigo-200  rounded-lg" name="price"
-                                placeholder="Silahkan isi harga produk"required>
+                            <input type="date" class="w-full border-sky-800 bg-indigo-200  rounded-lg" name="tanggal_project"
+                                placeholder="Silahkan isi tanggal"required>
                         </div>
                         <div class="w-full px-3 mt-3 ">
                             <label for="" class="text-lg font-semibold  text-gray-800">Alamat Project</label>
-                            <input type="number" class="w-full border-sky-800 bg-indigo-200  rounded-lg" name="stock"
+                            <input type="text" class="w-full border-sky-800 bg-indigo-200  rounded-lg" name="alamat_project"
                                 placeholder="Silahkan isi harga stock"required>
                         </div>
                         <div class="w-full px-3 mb-3 mt-3">
@@ -43,7 +53,7 @@
                                 cols="30" rows="10" placeholder="Silahkan isi pesan anda"></textarea>
                         </div>
                         <div class="w-full px-5 mt-5">
-                            <button
+                            <button type="submit"
                                 class="bg-white font-bold text-blue-800 shadow-lg border border-blue-800
                             hover:bg-blue-800 hover:text-white hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-800 transition duration-200 ease-in-out
                              px-3 py-2 rounded-lg ">
