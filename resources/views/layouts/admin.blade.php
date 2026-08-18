@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    @vite(['resources/css/app.css', 'resources/js/admin/admin.js'])
+    @vite(['resources/css/app.css', 'resources/js/admin/admin.js', 'resources/js/admin/modalAdmin.js' ])
     <title>@yield('title')</title>
     @include('layouts.partials.publik.style')
 

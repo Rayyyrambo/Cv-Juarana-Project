@@ -16,7 +16,7 @@
                     +
                 </a>
             </div>
-           
+
             @if (session('success'))
                 <div class="w-full px-3 py-2 bg-green-400 mb-3 mt-3 ">
                     {{ session('success') }}
@@ -66,14 +66,18 @@
                                                 class="px-3 py-1 bg-green-500 hover:bg-green-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
                                                 Edit
                                             </a>
-                                            <form action="{{ route('admin.products.destroy', $item->id) }}"method="post">
+                                            <button type="submit"
+                                                class="tombolHapus px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
+                                                Hapus
+                                            </button>
+                                            {{-- <form action="{{ route('admin.products.destroy', $item->id) }}"method="post">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
                                                     class="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded text-sm font-semibold transition duration-200 ease-in-out">
                                                     Hapus
                                                 </button>
-                                            </form>
+                                            </form> --}}
                                         </div>
                                     </td>
                                 </tr>
@@ -87,6 +91,37 @@
 
                         </tbody>
                     </table>
+                </div>
+            </div>
+            <div id="modalDelete"
+                class="hidden px-12 bg-gray-400 bg-opacity-65 fixed z-50 w-full h-screen left-0 top-0 flex justify-center items-center">
+                <div class="bg-slate-200 shadow-gray-600 px-2 py-2 shadow-lg rounded-lg">
+                    <div class="w-full flex items-center px-2 py-1">
+                        <img class="mr-4 object-cover w-12 h-12" src="{{ asset('images/warning_delete_r.png') }}"
+                            alt="gambar delete">
+                        <div class="w-1/2 ">
+                            <h1 class="text-lg text-black font-bold">Are You Sure ?</h1>
+                            <p class="text-base text-slate-700">If you are sure you want to delete the product from the
+                                product label, please press the delete
+                                button; press cancel if you wish to cancel.</p>
+                        </div>
+                    </div>
+                    <div class="w-full flex justify-end gap-4 px-3 ">
+                        <button type="submit" id="ButtonCancel"
+                            class="bg-green-400 px-2 py-3 rounded-lg text-green-700 font-bold">
+                            CANCEL
+                        </button>
+                        <form action="{{ route('admin.products.destroy', $item->id) }}"method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" id="ButtonDelete"
+                                class="bg-red-400 px-2 py-3 rounded-lg text-red-700 font-bold">
+                                DELETE
+                            </button>
+                        </form>
+
+                    </div>
+
                 </div>
             </div>
         </div>

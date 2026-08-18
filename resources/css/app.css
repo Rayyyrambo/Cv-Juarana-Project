@@ -86,8 +86,6 @@
     transform: scaleX(1);
 }
 
-
-
 .kategori-admin {
     position: absolute;
     right: 10px;
@@ -360,6 +358,30 @@
 .ful-height-scren {
     height: 100dvh;
 }
+/* Ukuran Scrollbar */
+.overflow-y-auto::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+/* Warna Area Track (Latar Scrollbar) */
+.overflow-y-auto::-webkit-scrollbar-track {
+    background: #e6e7eb;
+    border-radius: 8px;
+}
+
+/* Warna Batang Scrollbar (Thumb) */
+.overflow-y-auto::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 8px;
+    
+}
+
+/* Warna Batang saat di-hover */
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4; /* Warna Cyan */
+}
+
 body {
     margin: 0;
     padding: 0;

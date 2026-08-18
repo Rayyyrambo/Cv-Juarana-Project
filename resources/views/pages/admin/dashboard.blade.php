@@ -12,36 +12,36 @@
                 </div>
             </div>
             {{-- grid untuk card produk, project, massage start --}}
-            <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
-                <div class="container rounded-xl  px-5 py-5">
+            <div class="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-2 lg:gap-6 md:gap-6 gap-3 ">
+                <div class="container rounded-xl  lg:px-2 lg:py-2">
                     <div data-target="DetailProduct"
                         class="nav-btn cursor-pointer w-full mx-auto rounded-lg overflow-hidden flex bg-slate-200 hover:bg-slate-300  shadow-lg shadow-gray-600 ">
                         <div class=" w-3 bg-red-600">
                         </div>
                         <div class="flex justify-center flex-col px-5 py-5">
-                            <h1 class="text-2xl font-bold ">Total Produk</h1>
+                            <h1 class="text-lg lg:text-2xl font-bold ">Total Produk</h1>
                             <p class="text-gray-700 text-base font-bold">Cv. Juarana Mandiri</p>
                         </div>
                     </div>
                 </div>
-                <div class="container rounded-xl  px-5 py-5">
+                <div class="container rounded-xl  lg:px-2 lg:py-2">
                     <div data-target="DetailProject"
                         class="nav-btn cursor-pointer w-full mx-auto rounded-lg overflow-hidden flex bg-slate-200 hover:bg-slate-300  shadow-lg shadow-gray-600 ">
                         <div class=" w-3 bg-blue-600">
                         </div>
                         <div class="flex justify-center flex-col px-5 py-5">
-                            <h1 class="text-2xl font-bold ">Total Project</h1>
+                            <h1 class="text-lg lg:text-2xl font-bold ">Total Project</h1>
                             <p class="text-gray-700 text-base font-bold">Cv. Juarana Mandiri</p>
                         </div>
                     </div>
                 </div>
-                <div class="container rounded-xl  px-5 py-5">
+                <div class="container rounded-xl  lg:px-2 lg:py-2">
                     <div data-target="DetailMessage"
                         class="w-full cursor-pointer nav-btn mx-auto rounded-lg overflow-hidden flex bg-slate-200 hover:bg-slate-300 shadow-lg shadow-gray-600  ">
                         <div class=" w-3 bg-orange-600">
                         </div>
                         <div class="flex justify-center flex-col px-5 py-5">
-                            <h1 class="text-2xl font-bold ">Total Pesan Yang Masuk</h1>
+                            <h1 class="text-lg lg:text-2xl font-bold ">Total Pesan Yang Masuk</h1>
                             <p class="text-gray-700 text-base font-bold">Cv. Juarana Mandiri</p>
                         </div>
                     </div>
@@ -62,25 +62,30 @@
                 </div>
                 {{-- dropdwo kategori berdasarkan produk --}}
                 <div
-                    class="dropdown-product hidden mb-5 border border-slate-700   scale-y-95 opacity-0 overflow-hidden bg-gray-600/30 px-2 py-2 transition duration-300 ease-in-out origin-top">
-                    
-                    @forelse ($golongan as $item)
-                        <div class="mb-4 border-b border-slate-500 pb-3">
-                            <div class="flex items-center justify-between gap-4">
-                                <span class="text-lg font-semibold text-slate-600">{{ $item->name }}</span>
-                                <span class="text-sm text-slate-600">{{ $item->products->count() }} produk</span>
+                    class="dropdown-product   hidden mb-5 border border-slate-700   scale-y-95 opacity-0 overflow-hidden bg-gray-600/30 px-2 py-2 transition duration-300 ease-in-out origin-top">
+                    <div class="max-h-80 overflow-y-auto">
+                        @forelse ($golongan as $item)
+                            <div class="mb-4 border-b border-slate-500 pb-3">
+                                <div class="flex items-center justify-between gap-4">
+                                    <span class="text-lg font-semibold text-slate-600">{{ $item->name }}</span>
+                                    <span class="text-sm text-slate-600">{{ $item->products->count() }} produk</span>
+                                </div>
+                                <div class="mt-2   flex flex-wrap gap-2">
+                                    @forelse ($item->products as $product)
+                                        <span
+                                            class="rounded-full bg-slate-700 px-3 py-1 text-sm text-slate-100">{{ $product->name_product }}</span>
+                                    @empty
+                                        <span
+                                            class="text-sm text-white font-semibold px-2 py-2 rounded-lg bg-yellow-500">Belum
+                                            ada produk</span>
+                                    @endforelse
+                                </div>
                             </div>
-                            <div class="mt-2   flex flex-wrap gap-2">
-                                @forelse ($item->products as $product)
-                                    <span class="rounded-full bg-slate-700 px-3 py-1 text-sm text-slate-100">{{ $product->name_product }}</span>
-                                @empty
-                                    <span class="text-sm text-white font-semibold px-2 py-2 rounded-lg bg-yellow-500">Belum ada produk</span>
-                                @endforelse
-                            </div>
-                        </div>
-                    @empty
-                        <p class="text-slate-300">Kategori tidak ditemukan.</p>
-                    @endforelse
+                        @empty
+                            <p class="text-slate-300">Kategori tidak ditemukan.</p>
+                        @endforelse
+                    </div>
+
                 </div>
                 <a href="{{ route('admin.products.index') }}"
                     class="px-2 py-3  rounded-lg bg-red-500 shadow-lg text-white">Views Table Product</a>

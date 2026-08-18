@@ -2,6 +2,7 @@ const menuToggle = document.getElementById("menu-toggle");
 const sidebar = document.getElementById("sideBar"); // Menggunakan B besar sesuai HTML kamu
 const closeSide = document.getElementById("closeside");
 // PROTEKSI: Kode hanya berjalan di halaman Dashboard Admin yang ada SideBar-nya
+
 if (menuToggle && sidebar) {
     menuToggle.addEventListener("click", function () {
         sidebar.classList.remove("-translate-x-full");
@@ -78,7 +79,7 @@ if (dropdownBtn && dropdownMenu) {
         dropdownMenu.classList.toggle("max-h-96");
         dropdownMenu.classList.toggle("opacity-100");
         dropdownMenu.classList.toggle("hidden");
-        
+
         e.preventDefault();
     });
 }
@@ -112,7 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //  menambahkan perintah ketika di click pada setiap tombol
     NavButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            
             // ambil target section dari atribut data target
             const targetId = button.getAttribute("data-target");
 
