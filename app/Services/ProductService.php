@@ -32,7 +32,7 @@ class ProductService
             }
             $imageName = time() . '_' . str_replace(' ', '_', $imageFile->getClientOriginalName());
             $imageFile->storeAs('products', $imageName, 'public');
-            $data['image'] =($imageFile);
+            $data['image'] = $imageFile;
         }
          $product->update($data);
         
@@ -51,9 +51,19 @@ class ProductService
             return $query->where('category_name', $categoryFilter);
         })
         ->latest('created_at')
-        ->paginate(10) // Otomatis pagination 10 data per halaman
+        ->paginate($perPage) // Otomatis pagination 10 data per halaman
         ->withQueryString();
    }
+
+   public function deleteProduct(Product $product): bool
+    {
+        // Hapus file gambar dari storage jika ada
+        if ($product->image) {
+            Storage::disk('public')->delete('products/' . $product->image);
+        }
+
+        return $product->delete();
+    }
 
    public function getAllCategories(){
     return Category::all();

@@ -19,7 +19,7 @@
                         <div class=" w-3 bg-red-600">
                         </div>
                         <div class="flex justify-center flex-col px-5 py-5">
-                            <h1 class="text-lg lg:text-2xl font-bold ">Total Produk</h1>
+                            <h1 class="text-lg lg:text-2xl font-bold ">Card Produk</h1>
                             <p class="text-gray-700 text-base font-bold">Cv. Juarana Mandiri</p>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                         <div class=" w-3 bg-blue-600">
                         </div>
                         <div class="flex justify-center flex-col px-5 py-5">
-                            <h1 class="text-lg lg:text-2xl font-bold ">Total Project</h1>
+                            <h1 class="text-lg lg:text-2xl font-bold ">Card Project</h1>
                             <p class="text-gray-700 text-base font-bold">Cv. Juarana Mandiri</p>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         <div class=" w-3 bg-orange-600">
                         </div>
                         <div class="flex justify-center flex-col px-5 py-5">
-                            <h1 class="text-lg lg:text-2xl font-bold ">Total Pesan Yang Masuk</h1>
+                            <h1 class="text-lg lg:text-2xl font-bold ">Card Pesan Yang Masuk</h1>
                             <p class="text-gray-700 text-base font-bold">Cv. Juarana Mandiri</p>
                         </div>
                     </div>
@@ -50,10 +50,10 @@
 
             {{-- main detail Product --}}
             <main id="DetailProduct"
-                class="container opacity-0 translate-y-4 transition-all duration-700 ease-in-out tab-content mx-auto px-3 py-5 mt-12 rounded-xl shadow-lg shadow-gray-800   bg-slate-200">
+                class="container hidden opacity-0 translate-y-4 transition-all duration-700 ease-in-out tab-content mx-auto px-3 py-5 mt-12 rounded-xl shadow-lg shadow-gray-800   bg-slate-200">
                 <h1 class="text-3xl text-slate-800 font-bold">Detail data Produk </h1>
                 <div class="mt-12 ">
-                    <h1 class="text-xl text-black font-semibold">Total Product</h1>
+                    <h1 class="text-xl text-black font-semibold">Card Product</h1>
                     <p class="text-4xl font-bold text-slate-600">{{ $totalProduct }} product</p>
                 </div>
                 <div

@@ -26,7 +26,6 @@ hamburger.addEventListener("click", function () {
 // menu-kategori-produk-detail
 const btnDropdown = document.querySelector(".btn-menuProduct");
 
-
 // kategori-menu/mobile categori
 const kategoriMenu = document.querySelector(".kategori-menu");
 const mobileKategori = document.querySelector(".mobile-kategori");
@@ -114,3 +113,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     elemenAnimasi_two.forEach((el) => observe.observe(el));
 });
+
+// timeout alert succes message
+setTimeout(() => {
+    const successAlert = document.getElementById("successAlert");
+
+    if (successAlert) {
+        successAlert.classList.add("opacity-0");
+        setTimeout(() => successAlert.remove(), 500);
+    }
+}, 3000);

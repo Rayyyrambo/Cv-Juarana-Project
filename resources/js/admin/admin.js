@@ -110,30 +110,55 @@ document.addEventListener("DOMContentLoaded", () => {
     const NavButtons = document.querySelectorAll(".nav-btn");
     const TabsContent = document.querySelectorAll(".tab-content");
 
+    if (!NavButtons.length || !TabsContent.length) {
+        return;
+    }
+
+    const savedTarget = localStorage.getItem("adminDashboardDetail");
+    const defaultTarget = document.getElementById("DetailProduct")
+        ? "DetailProduct"
+        : TabsContent[0].id;
+    const initialTarget = document.getElementById(savedTarget)
+        ? savedTarget
+        : defaultTarget;
+
+    const showTab = (targetId) => {
+        TabsContent.forEach((content) => {
+            content.classList.add("hidden", "opacity-0", "translate-y-4");
+            content.classList.remove("opacity-100", "translate-y-0");
+        });
+
+        const activeContent = document.getElementById(targetId);
+        if (!activeContent) {
+            return;
+        }
+
+        activeContent.classList.remove("hidden");
+        setTimeout(() => {
+            activeContent.classList.remove("opacity-0", "translate-y-4");
+            activeContent.classList.add("opacity-100", "translate-y-0");
+        }, 20);
+    };
+
+    showTab(initialTarget);
+
     //  menambahkan perintah ketika di click pada setiap tombol
     NavButtons.forEach((button) => {
         button.addEventListener("click", () => {
             // ambil target section dari atribut data target
             const targetId = button.getAttribute("data-target");
 
-            // sembunyikan semua section
-            TabsContent.forEach((content) => {
-                content.classList.add("hidden", "opacity-0", "translate-y-4");
-                content.classList.remove("opacity-100", "translate-y-0");
-            });
-
-            // tampilkan section ketika di klik
-            const activeButtons = document.getElementById(targetId);
-            if (activeButtons) {
-                activeButtons.classList.remove("hidden");
-                setTimeout(() => {
-                    activeButtons.classList.remove(
-                        "opacity-0",
-                        "translate-y-4",
-                    );
-                    activeButtons.classList.add("opacity-100", "translate-y-0");
-                }, 20);
-            }
+            localStorage.setItem("adminDashboardDetail", targetId);
+            showTab(targetId);
         });
     });
 });
+
+setTimeout(() => {
+    const succesAlerts = document.getElementById("succesAlert");
+
+    if (succesAlerts) {
+        succesAlerts.classList.add("opacity-0");
+        setTimeout(() => succesAlerts.remove(), 500);
+    }
+}, 3000);

@@ -16,6 +16,14 @@
     {{-- end navbar --}}
     @include('layouts.partials.publik.navbar')
 
+    @if (session('success'))
+        <div id="successAlert"
+            class="fixed right-5 top-5 z-[60] max-w-sm rounded-lg border border-green-300 bg-green-100 px-5 py-4 text-green-800 shadow-lg transition-opacity duration-500"
+            role="alert">
+            <p class="font-semibold">{{ session('success') }}</p>
+        </div>
+    @endif
+
     {{-- start section1 --}}
     @yield('content')
     {{-- end section1 --}}
@@ -28,7 +36,7 @@
     {{-- end footer --}}
 
     {{-- modal --}}
-    @extends('layouts.partials.publik.modal')
+    @include('layouts.partials.publik.modal')
 
 </body>
 

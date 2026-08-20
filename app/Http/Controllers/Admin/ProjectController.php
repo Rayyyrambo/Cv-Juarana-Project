@@ -58,6 +58,7 @@ class ProjectController extends Controller
      */
     public function edit(string $id)
     {
+        
         $projects = Project::findOrFail($id);
         return view('pages.admin.projects.edit', compact('projects'));
     }
@@ -72,7 +73,7 @@ class ProjectController extends Controller
             
             $this->projectService->updateProject($project,$request->validated(), $request->file('image'));
             
-            return to_route('admin.projects.index')->with('succes', 'Project berhasil diperbaruhi');
+            return to_route('admin.projects.index')->with('success', 'Project berhasil diperbaruhi');
         } catch (\Throwable $th) {
              return back()->with('error', $th->getMessage());
         }

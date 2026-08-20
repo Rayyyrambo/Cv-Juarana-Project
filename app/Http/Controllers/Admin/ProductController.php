@@ -75,7 +75,8 @@ class ProductController extends Controller
     {
         try {
             $products = Product::findOrFail($id);
-            $products->delete();
+
+            $this->productService->deleteProduct($product);
             return to_route('admin.products.index')->with('success', 'Produk berhasil di hapus');
         } catch (\Throwable $th) {
             return back()->with('error', $th->getMessage());
