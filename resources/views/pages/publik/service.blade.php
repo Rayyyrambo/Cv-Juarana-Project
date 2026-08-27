@@ -84,7 +84,7 @@
                 class="absolute top-0 left-0 w-80 h-80 rounded-full bg-gradient-to-br from-cyan-200 via-cyan-300 to-cyan-600 blur-2xl opacity-80 -translate-x-1/2 -translate-y-1/2">
             </div>
             <div
-                class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gradient-to-tl from-cyan-200 via-blue-300 to-indigo-500 blur-1xl opacity-30 translate-x-1/2 translate-y-1/2">
+                class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gradient-to-tl from-cyan-200 via-blue-300 to-indigo-500 blur-1xl opacity-70 translate-x-1/2 translate-y-1/2">
             </div>
             <div class="  px-3  ">
                 <h2 class="text-4xl text-center font-bold text-slate-800 mb-6">Wujudkan Project Impian Anda </h2>

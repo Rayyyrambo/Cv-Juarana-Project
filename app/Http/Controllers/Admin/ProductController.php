@@ -39,7 +39,7 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {
         try {
-            $products = $this->productService->createtProduct($request->validated(),$request->file('image'));
+            $products = $this->productService->createProduct($request->validated(),$request->file('image'));
             return to_route('admin.products.index')->with('success', 'Produk berhasil di perbarui');
         } catch (\Throwable $th) {
             \Log::error('Gagal tambah produk: ' . $th->getMessage());

@@ -11,7 +11,7 @@ class ProductService
     /**
      * Create a new class instance.
      */
-   public function createtProduct(array $data, ?UploadedFile $imageFile = null):  Product{
+   public function createProduct(array $data, ?UploadedFile $imageFile = null):  Product{
    
     if($imageFile){
             $imageName = time() . '_' . str_replace(' ', '_', $imageFile->getClientOriginalName());
@@ -32,7 +32,7 @@ class ProductService
             }
             $imageName = time() . '_' . str_replace(' ', '_', $imageFile->getClientOriginalName());
             $imageFile->storeAs('products', $imageName, 'public');
-            $data['image'] = $imageFile;
+            $data['image'] = $imageName;
         }
          $product->update($data);
         
