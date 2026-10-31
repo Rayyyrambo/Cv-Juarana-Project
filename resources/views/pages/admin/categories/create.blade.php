@@ -13,7 +13,7 @@
                     <form action="{{ route('admin.categories.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="w-full px-3 mb-3 mt-3">
-                            <label for="" class="text-lg font-semibold  text-gray-800">Nama Kategori</label>
+                            <label class="text-lg font-semibold  text-gray-800">Nama Kategori</label>
                             <input type="text" class="w-full border-sky-800 bg-cyan-100  rounded-lg" name="name"
                                 placeholder="Silahkan isi produk"required>
                         </div>

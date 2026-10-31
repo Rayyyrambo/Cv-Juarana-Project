@@ -32,8 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // data modal project
 const buttonProject = document.querySelectorAll(".open-project");
+
 document.addEventListener("DOMContentLoaded", function () {
     const imagemdl = document.getElementById("modalImgProject");
+    
     buttonProject.forEach((button) => {
         button.addEventListener("click", function (e) {
             e.preventDefault();

@@ -31,25 +31,25 @@
                         @csrf
                         @method('PUT')
                         <div class="w-full px-3 mb-3 mt-3">
-                            <label for="" class="text-lg font-semibold  text-gray-800">Nama Project</label>
+                            <label  class="text-lg font-semibold  text-gray-800">Nama Project</label>
                             <input type="text" value="{{ old('name_project', $projects->name_project) }}"
                                 class="w-full border-sky-800 bg-cyan-100  rounded-lg" name="name_project"
                                 placeholder="Silahkan isi project">
                         </div>
                         <div class="w-full px-3 mb-3 mt-3 ">
-                            <label for="" class="text-lg font-semibold  text-gray-800">Tanggal Project </label>
+                            <label  class="text-lg font-semibold  text-gray-800">Tanggal Project </label>
                             <input type="date" value="{{ old('tanggal_project', $projects->tanggal_project) }}"
                                 class="w-full border-sky-800 bg-cyan-100  rounded-lg" name="tanggal_project"
                                 placeholder="Silahkan isi tanggal ">
                         </div>
                         <div class="w-full px-3 mt-3 ">
-                            <label for="" class="text-lg font-semibold  text-gray-800">Alamat Project</label>
+                            <label  class="text-lg font-semibold  text-gray-800">Alamat Project</label>
                             <input type="text" value="{{ old('alamat_project', $projects->alamat_project) }}"
                                 class="w-full border-sky-800 bg-cyan-100  rounded-lg" name="alamat_project"
                                 placeholder="Silahkan isi alamat">
                         </div>
                         <div class="w-full px-3 mb-3 mt-3">
-                            <label for="" class="text-lg font-semibold  text-gray-800">Gambar</label>
+                            <label  class="text-lg font-semibold  text-gray-800">Gambar</label>
                             <input type="file" class="w-full border border-sky-800 bg-cyan-100  rounded-lg"
                                 name="image" placeholder="Silahkan isi gambar">
                             @if ($projects->image)

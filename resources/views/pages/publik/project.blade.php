@@ -47,76 +47,7 @@
                 </div>
             @endforelse
 
-            {{-- <div class="w-full px-4">
-                <div
-                    class="bg-indigo-100 rounded-xl shadow-lg mb-10 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
-                    <img class="w-full object-cover " src="{{ asset('images/project1.jpg') }}" alt="">
-                    <div class="py-8 px-6">
-                        <h3>product</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam mollitia temporibus in
-                            alias dignissimos sed facere, officiis iusto atque!</p>
-                        <button class="bg-emerald-400 p-3 rounded-xl hover:bg-emerald-700">
-                            check
-                        </button>
-                    </div>
-                </div>
-            </div> --}}
-            {{-- <div class="w-full px-4">
-                <div
-                    class="bg-indigo-100 rounded-xl shadow-lg mb-10 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
-                    <img class="w-full object-cover " src="{{ asset('images/project1.jpg') }}" alt="">
-                    <div class="py-8 px-6">
-                        <h3>product</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam mollitia temporibus in
-                            alias dignissimos sed facere, officiis iusto atque!</p>
-                        <button class="bg-emerald-400 p-3 rounded-xl hover:bg-emerald-700">
-                            check
-                        </button>
-                    </div>
-                </div>
-            </div> --}}
-            {{-- <div class="w-full px-4">
-                <div
-                    class="bg-indigo-100 rounded-xl shadow-lg mb-10 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
-                    <img class="w-full object-cover " src="{{ asset('images/project1.jpg') }}" alt="">
-                    <div class="py-8 px-6">
-                        <h3>product</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam mollitia temporibus in
-                            alias dignissimos sed facere, officiis iusto atque!</p>
-                        <button class="bg-emerald-400 p-3 rounded-xl hover:bg-emerald-700">
-                            check
-                        </button>
-                    </div>
-                </div>
-            </div> --}}
-            {{-- <div class="w-full px-4">
-                <div
-                    class="bg-indigo-100 rounded-xl shadow-lg mb-10 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
-                    <img class="w-full object-cover " src="{{ asset('images/project1.jpg') }}" alt="">
-                    <div class="py-8 px-6">
-                        <h3>product</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam mollitia temporibus in
-                            alias dignissimos sed facere, officiis iusto atque!</p>
-                        <button class="bg-emerald-400 p-3 rounded-xl hover:bg-emerald-700">
-                            check
-                        </button>
-                    </div>
-                </div>
-            </div> --}}
-            {{-- <div class="w-full px-4">
-                <div
-                    class="bg-indigo-100 rounded-xl shadow-lg mb-10 overflow-hidden transition duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
-                    <img class="w-full object-cover " src="{{ asset('images/project1.jpg') }}" alt="">
-                    <div class="py-8 px-6">
-                        <h3>product</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quibusdam mollitia temporibus in
-                            alias dignissimos sed facere, officiis iusto atque!</p>
-                        <button class="bg-emerald-400 p-3 rounded-xl hover:bg-emerald-700">
-                            check
-                        </button>
-                    </div>
-                </div>
-            </div> --}}
+
         </div>
     </section>
 @endsection

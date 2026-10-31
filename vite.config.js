@@ -1,14 +1,17 @@
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+import { defineConfig } from "vite";
+import laravel from "laravel-vite-plugin";
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
-            input: ['resources/css/modal.js', 'resources/js/modal.js'],
-            input: ['resources/css/dataModal.js', 'resources/js/dataModal.js'],
-            input: ['resources/css/dataModal.js', 'resources/js/admin/admin.js'],
-            input: ['resources/js/admin/modalAdmin.js'],
+            input: [
+                "resources/css/app.css",
+                "resources/js/app.js",
+                "resources/js/modal.js",
+                "resources/js/dataModal.js",
+                "resources/js/admin/admin.js",
+                "resources/js/admin/modalAdmin.js",
+            ],
             refresh: true,
         }),
     ],

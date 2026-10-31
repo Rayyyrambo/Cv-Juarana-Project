@@ -5,7 +5,7 @@
         <button id="closeModalBtn"
             class="absolute top-0 right-0 p-2 text-gray-700 hover:text-black text-2xl font-bold">×</button>
         <div class="container    ">
-            <img id="modalImg" class="w-60   object-cover " src="{{ asset('images/project1.jpg') }}" alt="">
+            <img id="modalImg" class="w-60   object-cover "  alt="">
             <div class="mt-3 border border-gray-400 rounded-lg px-3 p-5 bg-slate-800">
                 <h1 id="modalTitle"
                     class="text-1xl shadow-lg shadow-slate-600 text-center font-bold bg-yellow-400 rounded-lg w-40 px-5 py-2 mb-2">
@@ -149,7 +149,7 @@
             class="absolute top-0 right-0 p-2 text-gray-700 hover:text-black text-2xl font-bold">×</button>
         <div class="container ">
             <img id="modalImgProject" class="w-full  shadow-xl border object-cover "
-                src="{{ asset('images/project1.jpg') }}" alt="">
+                 alt="">
             {{-- <div class="mt-3 border border-gray-400 rounded-lg px-3 p-5 bg-slate-800">
                 <h1 id="modalTitle"
                     class="text-1xl shadow-lg shadow-slate-600 text-center font-bold bg-yellow-400 rounded-lg w-40 px-5 py-2 mb-2">

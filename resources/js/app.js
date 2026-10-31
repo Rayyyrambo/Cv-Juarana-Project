@@ -10,18 +10,19 @@ Alpine.start();
 // hamburger
 const hamburger = document.querySelector("#hamburger"); //yang dimana carikan saya id yg bernama hamburger
 const navMenu = document.querySelector(".navbar-menu");
-hamburger.addEventListener("click", function () {
-    //<------ yang dimana ketika hamburger di klik
-    if (navMenu && hamburger) {
+if (hamburger && navMenu) {
+    hamburger.addEventListener("click", function () {
+        //<------ yang dimana ketika hamburger di klik
+
         // Pastikan elemen ditemukan sebelum menambahkan event listener
         navMenu.classList.toggle("active");
         hamburger.classList.toggle("hamburger-active");
-    } else {
-        console.warn(
-            "Elemen hamburger atau navMenu tidak ditemukan di halaman ini.",
-        );
-    }
-});
+    });
+} else {
+    console.warn(
+        "Elemen hamburger atau navMenu tidak ditemukan di halaman ini.",
+    );
+}
 
 // menu-kategori-produk-detail
 const btnDropdown = document.querySelector(".btn-menuProduct");
@@ -29,13 +30,17 @@ const btnDropdown = document.querySelector(".btn-menuProduct");
 // kategori-menu/mobile categori
 const kategoriMenu = document.querySelector(".kategori-menu");
 const mobileKategori = document.querySelector(".mobile-kategori");
-document.querySelector("#kategori").onclick = (e) => {
-    if (kategoriMenu && mobileKategori) {
+if (kategoriMenu && mobileKategori) {
+    document.querySelector("#kategori").onclick = (e) => {
         kategoriMenu.classList.toggle("kategori-active");
         mobileKategori.classList.toggle("mobile-categori-active");
         e.preventDefault();
-    }
-};
+    };
+} else {
+    console.warn(
+        "Elemen kategori atau mobileKategori tidak ditemukan di halaman ini.",
+    );
+}
 
 // klik di luar elemen
 const kategoriKlik = document.querySelector("#kategori");

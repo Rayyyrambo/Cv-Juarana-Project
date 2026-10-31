@@ -33,26 +33,26 @@
                         </div>
 
                         <div class="w-full px-3 mb-3 mt-3">
-                            <label for="" class="text-lg font-semibold  text-gray-800">NamaProduk</label>
+                            <label  class="text-lg font-semibold  text-gray-800">NamaProduk</label>
                             <input type="text" class="w-full border-sky-800 bg-indigo-200  rounded-lg" name="name_product"
                                 placeholder="Silahkan isi produk"required>
                         </div>
                         <div class="w-full px-3 mb-3 mt-3 ">
-                            <label for="" class="text-lg font-semibold  text-gray-800">Harga</label>
+                            <label  class="text-lg font-semibold  text-gray-800">Harga</label>
                             <input type="number" class="w-full border-sky-800 bg-indigo-200  rounded-lg" name="price"
                                 placeholder="Silahkan isi harga produk"required>
                         </div>
                         <div class="w-full px-3 mt-3 ">
-                            <label for="" class="text-lg font-semibold  text-gray-800">Stock</label>
+                            <label  class="text-lg font-semibold  text-gray-800">Stock</label>
                             <input type="number" class="w-full border-sky-800 bg-indigo-200  rounded-lg" name="stock"
                                 placeholder="Silahkan isi harga stock"required>
                         </div>
                         <div class="w-full px-3 mb-3 mt-3">
-                            <label for="" class="text-lg font-semibold  text-gray-800">Gambar</label>
+                            <label  class="text-lg font-semibold  text-gray-800">Gambar</label>
                             <input type="file" class="w-full border border-sky-800 bg-indigo-200  rounded-lg" name="image" placeholder="Silahkan isi produk">
                         </div>
                         <div class="w-full px-3 mb-3 mt-3">
-                            <label for="" class="text-lg font-semibold  text-gray-800">Description</label>
+                            <label  class="text-lg font-semibold  text-gray-800">Description</label>
                             <textarea name="description" id="description"
                                 class="w-full border-sky-800 bg-indigo-200 derror rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                                 cols="30" rows="10" placeholder="Silahkan isi pesan anda"></textarea>

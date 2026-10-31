@@ -115,12 +115,12 @@
                 </div>
                 <div class="w-full mt-6 flex gap-8 mb-8 flex-wrap">
                     <div class="mt-5 ">
-                        <label for="" class="font-semibold border-b border-gray-900 py-2">Total Email
+                        <label class="font-semibold border-b border-gray-900 py-2">Total Email
                             masuk</label>
                         <p class="text-xl font-bold text-slate-600 mt-6">{{ $totalEmail }} Email</p>
                     </div>
                     <div class="mt-5 ">
-                        <label for="" class="font-semibold border-b border-gray-900 py-2">Total username
+                        <label class="font-semibold border-b border-gray-900 py-2">Total username
                             masuk</label>
                         <p class="text-xl font-bold text-slate-600 mt-6">{{ $totalUser }} Username</p>
                     </div>
