@@ -17,6 +17,33 @@ class AuthenticationTest extends TestCase
         $response->assertStatus(200);
     }
 
+    public function test_invalid_credentials_show_an_error_on_the_login_screen(): void
+    {
+        $response = $this->followingRedirects()->post('/login', [
+            'name' => 'unknown-user',
+            'password' => 'wrong-password',
+        ]);
+
+        $response->assertOk()
+            ->assertSee('Nama pengguna atau password yang Anda masukkan salah.');
+    }
+
+    public function test_non_admin_users_see_an_error_on_the_login_screen(): void
+    {
+        $user = User::factory()->create([
+            'name' => 'regular-user',
+            'role' => 'user',
+        ]);
+
+        $response = $this->followingRedirects()->post('/login', [
+            'name' => $user->name,
+            'password' => 'password',
+        ]);
+
+        $response->assertOk()
+            ->assertSee('Hanya admin yang dapat login ke sistem ini.');
+    }
+
     public function test_users_can_authenticate_using_the_login_screen(): void
     {
         $user = User::factory()->create();

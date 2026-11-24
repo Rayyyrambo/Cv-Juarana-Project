@@ -86,7 +86,7 @@
                                                             <p class="text-base text-slate-700">If you are sure you want to
                                                                 delete the product from the
                                                                 projects label, please press the delete
-                                                                button; press cancel if you wish to cancel.</p>
+                                                                button press cancel if you wish to cancel.</p>
                                                         </div>
                                                     </div>
                                                     <div class="w-full flex justify-end gap-4 px-3 ">

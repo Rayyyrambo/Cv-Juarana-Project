@@ -1,10 +1,10 @@
-@extends('layouts.admin');
+@extends('layouts.admin')
 
 
 
 @section('title', 'edit')
 @section('content')
-    <div class="flex-1 overflow-y-auto bg-gray-50">
+    <div class="flex-1 overflow-y-auto ">
         <div class="container  mx-auto px-4 lg:px-8 py-8">
             <div class="w-full flex flex-wrap justify-between items-center mb-6">
                 <h2 class="text-2xl font-bold text-gray-800">Edit Product</h2>

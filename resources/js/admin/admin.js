@@ -59,7 +59,7 @@ document.addEventListener("click", function (e) {
     }
 });
 
-// serach produk
+// search produk
 const SearchMenu = document.querySelector(".search-menu");
 const buttonProduk = document.getElementById("toggle-produk");
 if (SearchMenu && buttonProduk) {
@@ -84,7 +84,7 @@ if (dropdownBtn && dropdownMenu) {
     });
 }
 
-// serach kategori
+// search kategori
 const kategoriAdmin = document.querySelector(".kategori-admin");
 const buttonKategori = document.getElementById("toggle-kategori");
 if (kategoriAdmin && buttonKategori) {

@@ -1,0 +1,14 @@
+
+
+@font-face {
+    font-family: "SourGummy";
+    src:
+        url("SourGummy-Black.woff2") format("woff2"),
+        url("SourGummy-Black.woff") format("woff"),
+        url("SourGummy-Black.ttf") format("truetype");
+   
+}
+
+.SourGummy {
+    font-family: "SourGummy", sans-serif;
+}

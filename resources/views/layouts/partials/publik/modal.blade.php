@@ -1,40 +1,47 @@
 {{-- modal product --}}
-<div class="hidden bg-gray-400 px-2 py-3 bg-opacity-90  fixed z-50 left-0 top-0 w-full h-screen overflow-auto"
+<div class=" hidden bg-gray-400 px-3   lg:px-2 py-12 bg-opacity-90  fixed z-50 left-0 top-0 w-full h-screen overflow-auto flex justify-center items-center pt-24"
     id="modalProduct">
-    <div class=" bg-slate-600 shadow-gray-800 relative p-5 m-auto w-80  lg:w-96 mt-24 rounded-lg shadow-lg">
+    <div class=" bg-white shadow-gray-800 relative p-5 m-auto w-full  lg:w-1/2  rounded-lg shadow-lg">
         <button id="closeModalBtn"
-            class="absolute top-0 right-0 p-2 text-gray-700 hover:text-black text-2xl font-bold">×</button>
-        <div class="container    ">
-            <img id="modalImg" class="w-60   object-cover "  alt="">
-            <div class="mt-3 border border-gray-400 rounded-lg px-3 p-5 bg-slate-800">
-                <h1 id="modalTitle"
-                    class="text-1xl shadow-lg shadow-slate-600 text-center font-bold bg-yellow-400 rounded-lg w-40 px-5 py-2 mb-2">
-                    Nama Produk</h1>
-                <p id="modalPrice" class="px-5 text-gray-300 font-semibold mt-3">200.000</p>
-                <p id="modalStock" class="px-5 py-2 text-gray-300  font-semibold">stock produk</p>
-                <p id="modalCategory"
-                    class="bg-zinc-950 text-center w-40 mt-1 text-gray-100 px-3 font-semibold border-2 border-yellow-300 py-2 rounded-xl">
-                    kategori produk</p>
-                <p id="modalDesc" class="mt-2 text-gray-200">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Libero
-                    repellendus voluptas amet,
-                    inventore officia maiores veniam molestias, facilis, asperiores omnis neque? Sit eius laboriosam
-                    ipsum quo dolorem aut rerum nulla?</p>
-                <div class="flex justify-end ">
-                    <a href="https://api.whatsapp.com/send?phone=6282194809529&text=Halo%20Admin%20Saya%20ingin%20pesan%20 {{ $product->name_product }}"
-                        target="_blank"
-                        class="bg-sky-700 px-3 py-3 rounded-lg font-bold shadow-lg transition ease-in-out duration-300 hover:bg-sky-400 hover:text-white text-lg  ">Pesan</a>
+            class="absolute top-0 right-0 p-1 text-gray-700 hover:text-black text-2xl font-bold">×</button>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+            <div class="flex justify-center border-2 rounded-lg border-blue-400 px-3 py-3 ">
+
+                <img id="modalImg" class="w-full rounded-lg object-cover" alt="">
+            </div>
+            <div class="w-full">
+                <div class="border-2 border-blue-400 rounded-lg px-3 p-4 ">
+                    <h1 id="modalTitle" class="text-2xl text-start font-bold   w-40 lg:w-full px-5 py-2 mb-2">
+                        MU-380 Thinbed BLock Mortar</h1>
+                    <p id="modalPrice" class="px-5 text-lg font-bold mt-3">200.000</p>
+                    <p id="modalStock" class="px-5 py-2 text-slate-800  font-semibold">stock produk</p>
+                    <p id="modalCategory"
+                        class=" text-center w-40 mt-1 text-blue-800 px-3 font-semibold border-2 rounded-lg border-black py-2 ">
+                        kategori produk</p>
+                    <p id="modalDesc" class="mt-2 text-slate-800">Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit.
+                        Libero
+                        repellendus voluptas amet,
+                        inventore officia maiores veniam molestias, facilis, asperiores omnis neque? Sit eius laboriosam
+                        ipsum quo dolorem aut rerum nulla?</p>
+                    <div class="flex justify-end mt-3 ">
+                        <a href="https://api.whatsapp.com/send?phone=6282194809529&text=Halo%20Admin%20Saya%20ingin%20pesan%20 {{ $product->name_product }}"
+                            target="_blank"
+                            class="bg-sky-700 text-slate-200 px-3 py-3 rounded-lg font-bold shadow-lg transition ease-in-out duration-300 hover:bg-sky-400 hover:text-white text-lg  ">Pesan</a>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
+
 
 
 {{-- maps modal --}}
 <div class="hidden bg-gray-400 px-2 py-3 bg-opacity-90  fixed z-50 left-0 top-0 w-full h-screen overflow-auto"
     id="mapsModal">
-    <div class=" bg-slate-600 relative p-5 m-auto w-80  lg:w-96 mt-24 rounded-lg shadow-lg shadow-gray-800">
+    <div class=" bg-white relative p-5 m-auto w-80  lg:w-2/3 mt-24 rounded-lg shadow-lg shadow-gray-800">
         <button id="closeMapsBtn"
             class="absolute top-0 right-0 p-2 text-gray-700 hover:text-black text-2xl font-bold">×</button>
         <div class="container">
@@ -45,13 +52,20 @@
                     loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-            <div data-aos="fade-right" data-aos-duration="1000" class="mt-5 w-2/3 ">
-                <h1 class="font-bold bg-gray-400 shadow-lg shadow-gray-800 px-3 py-3 text-lg rounded-lg ">Kantor buka
-                    pada pukul:</h1>
-                <p class="font-bold text-gray-200 px-3 mt-2">8:30 WITA</p>
-                <h1 class="font-bold bg-gray-400 px-3 py-3 text-lg rounded-lg mt-3 shadow-lg shadow-gray-800 ">Kantor
-                    tutup pada pukul:</h1>
-                <p class="text-gray-200 mt-2 px-3 font-bold">5:30 WITA</p>
+            <div data-aos="fade-right" data-aos-duration="1000" class="mt-5 w-full flex justify-between gap-3 ">
+                <div class="flex-col">
+                    <h1 class="font-bold border-b-2 mb-3 border-slate-400  px-3 py-3 text-lg  ">Kantor
+                        buka
+                        pada pukul:</h1>
+                    <p class="font-bold text-slate-600 px-3 mt-2 text-center">8:30 WITA</p>
+                </div>
+                <div class="flex-col">
+                    <h1 class="font-bold  px-3 py-3 text-lg  mb-3 border-b-2 border-slate-400   ">
+                        Kantor
+                        tutup pada pukul:</h1>
+                    <p class="text-slate-600 mt-2 px-3 font-bold text-center">17:30 WITA</p>
+                </div>
+
             </div>
         </div>
     </div>
@@ -148,8 +162,7 @@
         <button id="closeProjectBtn"
             class="absolute top-0 right-0 p-2 text-gray-700 hover:text-black text-2xl font-bold">×</button>
         <div class="container ">
-            <img id="modalImgProject" class="w-full  shadow-xl border object-cover "
-                 alt="">
+            <img id="modalImgProject" class="w-full  shadow-xl border object-cover " alt="">
             {{-- <div class="mt-3 border border-gray-400 rounded-lg px-3 p-5 bg-slate-800">
                 <h1 id="modalTitle"
                     class="text-1xl shadow-lg shadow-slate-600 text-center font-bold bg-yellow-400 rounded-lg w-40 px-5 py-2 mb-2">

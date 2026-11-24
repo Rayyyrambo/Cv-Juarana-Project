@@ -50,3 +50,54 @@ document.addEventListener("click", (e) => {
         modalProjectsdlt.classList.add("hidden");
     }
 });
+
+//Modal delete Massage
+const modalMassage = document.getElementById("modalDeleteMassage");
+const btnCancelMassage = document.getElementById("ButtonCancelMassage");
+const btnDeleteMassage = document.querySelectorAll(".btnMassageDelete");
+
+btnDeleteMassage.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalMassage.classList.remove("hidden");
+    });
+});
+
+if (btnCancelMassage) {
+    btnCancelMassage.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalMassage.classList.add("hidden");
+    });
+}
+
+document.addEventListener("click", (e) => {
+    if (e.target === modalMassage) {
+        modalMassage.classList.add("hidden");
+    }
+});
+
+//Modal delete Category
+const modalCategory = document.getElementById("modalDeleteCategori");
+const btnCancelCategory = document.getElementById("ButtonCancelCategori");
+const btnDeleteCategory = document.querySelectorAll(".btnCategorieDelete");
+
+btnDeleteCategory.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalCategory.classList.remove("hidden");
+    });
+});
+
+if (btnCancelCategory) {
+    btnCancelCategory.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalCategory.classList.add("hidden");
+    });
+}
+
+document.addEventListener("click", (e) => {
+    if (e.target === modalCategory) {
+        e.preventDefault();
+        modalCategory.classList.add("hidden");
+    }
+});

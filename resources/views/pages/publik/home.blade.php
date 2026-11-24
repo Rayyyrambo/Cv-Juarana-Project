@@ -77,10 +77,13 @@
                     d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.456-2.456L14.25 6l1.035-.259a3.375 3.375 0 0 0 2.456-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
             </svg>
             <div class="rounded-tr-3xl rounded-tl-lg rounded-bl-3xl rounded-br-lg bg-blue-600 px-1 py-2">
-                <h1 class="lg:text-5xl text-2xl px-3 py-3 bg-blue-500 rounded-tr-3xl rounded-tl-lg rounded-bl-3xl rounded-br-lg text-white font-semibold italic">Location & Message</h1>
+                <h1
+                    class="lg:text-5xl text-2xl px-3 py-3 bg-blue-500 rounded-tr-3xl rounded-tl-lg rounded-bl-3xl rounded-br-lg text-white font-semibold italic">
+                    Location & Message</h1>
             </div>
         </div>
-        <h1 class="text-center mt-3 text-blue-600 lg:text-2xl text-xl font-semibold">Kami Siap Melayani Anda Dengan Sepenuh Hati</h1>
+        <h1 class="text-center mt-3 text-blue-600 lg:text-2xl text-xl font-semibold">Kami Siap Melayani Anda Dengan Sepenuh
+            Hati</h1>
         <div class=" w-1/2 mx-auto mt-3">
             <hr class="text-center  border border-blue-500 w-full">
             <div class="px-5 mt-2">
@@ -96,16 +99,15 @@
                         class="bg-slate-100 scroll-animated shadow-lg  transition duration-300 ease-in-out hover:shadow-lg hover:shadow-indigo-400 rounded-xl w-full px-3  py-5 relative  border-2 border-indigo-300">
 
                         <div
-                            class="absolute -top-6 right-0 w-28 h-24 rounded-t-full rotate-45 origin-top-left bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-3xl bg-opacity-70 translate-x-1/2 translate-y-2/2">
+                            class="absolute -z-10 top-0 left-0 w-36 h-32 rounded-br-full    bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-1xl bg-opacity-30 translate-x-2/2 translate-y-2/2">
                         </div>
-
-
-
-
+                        <div
+                            class="absolute bottom-6 right-0 w-24 h-24 rounded-l-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-3xl bg-opacity-70">
+                        </div>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor"
-                                class="lg:w-14 lg:h-14 w-20 h-20  px-2 py-1 text-center  bg-blue-400 rounded-lg text-white">
+                                class="lg:w-14 lg:h-14 w-14 h-14  px-2 py-1 text-center  bg-blue-400 rounded-lg text-white">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M9 6.75V15m6-9v8.25m-12 3.755 6.145-3.067a1.5 1.5 0 0 1 1.342 0l6.026 3.013A1.5 1.5 0 0 0 18.75 16.9V5.1a1.5 1.5 0 0 0-2.25-1.299l-4.145 2.067a1.5 1.5 0 0 1-1.342 0L5.1 2.855A1.5 1.5 0 0 0 2.25 4.15v11.7c0 .568.321 1.087.832 1.342Z" />
                             </svg>
@@ -133,7 +135,7 @@
                     <div
                         class="bg-slate-100 scroll-animated transition duration-300 ease-in-out hover:shadow-lg hover:shadow-indigo-400 rounded-xl w-full px-3 py-5 relative shadow-lg border-2 border-indigo-300">
                         <div
-                            class="absolute top-0 left-0 w-20 h-24 rounded-r-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800 blur-3xl bg-opacity-70">
+                            class="absolute -z-10 top-0 left-0 w-36 h-32 rounded-br-full bg-gradient-to-br from-sky-500 via-indigo-500 to-sky-800  bg-opacity-70">
                         </div>
 
                         <div
@@ -141,7 +143,7 @@
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor"
-                            class="lg:w-14 lg:h-14 w-20 h-20   px-2 py-1 text-center  bg-blue-400 rounded-lg text-white">
+                            class="lg:w-14 lg:h-14 w-14 h-14   px-2 py-1 text-center  bg-blue-400 rounded-lg text-white">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M7.5 8.25h9m-9 3h6m-9.75 6.75 3.75-3.75h9A2.25 2.25 0 0 0 19.5 12V6A2.25 2.25 0 0 0 17.25 3.75H6.75A2.25 2.25 0 0 0 4.5 6v9a2.25 2.25 0 0 0 2.25 2.25Z" />
                         </svg>

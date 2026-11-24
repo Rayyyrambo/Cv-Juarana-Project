@@ -128,3 +128,18 @@ setTimeout(() => {
         setTimeout(() => successAlert.remove(), 500);
     }
 }, 3000);
+
+const errorLens = document.getElementById("errorAlert");
+if (errorLens) {
+    requestAnimationFrame(() => {
+        errorLens.classList.add("error-alert-show");
+    });
+}
+setTimeout(() => {
+    const errorAlertt = document.getElementById("errorAlert");
+    if (errorAlertt) {
+        errorAlertt.classList.remove("error-alert-show");
+        errorAlertt.classList.add("opacity-0");
+        setTimeout(() => errorAlertt.remove(), 500);
+    }
+}, 3000);
